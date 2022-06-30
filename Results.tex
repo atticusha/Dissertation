@@ -1,0 +1,3147 @@
+\chapter{Results}
+\label{ch:result}
+\section{Univariate results}
+
+Three separate univariate analyses were undertaken, one for each of the alternations being studied. Generally speaking, these analayses identify those variables with a statistically significant association with a particular alternation outcome. 
+
+The following three subsections detail the models used for univariate analysis as well as the resulting (significant) variables. Variables fed into the univariate models followed the selection criteria described in Chapter \ref{ch:method}, but certain adjustments were made. Given their low counts, variables indicating argument lemmas (e.g. \codebox{aya.goal}) were removed. Instead, I used the more abstract semantic classes from Chapter \ref{ch:semantics} in their place. Additionally, corpus-internal tags (like \codebox{Lemma} and \codebox{Morph}, which indicate a lemma or morpheme not present in the semi-automated gold-standard corpus) were not included in analyses. Similarly, tags indicating the direction of the argument in relation to the verb (e.g. \codebox{@ACTOR>.actor} for arguments occurring to the left of the verb) were not used. Although it is possible some syntactic information \textit{could} be helpful, Nêhiyawêwin Order is very flexible, and only slightly less than half of all verbs even contained overt arguments. Further, previous syntactic accounts have not suggested linear order of arguments to be a significant influence on Order. Finally, tags like \codebox{N.actor} and \codebox{I.actor} were removed because they were implicitly reflected in the verb class (e.g. all actors are nouns, all VAIs will have animate actors).\footnote{Inanimate actor forms are not included in this corpus} 
+
+\subsection{Independent vs. Conjunct}
+The selected variables were fed into the \codebox{nominal}, producing a set of  χ$^{2}$ test results. Statistically significant results are presented in Tables \ref{tab:iincnjuni} through \ref{tab:tancnjuni}. These tables depict the predictor names, the number of tokens for each predictor, their χ$^{2}$ statistic, and direction of association between predictor and outcome (i.e. a \codebox{+} indicates a positive association, which in turn implies that a predictor occurs more often with a particular alternation construction than would be expected by chance, and a \codebox{-} represents the opposite).
+
+\FloatBarrier
+\subsubsection{Intransitive Inanimate Verbs}
+
+\begin{table}[h!]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+&N&χ$^{2}$&Cnj & Ind \\
+\midrule
+PV.Time & 213 & 3.\textless{}0.001 & - & + \\
+II.sense & 274 & \textless{}0.001 & - & + \\
+NI.object.actor & 144 & 0.026 & + & - \\
+Pron.actor & 58 & 0.02 & + & - \\
+Dem.actor & 57 & 0.01 & + & - \\
+Med.actor & 24 & 0.03 & + & - \\
+\bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. Conjunct Alternation: VIIs \\ \label{tab:iincnjuni}
+  }
+\end{table}
+
+For the Independent vs Conjunct alternation VIIs, only preverbs of time and sensory verbs were positively associated with the Independent Order. All other effects such as \codebox{NI.object.actor}, as well as pronominal, demonstrative, and medial actors, were positively associated with the Conjunct. Note that both \codebox{Dem.actor} and \codebox{Med.actor} are features associated with certain pronouns, and so are essentially subtypes of \codebox{Pron.actor}.
+\FloatBarrier
+
+
+\subsubsection{Intransitive Animate Verb}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+ & N & χ$^{2}$ & Cnj & Ind \\ 
+\midrule
+AI.speech        & 1344 & \textless{}0.001 & - & + \\
+actor.3          & 3646 & \textless{}0.001 & - & + \\
+PV.Time          & 2008 & \textless{}0.001 & + & - \\
+PV.Move          & 442 & \textless{}0.001 & + & - \\
+PV.Qual          & 173 & 0.003 & + & - \\
+PV.StartFin      & 143 & 0.003 & + & - \\
+PV.Discourse     & 137 & \textless{}0.001 & + & - \\
+PV.Position      & 121 & 0.004 & + & - \\
+AI.do            & 2125 & \textless{}0.001 & + & - \\
+AI.state         & 1924 & \textless{}0.001 & + & - \\
+AI.cooking       & 281 & \textless{}0.001 & + & - \\
+AI.reflexive     & 276 & \textless{}0.001 & + & - \\
+AI.health        & 122 & 0.02 & + & - \\
+AI.pray          & 61 & 0.005 & + & - \\
+RdplW            & 142      & \textless{}0.001 & + & - \\
+NA.persons.actor & 737 & \textless{}0.001 & + & - \\
+Sg.actor         & 540 & 0.001 & + & - \\
+Pl.actor         & 295 & \textless{}0.001 & + & - \\
+Pron.actor       & 403 & 0.01 & + & - \\
+Dem.actor        & 200 & 0.02 & + & - \\
+NA.beast.of.burden.actor & 59 & 0.02 & + & - \\
+NA.food.actor    & 37 & 0.03 & + & - \\
+actor.1          & 1825 & 0.04 & + & - \\
+actor.2          & 250 & \textless{}0.001 & + & - \\
+Obv.actor        & 45 & 0.01 & + & - \\
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. Conjunct Alternation: VAIs \\ \label{tab:aincnjuni}
+  }
+\end{table}
+
+
+The VAIs showed a number of significant effects, nearly all positively associated with the Conjunct as detailed in Table \ref{tab:aincnjuni}. In fact, only verbs relating to speech or those having a third person actor seemed to positively associate with the Independent. Notably, a number of preverbs were positively associated with the Conjunct: those of time, movement, quality, starting/finishing, discourse, and position. In general, it appears that semantic effects were associated with the Conjunct, with the semantic classes of action, state, cooking, reflexive, heath, and praying all having significant positive Conjunct effects. Beyond these and the effect of weak reduplication, all other remaining effects were related to explicitly realized actors (as separate words). Singular and plural actors, pronominal and demonstrative, actors semantically relating to food and beasts of burden, as well as first, second, and obviative actors were all positively associated with the Conjunct. 
+\FloatBarrier
+
+
+
+
+\FloatBarrier
+
+\subsubsection{Transitive Inanimate Verbs}
+
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+ & N & χ$^{2}$ & Cnj & Ind \\ 
+\midrule
+TI.cognitive & 1160 & \textless{}0.001 & - & + \\
+
+NA.persons.actor & 261 & 0.02 & - & + \\
+Pron.actor & 158 & \textless{}0.001 & - & + \\
+Pers.actor & 107 & \textless{}0.001 & - & + \\
+actor.1 & 1202 & \textless{}0.001 & - & + \\
+actor.2 & 250 & \textless{}0.001 & - & + \\
+Px1Sg.goal & 18 & 0.05 & - & + \\
+
+
+TI.do & 1632 & \textless{}0.001 & + & - \\
+TI.money.count & 23 & 0.03 & + & - \\
+PV.Discourse & 64 & \textless{}0.001 & + & - \\
+NI.nominal.goal & 114 & 0.002 & + & - \\
+NI.natural.force.goal & 73 & 0.03 & + & - \\
+NI.place.goal & 42 & 0.001 & + & - \\
+Sg.goal & 789 & \textless{}0.001 & + & - \\
+Pl.goal & 244 & \textless{}0.001 & + & - \\
+
+D.goal & 64 & 0.01 & + & - \\
+NDI.Body.goal & 55 & 0.01 & + & - \\
+Px3Sg.goal & 43 & 0.02 & + & - \\
+Der.Dim.goal & 30 & 0.01 & + & - \\
+actor.3 & 1514 & \textless{}0.001 & + & - \\
+
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. Conjunct Alternation: VTIs \\ \label{tab:tincnjuni}
+  }
+\end{table}
+
+Like the VAIs, there were a number of VTI effects that showed a significant association, mostly with the Conjunct, as seen in Table \ref{tab:tincnjuni}. The only Independent-associated effects were verbs having to do with cognition, actors that had referents that were types of people, pronominal actors (especially personal pronouns), first or second person actors, and goals possessed by singular first persons. The majority of Conjunct associated variables concerned arguments, specifically goals. The only verbal associations were the semantic classes of action and money/counting as well as preverbs of discourse. Goals that were nominalized verbs, natural forces or place names; singular or plural goals, dependent goals, dependent goals specifically relating to body parts, those possessed by a singular third persons, and diminutive goals all associated with the Conjunct. The only actor based effect for the Conjunct was that of third persons actors. 
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Transitive Animate Verbs}
+
+
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+ & N & χ$^{2}$ & Cnj & Ind \\ 
+\midrule
+TA.speech       & 1114 & \textless{}0.001 & - & + \\
+goal.3          & 1498 & \textless{}0.001 & - & + \\
+actor.1         & 1067 &  & - & + \\
+
+
+PV.Time         & 1189 & \textless{}0.001 & + & - \\
+PV.Move         & 172 & \textless{}0.001 & + & - \\
+PV.Discourse    & 68 & \textless{}0.001 & + & - \\
+PV.Qual         & 62 & 0.05 & + & - \\
+PV.Position     & 47 & 0.01 & + & - \\
+TA.cognitive    & 843 & 0.02 & + & - \\
+TA.do           & 837 & \textless{}0.001 & + & - \\
+TA.food         & 96 & \textless{}0.001 & + & - \\
+TA.money.count  & 66 & 0.04 & + & - \\
+
+
+goal.obv & 702   & \textless{}0.001 & + & - \\
+goal.2           & 177 & 0.002 & + & - \\
+NA.persons.goal  & 394 & 0.001 & + & - \\
+Px3Pl.goal & 20  & 0.03 & + & - \\
+
+NA.persons.actor & 199 & 0.01 & + & - \\
+NDA.Relations.actor & 82 & 0.02 & + & - \\
+Sg.actor         & 178   & \textless{}0.001 & + & - \\
+D.actor          & 82 & 0.02 & + & - \\
+actor.3          & 1266 & \textless{}0.001 & + & - \\
+actor.obv        & 152 & \textless{}0.001 & + & - \\
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. Conjunct Alternation: VTAs \\ \label{tab:tancnjuni}
+  }
+\end{table}
+
+
+The VTAs followed a similar pattern as seen previously. Nearly all significant effects in Table \ref{tab:tancnjuni} were positively associated with the Conjunct, though verbs having to do with speech, having a first person actor, and having a first person goal all positively associated with the Independent. As in the VAIs, all preverb effects (those of time, movement, discourse, quality, and position) were associated with the Conjunct. Verbs of cognition, action, food, and money/counting were similarly aligned. Both actor and goal effects were present in the VTAs. Second person and obviative goals, those possessed by plural third persons, and goals representing people were all positively associated with the Conjunct. Actor effects such as the semantic classes of person actors and those representing a dependent relationship, singular and dependent actors, as well as third and obviative persons were also positively associated with the Conjunct. 
+\FloatBarrier
+
+
+\FloatBarrier
+
+\subsection{Independent vs. ê-Conjunct}
+\FloatBarrier
+
+\subsubsection{Intransitive Inanimate Verbs}
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{rllll}
+    \toprule
+&N&χ$^{2}$&ê-Cnj&Ind\\
+\midrule
+II.sense & 255 & 0.001 & - & + \\
+PV.Time & 186 & \textless{}0.001 & - & + \\
+
+NI.object.actor & 126 & 0.001 & + & - \\
+Sg.actor & 158 & 0.03 & + & - \\
+Pron.actor & 48 & 0.007 & + & - \\
+Dem.actor & 47 & 0.003 & + & - \\
+Med.actor & 21 & 0.01 & + & - \\
+\bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. ê-Conjunct Alternation: VIIs \\ \label{tab:iiiveuni}
+  }
+\end{table}
+
+Considering the alternation between the Independent and the ê-Conjunct, the only effects positively associated with the Independent were verbal effects: sensory verbs and preverbs of time. All other effects concerned the actor of a verb and were associated with the ê-Conjunct: Object actors, singular actors, as well as pronominal, demonstrative, and medial actors.
+\FloatBarrier
+
+
+
+\FloatBarrier
+
+\subsubsection{Intransitive Animate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+&N&χ$^{2}$&ê-Cnj&Ind\\
+\midrule
+
+AI.speech & 1240 & \textless{}0.001 & - & + \\
+actor.3 & 3109 & \textless{}0.001 & - & + \\
+
+PV.Time & 1654 & \textless{}0.001 & + & - \\
+PV.Move & 346 & \textless{}0.001 & + & - \\
+PV.Qual & 147 & 0.001 & + & - \\
+PV.StartFin & 123 & \textless{}0.001 & + & - \\
+PV.Discourse & 116 & \textless{}0.001 & + & - \\
+PV.Position & 109 & \textless{}0.001 & + & - \\
+
+AI.do & 1671 & \textless{}0.001 & + & - \\
+AI.state & 1578 & \textless{}0.001 & + & - \\
+AI.cooking & 231 & \textless{}0.001 & + & - \\
+AI.reflexive & 222 & \textless{}0.001 & + & - \\
+AI.pray & 46 & 0.012 & + & - \\
+RdplW & 124 & \textless{}0.001 & + & - \\
+NA.persons.actor & 554 & 0.004 & + & - \\
+NA.beast.of.burden.actor & 46 & 0.03 & + & - \\
+Pl.actor & 228 & 0.01 & + & - \\
+actor.1 & 1551 & 0.002 & + & - \\
+actor.obv & 138 & \textless{}0.001 & + & - \\
+
+\bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. ê-Conjunct Alternation: VAIs \\ \label{tab:aiiveuni}
+  }
+\end{table}
+
+The VAIs continued the previous trend: verbs of speech with third person actors associated with the Independent, but all other significant effects as described in Table \ref{tab:aiiveuni} were positively associated with the ê-Conjunct. This includes the verbal effects: preverbs of time, movement, quality, starting/finishing, discourse, and position; semantic classes, of verbs of action, state, cooking, praying, and reflexive verbs; and weak reduplication all positively associated with the ê-Conjunct. Actor effects included person actors, beasts of burden, plural actors, first person actors, and obviative actors.
+\FloatBarrier
+\FloatBarrier
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+&N&χ$^{2}$&ê-Cnj&Ind\\
+\midrule
+
+TI.cognitive       &   1008 & \textless{}0.001 &  - &  + \\
+NA.persons.actor   &    203   & 0.003           & -  & + \\
+Pers.actor      &        95  & \textless{}0.001  & -  & + \\
+Pron.actor       &      129 & \textless{}0.001  & -  & + \\
+Px1Sg.goal        &      15  &   0.05       &    -   & + \\
+actor.2            &    181 & \textless{}0.001 &  -  & + \\
+actor.1             &  1043 & \textless{}0.001  & -  & + \\
+TI.do                & 1281 & \textless{}0.001  & + &  - \\
+TI.money.count        &  17  & 0.04           & +  & - \\
+PV.Discourse           & 55 & \textless{}0.001 &  +  & - \\
+NI.natural.force.goal   & 64 & 0.008            & +  & - \\
+NI.place.goal       &    31 & 0.002         &    +  & - \\
+Der.Dim.goal        &    20  & 0.02          &  + &  - \\
+Pl.goal             &   205 & \textless{}0.001 &  +  & - \\
+actor.3             &  1184 & \textless{}0.001 &  +  & - \\
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. ê-Conjunct Alternation: VTIs \\ \label{tab:tiiveuni}
+  }
+\end{table}
+
+The VTIs showed a more equal distribution for Independent and Conjunct effects. Verbs of cognition, actors representing people, pronominal actors (especially personal pronouns), actors which are possessed by first persons, and verbs with first and second person actors positively associated with the Independent. Conversely, verbs of action, verbs of moeny/counting, preverbs of discourse, goals representing natural forces, goals representing places, and plural goals all positively associated with the ê-Conjunct. The only actor based positive ê-Conjcunt association was third person actors.
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Transitive Animate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rllll}
+    \toprule
+&N&χ$^{2}$&ê-Cnj&Ind\\
+\midrule
+$redoall$
+TA.speech & 905 & \textless{}0.001 & - & + \\
+actor.1 & 892 & \textless{}0.001 & - & + \\
+actor.2 & 84 & \textless{}0.001 & - & + \\
+goal.3 & 1185 & \textless{}0.001 & - & + \\
+
+PV.Time & 946 & \textless{}0.001 & + & - \\
+PV.Move & 123 & \textless{}0.001 & + & - \\
+PV.Discourse & 58 & \textless{}0.001 & + & - \\
+PV.Qual & 49 & 0.03749096 & + & - \\
+PV.Position & 44 & 0.001 & + & - \\
+PV.StartFin & 30 & 0.03 & + & - \\
+TA.cognitive & 692 & 0.003 & + & - \\
+TA.do & 650 & \textless{}0.001 & + & - \\
+TA.food & 80 & \textless{}0.001 & + & - \\
+Sg.actor & 138 & 0.001 & + & - \\
+D.actor & 68 & 0.009 & + & - \\
+NDA.Relations.actor & 68 & 0.009 & + & - \\
+Obv.actor & 31 & 0.02 & + & - \\
+actor.3 & 1060 & \textless{}0.001 & + & - \\
+actor.obv & 109 & \textless{}0.001 & + & - \\
+goal.obv & 579 & \textless{}0.001 & + & - \\
+NA.persons.goal & 290 & 0.04 & + & - \\
+Px3Sg.goal & 36 & 0.01 & + & - \\
+Px3Pl.goal & 15 & 0.03 & + & - \\
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Independent Vs. ê-Conjunct Alternation: VTAs \\ \label{tab:taiveuni}
+  }
+\end{table}
+
+The VTAs in the Independent vs. ê-Conjunct alternation mostly exhibit significant associations with the ê-Conjunct: only verbs of speech, local actors, and third person goals showed an association with the Independent Order. The usual significant preverb classes, those of time, movement, discourse, quality, position and starting/finishing were associated with the ê-Conjunct, as were the major semantic classes of cognition, acct ion, and food. A number of actor effects positively associated with the ê-Conjunct, including singular and dependent actors, actors representing dependent relations, an non-local actors. Goals which were obviative, representative of persons, and those that were possessed by third persons were also associated with the outcome. 
+\FloatBarrier
+
+
+\FloatBarrier
+
+\subsection{Conjunct Types}
+Unlike the previous two sections, the alternation described in this section is multinomial. As a result, the positive/negative association for one outcome does not imply the opposite association in another outcome. Some items may show a \codebox{0} mark in the tables representing the lack of a significant effect in one particular outcome. 
+\FloatBarrier
+
+\subsubsection{Intransitive Inanimate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rlllll}
+    \toprule
+ & N & χ$^{2}$ & ê-Cnj & kâ-Cnj & Other-Cnjs \\
+\midrule
+II.sense & 171 & \textless{}0.001 & + & - & 0\\
+PV.Time & 135 & 0.001 & + & - & 0\\
+Sg.actor & 134 & \textless{}0.001 & + & - & 0\\
+NI.object.actor & 119 & \textless{}0.001 & + & - & 0\\
+II.natural.land & 145 & \textless{}0.001 & - & + & 0\\
+
+  
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Conjunct Type Alternation: VIIs \\ \label{tab:iicnjuni}
+  }
+\end{table}
+
+The VIIs showed significant associations only for the ê- and kâ-Conjuncts, where the two always showed association in the opposite direction (a pattern which can be partially seen throughout the this alternation). Sensory verbs, preverbs of time, singular arctors, and object actors were positively associated with the ê-Conjunct and negatively associated with the kâ-Conjunct. Verbs in the \codebox{II.natural.land} class was the odd one out, positively associating with kâ-Conjunct and negatively associating with the ê-Conjunct. 
+
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Intransitive Animate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rlllll}
+    \toprule
+ & N & χ$^{2}$ & ê-Cnj & kâ-Cnj & Other-Cnjs \\
+\midrule
+PV.Discourse & 120 & 0.05 & + & - & 0 \\
+PV.Position & 95 & 0.01 & + & - & 0 \\
+actor.1 & 1251 & 0.001 & + & - & 0 \\
+actor.3 & 2222 & \textless{}0.001 & + & 0 & - \\
+RdplW & 114 & 0.03 & + & 0 & 0 \\
+actor.2 & 207 & \textless{}0.001 & - & + & + \\
+AI.do & 1649 & 0.005 & - & + & 0 \\
+NA.persons.actor & 545 & \textless{}0.001 & - & + & 0 \\
+Sg.actor & 392 & \textless{}0.001 & - & + & 0 \\
+Pron.actor & 292 & \textless{}0.001 & - & + & 0 \\
+Prox.actor & 91 & \textless{}0.001 & - & + & 0 \\
+Dem.actor & 149 & \textless{}0.001 & - & + & - \\
+AI.health & 99 & 0.001 & - & 0 & + \\
+Pl.actor & 224 & \textless{}0.001 & 0 & + & - \\
+Med.actor & 56 & 0.05 & 0 & + & 0 \\
+PV.Time & 1442 & \textless{}0.001 & 0 & - & + \\
+PV.WantCan & 45 & \textless{}0.001 & 0 & - & + \\
+AI.cooking & 222 & 0.03 & 0 & - & 0 \\
+PV.Qual & 133 & 0.02 & 0 & 0 & - \\
+D.actor & 164 & 0.003 & 0 & 0 & - \\
+NDA.Relations.actor & 164 & 0.003 & 0 & 0 & - \\
+Px1Sg.actor & 123 & 0.02 & 0 & 0 & - \\
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Conjunct Type Alternation: VAIs \\ \label{tab:aicnjuni}
+  }
+\end{table}
+
+The VAIs showed a more varied result. Preverbs of discourse and position, as well as first person actors were positively associated with the ê-Conjunct and negatively associated with the kâ-Conjunct. Third person actors were positively associated with the ê-Conjunct and negatively associated with the Other-Conjunct. The final positive association for the ê-Conjunct was weak duplication, which was only significant for the ê-Conjunct. Verbs of action, as well as actors that were people, signular, pronouns, proximate, or demonstrative all positively associated with the kâ-Conjunct while negatively associating with the ê-Conjunct. Plural actors and medial actors were positively associated with the kâ-Conjunct, while preverbs of time, desire/ability and verbs of cooking were negatively associated with the outcome. Interestingly, the Other-Conjunct outcome regularly disagreed in association with the ê-Conjunct: with third person actors had a negative association with the ê-Conjunct, they had a negative association with the Other Conjunct, while the opposite pattern is seen with second person and verbs of health. Other positive associations with the Other-Conjunct outcome were preverbs of time (likely a result of the ka-Conjunct necessarily having \codebox{PV.ka}, a preverb of time) and desire/ability. The class had negative effects in the form of demonstrative, plural, aand dependent actors, preverbs of quality, actors representing dependent relations, and actors possessed by a singular first person. 
+\FloatBarrier
+
+
+\FloatBarrier
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rlllll}
+    \toprule
+ & N & χ$^{2}$ & ê-Cnj & kâ-Cnj & Other-Cnjs \\
+\midrule
+ 
+PV.Position & 45 & 0.002 & + & - & -  \\
+actor.1 & 693 & \textless{}0.001 & + & 0 & -  \\
+PV.WantCan & 51 & \textless{}0.001 & - & + & 0  \\
+TI.speech & 171 & \textless{}0.001 & - & + & 0  \\
+NA.persons.actor & 162 & \textless{}0.001 & - & + & 0  \\
+Sg.goal & 586 & \textless{}0.001 & - & + & +  \\
+NI.object.goal & 512 & \textless{}0.001 & - & + & 0  \\
+Dem.goal & 216 & \textless{}0.001 & - & + & 0  \\
+Pron.goal & 216 & \textless{}0.001 & - & + & 0  \\
+Prox.goal & 122 & \textless{}0.001 & - & + & 0  \\
+NI.nominal.goal & 95 & \textless{}0.001 & - & + & +  \\
+actor.2 & 137 & \textless{}0.001 & - & 0 & +  \\
+Med.goal & 94 & 0.05 & - & 0 & 0  \\
+D.goal & 54 & 0.05 & - & 0 & +  \\
+PV.Time & 860 & \textless{}0.001 & 0 & - & +  \\
+Sg.actor & 93 & 0.01 & 0 & + & 0  \\
+Pron.actor & 88 & 0.05 & 0 & + & 0  \\
+actor.3 & 1195 & 0.05 & 0 & 0 & -  \\
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Conjunct Type Alternation: VTIs \\ \label{tab:ticnjuni}
+  }
+\end{table}
+
+The VTIs had only two positive associations for the ê-Conjunct: preverbs of position and first person actors. Second person actors and those which were people, along with singular, object, nominal, demonstrative, pronominal, proximal, medial and dependent goals all negatively associated with this outcome, as did verbs of speech and preverbs of desire/ability. Conversely, only two forms showed a negative association with the kâ-Conjunct: preverbs of position and time. All other significant effects, including preverbs of desire/ability; singular, pronominal, and person actors; verbs of speech; and goals representing objects, nominalized verbs, singular entities, demonstratives, pronouns, and proximals all occurred more often with the kâ-Conjunct than otherwise would be expected based on chance. Preverbs of position and first or third person actors were negatively associated with the Other-Conjunct, while singular, nominal, and dependent goals were positively associated with the outcome. Beyond these, second person actors and preverbs of time were also positively associated with the Other-Conjunct.
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Transitive Animate Verbs}
+
+\begin{table}[H]
+  \centering
+  \footnotesize
+\begin{tabular}{rlllll}
+    \toprule
+ & N & χ$^{2}$ & ê-Cnj & kâ-Cnj & Other-Cnjs \\
+\midrule
+
+PV.Time & 863 & \textless{}0.001 & + & - & + \\
+TA.cognitive & 580 & \textless{}0.001 & + & - & + \\
+actor.3 & 893 & \textless{}0.001 & + & - & - \\
+goal.4 & 529 & \textless{}0.001 & + & - & - \\
+PV.Position & 39 & 0.01 & + & - & 0 \\
+goal.1 & 392 & \textless{}0.001 & + & 0 & - \\
+PV.Discourse & 58 & 0.03 & + & 0 & - \\
+TA.speech & 576 & \textless{}0.001 & - & + & 0 \\
+Sg.goal & 195 & \textless{}0.001 & - & + & 0 \\
+Prox.goal & 66 & 0.02 & - & + & 0 \\
+actor.2 & 84 & \textless{}0.001 & - & 0 & + \\
+goal.3 & 897 & \textless{}0.001 & - & 0 & + \\
+goal.2 & 134 & 0.01 & - & 0 & + \\
+Prox.actor & 31 & 0.01 & 0 & + & 0 \\
+Px1Sg.goal & 67 & 0.04 & 0 & 0 & - \\
+actor.1 & 567 & 0.03 & 0 & 0 & - \\
+
+  \bottomrule
+  \end{tabular}
+  \caption{
+   Univariate results for the Conjunct Type Alternation: VTAs \\ \label{tab:tacnjuni}
+  }
+\end{table}
+
+Results for the VTAs present a number of different  significant effects for all outcomes. Preverbs of time, position, and discourse; third person actors, first person and obviative goals, and verbs of cognition all positively associated with the ê-Conjunct. Second and third person goals, proximate goals, singular goals, second person actors, and verbs of speech were all negatively associated with the outcome. The kâ-Conjunct was positively associated with proximate actors, proximate and singular goals, and verbs of speech. Preverbs of time and position, third person actors, obviative goals, and verbs of cognition were negatively associated with the outcome. Finally, preverbs of time, verbs of cognition, second person actor and goals, and third person goals all positively associated with the Other-Conjunct outcome; first person actors, third person actors, first person and obviative goals, and prevebs of discourse all negatively associated with the Other-Conjunct.
+\FloatBarrier
+
+\FloatBarrier
+
+\section{Bivariate Results}
+Before moving on to the multivariate analysis, the significant effects for each verb class in each alternation were tested for pairwise assoiciation. Pairs which were found to be bivariate (those with Theil’s uncertainty coefficients \citep{theil1970estimation} of $>$ 0.50, indicating that one the presence of absence of one variable provides information about the presence of abscence of another) were dealt with by removing one of the items in the pair. The item for removal was chosen based on its relevance and explanatory value, e.g. if \codebox{D.goal} and \codebox{NDI.Body.goal} are bivariate, the later provides more semantic information than the former, which simply says whether something is dependent. 
+
+The following section presents the effects that formed a bivariate pair along with the eventual list of effects to address this bivariance. The resulting list of effects will be used for multivariate analysis in the next subsection.
+
+The bivariance results present the effects that form each bivariate pair (referred to as \textit{category1} and \textit{category2}), the number of tokens for each category (i.e. \textit{N1} is the number of tokens for \textit{category1},  \textit{N2} is the number of tokens for \textit{category2}). The resulting tables also include the number of tokens where each effect co-occur, represented in column \textit{N12}.
+
+\subsection{Independent vs. Conjunct}
+\subsubsection{Intransitive Inanimate Verbs}
+\FloatBarrier
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+NI.object.actor & Pron.actor & 144 & 58 & 58 \\
+NI.object.actor & Dem.actor & 144 & 57 & 57 \\
+Pron.actor & Dem.actor & 58 & 57 & 57 \\
+Pron.actor & Med.actor & 58 & 24 & 24 \\
+Dem.actor & Med.actor & 57 & 24 & 24 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VIIs \\ \label{tab:iiindcuni}
+  }
+\end{table}
+
+Biavariance in the VIIs concerned actor variables. Every instance of both \codebox{Pron.actor} and \codebox{Dem.actor} were used along with the \codebox{NI.object.actor} tag. This may suggest that when demonstrative pronouns are used with VIIs as actors, they represent inanimate objects. Similarly, the bivariate results in Table \ref{tab:iiindcuni} also show that nearly all pronominal actors were demonstrative and that all demonstrative pronouns were medial; less interestingly, all medial pronouns coocurred with pronominal tags. To alleviate bivariance, \codebox{Pron.actor} and \codebox{Dem.actor} were removed, resulting in the following variables to be kept for multivariate analysis: \codebox{PV.Time},\codebox{II.sense},\codebox{NI.object.actor},\codebox{Med.actor}.
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Intransitive Animate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+NA.persons.actor & Pron.actor & 737 & 405 & 405 \\
+NA.persons.actor & Dem.actor & 737 & 201 & 201 \\
+Pron.actor & Dem.actor & 403 & 201 & 201  \\
+actor.3 & actor.1 & 3646 & 1836 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VAIs \\ \label{tab:aicnjuni}
+  }
+\end{table}
+
+Again, the VAI's bivariance for the Independent vs. Conjunct focused on actor variables. Whenever a demontrative or more general pronoun was observed so too was an actor from the \codebox{NA.persons.actor} class. As a consequence of demonstrative pronouns being pronouns, the two were similarly bivariate. Finally, third and first person actors were bivariate, as the latter never cooccured with the former. \codebox{Pron.actor}, \codebox{Dem.actor}, and \codebox{actor.1} were removed to address bivariance, resulting in the following variables for multivariate analysis: \codebox{PV.Time}, \codebox{PV.Move}, \codebox{PV.Qual}, \codebox{PV.StartFin}, \codebox{PV.Discourse}, \codebox{PV.Position}, \codebox{AI.do}, \codebox{AI.state}, \codebox{AI.speech}, \codebox{AI.cooking}, \codebox{AI.reflexive}, \codebox{AI.health}, \codebox{AI.pray}, \codebox{RdplW}, \codebox{NA.persons.actor}, \codebox{Sg.actor}, \codebox{Pl.actor}, \codebox{NA.beast.of.burden.actor}, \codebox{NA.food.actor}, \codebox{actor.3}, \codebox{actor.2}, \codebox{actor.4}.
+
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+TI.do & TI.cognitive & 1632 & 1163 & 0 \\
+NA.persons.actor & Pron.actor & 261 & 158 & 158 \\
+NA.persons.actor & Pers.actor & 261 & 107 & 107 \\
+Pron.actor & Pers.actor & 158 & 107 & 107 \\
+actor.3 & actor.1 & 1508 & 1202 & 0 \\
+D.goal & NDI.Body.goal & 64 & 55 & 55 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VTIs \\ \label{tab:ticnjuni}
+  }
+\end{table}
+
+The VTIs show a similar pattern as the above classes: Pronouns, and specifically personal pronouns, always occured with actors representing people, and personal pronouns were necessarily also pronouns. Similarly, all dependent goals having to do with body parts were also classified as dependent nouns. As in the VAI class, first and third person actors never cooccured. Finally, the two main verb classes, \codebox{TI.do} and \codebox{TI.cognitive} were also bivariate, never occurring together. To address this bivariance, \codebox{TI.cognitive}, \codebox{Pron.actor}, \codebox{Pers.actor}, \codebox{actor.1}, and \codebox{D.goal} were removed leaving the following variables: \codebox{PV.Discourse}, \codebox{TI.do}, \codebox{TI.money.count}, \codebox{NA.persons.actor}, \codebox{actor.3}, \codebox{actor.2}, \codebox{Sg.goal}, \codebox{Pl.goal}, \codebox{NI.nominal.goal}, \codebox{NI.natural.force.goal}, \codebox{NDI.Body.goal}, \codebox{Px3Sg.goal}, \codebox{NI.place.goal}, \codebox{Der.Dim.goal}, \codebox{Px1Sg.goal}.
+
+\FloatBarrier
+\FloatBarrier
+
+\subsubsection{Transitive Animate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+D.actor & NDA.Relations.actor & 82 & 82 & 82 \\
+actor.3 & goal.3 & 1266 & 1498 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VTAs \\ \label{tab:tacnjuni}
+  }
+\end{table}
+
+The VTAs had a much smaller set of covariates than pevious classes. All dependent actors representing people of close relation were also marked as dependent goals (for obvious reasons). Third person actors and goals were also bivariatre, never occurring together. Here, \codebox{D.actor} and \codebox{actor.3}, were removed, leaving the following variables for multivariate analysis: \codebox{PV.Time}, \codebox{PV.Move}, \codebox{PV.Discourse}, \codebox{PV.Qual}, \codebox{PV.Position}, \codebox{TA.speech}, \codebox{TA.cognitive}, \codebox{TA.do}, \codebox{TA.food}, \codebox{TA.money.count}, \codebox{NA.persons.actor}, \codebox{Sg.actor}, \codebox{NDA.Relations.actor}, \codebox{actor.1}, \codebox{actor.4}, \codebox{goal.3}, \codebox{goal.4}, \codebox{goal.2}, \codebox{NA.persons.goal}, \codebox{Px3Pl.goal}.
+
+
+
+\subsection{Independent vs. ê-Conjunct}
+
+\subsubsection{Intransitive Inanimate Verbs}
+\FloatBarrier
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+Sg.actor & NI.object.actor & 158 & 126 & 119 \\
+NI.object.actor & Pron.actor & 126 & 48 & 48 \\
+Pron.actor & Dem.actor & 48 & 47 & 47 \\
+Pron.actor & Med.actor & 48 & 21 & 21 \\
+Dem.actor & Med.actor & 47 & 21 & 21 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VIIs \\ \label{tab:iiindeuni}
+  }
+\end{table}
+
+Once again, the VII effects concerned only actors. Nearly every instance of \codebox{NI.object.actor} also occurred with \codebox{Sg.actor}. In turn, the \codebox{Pron.actor} tag always occurred with \codebox{NI.object.actor} while \codebox{Dem.actor} always occured with \codebox{Pron.actor}. Similarly, \codebox{Med.actor} always occurred with both \codebox{Pron.actor} and \codebox{Dem.actor}. Removing \codebox{Sg.actor}, \codebox{Pron.actor}, and \codebox{Med.actor} leaves \codebox{PV.Time}, \codebox{II.sense}, \codebox{NI.object.actor}, and \codebox{Dem.actor} as variables.
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Intransitive Animate Verbs}
+
+There were no bivariate variables for VAIs in the Independent vs. ê-Conjunct alternation.
+
+\FloatBarrier
+
+\FloatBarrier
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+TI.do & TI.cognitive & 1281 & 1008 & 0 \\
+NA.persons.actor & Pron.actor & 203 & 129 & 129 \\
+NA.persons.actor & Pers.actor & 203 & 95 & 95 \\
+Pron.actor & Pers.actor & 129 & 95 & 95 \\
+actor.3 & actor.1 & 1184 & 1043 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VTIs \\ \label{tab:ticnjuni}
+  }
+\end{table}
+
+As in the previous alternation, verbs of cognition and verbs of action were bivariate in that they never occur together. Similar to other classes, \codebox{Pron.actor} and \codebox{Pers.actor} always occured with \codebox{NA.persons.actor}, and \codebox{Pers.actor} did the same with \codebox{Pron.actor}. Finally, third and first person actors never cooccured. To alleviate this covariance, effects of \codebox{TI.Cognitive}, \codebox{Pron.actor}, \codebox{Pers.actor}, and \codebox{actor.1} were removed, leaving \codebox{PV.Discourse}, \codebox{TI.do}, \codebox{TI.money.count}, \codebox{NA.persons.actor}, \codebox{actor.3}, \codebox{actor.2}, \codebox{Pl.goal}, \codebox{NI.natural.force.goal}, \codebox{NI.place.goal}, \codebox{Der.Dim.goal}, \codebox{Px1Sg.goal} as the final set of variables for multivariate analysis. 
+
+\FloatBarrier
+\FloatBarrier
+
+\subsubsection{Transitive Animate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+D.actor & NDA.Relations.actor & 68 & 68 & 68 \\
+actor.3 & goal.3 & 1060 & 1185 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the Independent vs. Conjunct Alternation: VTAs \\ \label{tab:tacnjuni}
+  }
+\end{table}
+\FloatBarrier
+\FloatBarrier
+There were only two instances of bivariance: \codebox{NDA.Relations.actor} always occurred with \codebox{D.actor}, and third person actors and goals never occurred together (as one argument would need to be obviative in terms of Nêhiyawêwin grammar). \codebox{D.actor} and \codebox{actor.3} were removed to produce the following set of variables: \codebox{PV.Time}, \codebox{PV.Move}, \codebox{PV.Discourse}, \codebox{PV.Qual}, \codebox{PV.Position}, \codebox{PV.StartFin}, \codebox{TA.speech}, \codebox{TA.cognitive}, \codebox{TA.do}, \codebox{TA.food}, \codebox{Sg.actor}, \codebox{D.actor}, \codebox{NDA.Relations.actor}, \codebox{actor.1}, \codebox{actor.4}, \codebox{actor.2}, \codebox{goal.3}, \codebox{goal.4}, \codebox{NA.persons.goal}, \codebox{Px3Sg.goal}, and \codebox{Px3Pl.goal}
+
+
+
+\subsection{Conjunct Type}
+
+\FloatBarrier
+
+\subsubsection{Intransitive Inanimate Verbs}
+
+\FloatBarrier
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+Sg.actor & NI.object.actor & 134 & 119 & 110 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct Alternation: VIIs \\ \label{tab:iicnjuni}
+  }
+\end{table}
+The single instance of bivariance for the VIIs in the Conjunct Type alternation was the relationship between \codebox{Sg.actor} and \codebox{NI.object.actor}, where the latter nearly always occured alongside the former. Removing the \codebox{Sg.actor} prodice the variable set: \codebox{PV.Time}, \codebox{II.sense}, \codebox{II.natural.land}, \codebox{II.weather}, \codebox{NI.object.actor}.
+
+
+\subsubsection{Intransitive Animate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+NA.persons.actor & Pron.actor & 545 & 292 & 292 \\
+NA.persons.actor & Dem.actor & 545 & 149 & 149 \\
+Pron.actor & Dem.actor & 292 & 149 & 149 \\
+Pron.actor & Prox.actor & 292 & 91 & 91 \\
+Pron.actor & Med.actor & 292 & 56 & 56 \\
+D.actor & NDA.Relations.actor & 164 & 164 & 164 \\
+D.actor & Px1Sg.actor & 164 & 123 & 123 \\
+NDA.Relations.actor & Px1Sg.actor & 164 & 123 & 123 \\
+Dem.actor & Prox.actor & 149 & 91 & 91 \\
+Dem.actor & Med.actor & 149 & 56 & 56 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct Alternation: VAIs \\ \label{tab:aicnjuni}
+  }
+\end{table}
+
+In the VAIs, \codebox{Pron.actor} and \codebox{Dem.actor} always cooccured with \codebox{NA.persons.actor}; both \codebox{Dem.actor}, \codebox{Prox.actor}, and \codebox{Med.actor} were always accompanied by \codebox{Pron.actor}; \codebox{NDA.Relations.actor} and \codebox{Px1Sg.actor} always coccured with \codebox{D.actor}; \codebox{Px1Sg.actor} was always accompanied by \codebox{NDA.Relations.actor}. Finally, both \codebox{Prox.actor} and \codebox{Med.actor} always cooccured with \codebox{Dem.actor}. Removing \codebox{Prox.actor}, \codebox{Pron.actor}, \codebox{Dem.actor}, \codebox{Med.actor}, \codebox{D.actor}, \codebox{Px1Sg.actor} results in the following variables: \codebox{PV.Time}, \codebox{PV.Qual}, \codebox{PV.Discourse}, \codebox{PV.Position}, \codebox{PV.WantCan}, \codebox{AI.do}, \codebox{AI.cooking}, \codebox{AI.health}, \codebox{RdplW}, \codebox{NA.persons.actor}, \codebox{Sg.actor}, \codebox{Pl.actor}, \codebox{NDA.Relations.actor}, \codebox{actor.3}, \codebox{actor.1}, \codebox{actor.2}.
+
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1            & category2    & N1   & N2   & N12 \\
+\midrule
+NA.persons.actor      & Pron.actor & 162 & 88 & 88 \\
+actor.3 & actor.1     & 1195 & 693 & 0 \\
+Dem.goal & Pron.goal  & 216 & 216 & 216 \\
+Dem.goal & Prox.goal  & 216 & 122 & 122 \\
+Dem.goal & Med.goal   & 216 & 94 & 94 \\
+Pron.goal & Prox.goal & 216 & 122 & 122 \\
+Pron.goal & Med.goal  & 216 & 94 & 94 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct Alternation: VTIs \\ \label{tab:ticnjuni}
+  }
+\end{table}
+
+The bivariance for VTIs in the Conjunct Type Alternation concerned mostly goal related variables. The variables \codebox{Pron.goal}, \codebox{Prox.goal}, and \codebox{Med.goal} always cooccured with \codebox{Dem.goal}. Both \codebox{Prox.goal} and \codebox{Med.goal} cooccured with \codebox{Pron.goal}. Removing \codebox{Pron.actor}, \codebox{actor.1}, \codebox{Dem.goal}, \codebox{Pron.goal} results in: \codebox{PV.Time}, \codebox{PV.WantCan}, \codebox{PV.Position}, \codebox{TI.speech}, \codebox{NA.persons.actor}, \codebox{Sg.actor}, \codebox{actor.3}, \codebox{actor.2}, \codebox{Sg.goal}, \codebox{NI.object.goal}, \codebox{Prox.goal}, \codebox{NI.nominal.goal}, \codebox{Med.goal}, \codebox{D.goal}.
+
+
+
+
+
+
+
+\subsubsection{Transitive Animate Verbs}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\toprule
+category1        & category2  & N1   & N2   & N12 \\
+\midrule
+actor.3 & goal.3 & 893 & 897 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{
+   Bivariate results for the ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct Alternation: VTAs \\ \label{tab:tacnjuni}
+  }
+\end{table}
+
+The final class to discuss is the VTA, which had only a single bivariate pair. In this pair, \codebox{actor.3} and \codebox{goal.3} never occurred together. Removing \codebox{Actor.3} results in the final set of variables: \codebox{PV.Time}, \codebox{PV.Discourse}, \codebox{PV.Position}, \codebox{TA.cognitive}, \codebox{TA.speech}, \codebox{Prox.actor}, \codebox{actor.1}, \codebox{actor.2}, \codebox{goal.3}, \codebox{goal.4}, \codebox{goal.1}, \codebox{goal.2}, \codebox{Sg.goal}, \codebox{Px1Sg.goal}, \codebox{Prox.goal}.
+
+
+
+
+\section{Multivariate results}
+
+The following section details the results of the multivariate logistic regressions described in Chapter \ref{ch:method}. These results are presented as a set of tables where each row represents a fixed effect (i.e. those effects identified in the previous section). In addition, each table contains a row labelled \textit{Intercept}. The intercept represents a log-odds of 0 for all included effects. As well, the intercept can be seen as representing the effect for the aggregate of all the implicit values that are excluded from the set of variables used in modeling. As Agresti points out, the intercept is not usually of much explanatory value \citep[165]{agresti2013categorical}. Each effect is reported with an estimate and a \textit{p}-value. Only effects where \textit{p} is less than 0.05, unrounded, are reported. A summary table is given for each of the four verb classes in each of the three alternations being studied. 
+
+\subsection{Independent vs. Conjunct}
+In this alternation, all effects are reported for their influence on the occurrence of an \textbf{Independent} form. If an effect is negative, its occurrence is less likely to occur with an Independent form, and more likely to influence a verb to occur in the Conjunct. In the inverse, a positive effect indicated an effect is more likely to influence a verb to occur in the Independent and less likely to do so for the Conjunct.
+
+    \subsubsection{Intransitive Inanimate Verbs}
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+    \toprule
+            & \textbf{Independent} & \\
+                    \midrule
+            & Estimate & \textit{p}-value \\
+    \midrule
+(Intercept) & -1.370 & $<$ 0.001 \\
+PV.Time & 0.673 & 0.001 \\
+
+    \bottomrule
+    \end{tabular}
+    \caption{
+       Multivariate results for the Independent vs. Conjunct Alternation: VIIs \\ \label{tab:iiivcmv}
+      }
+    \end{table}
+    
+
+
+    In the alternation between the Independent and the Conjunct generally, the VIIs had only a single significant effect: preverbs of time, which increase the likelihood of an Independent form. In fact, of the 204 Independent forms, 81 contained a preverb of time, the vast majority of which (57) were the past tense \codebox{PV.ki}, as in (\ref{ivcii1}) and (\ref{ivcii2}). 
+    
+    \begin{exe}
+    \ex
+    \gll ``êy, \textbf{kî-miywâsin}," itwêw, nôcikwêsiw ana ...\\
+           Hey, {\textbf{life used to be good}} {she said}, {old woman} that ... \\
+    \trans ` ``Hey, life used to be good'' she said, that old woman ...' \citep[74]{Bearetal1992}
+    \label{ivcii1}
+    \end{exe}
+    
+        \begin{exe}
+    \ex
+    \gll \textbf{kî-âyiman} ôtê ka-pê-wîcihiwêyân maskwacîsihk ...\\
+         {\textbf{it was hard}} here {I to come live} maskwacîsihk ... \\
+    \trans `it was hard to come live here at maskwacîsihk ...'  \citep[2]{Minde1997kwayask}
+    \label{ivcii2}
+    \end{exe}
+            
+    
+    In each of the above examples, the verbs represent matrix clause verbs, particularly in (\ref{ivcii2}) where an embedded verb, \textit{ka-pê-wîcihiwêyân}, appears in a Conjunct form. This characterization of the Independent as a matrix form and the Conjunct as an embedded form fits with the description of the Order in \citet{Cook2008}. 
+
+    \subsubsection{Intransitive Animate Verbs}
+    
+        \begin{table}[H]
+        \centering
+        \begin{tabular}{lll}
+    \toprule
+            & \textbf{Independent} & \\
+                    \midrule
+            & Estimate & \textit{p}-value \\
+    \midrule
+(Intercept)  & -1.379 & $<$ 0.001 \\
+PV.Discourse & -0.944 & 0.001 \\
+actor.obv    & -0.812 & 0.001 \\
+Sg.actor     & -0.472 & 0.003 \\
+PV.Time      & 0.182 & 0.013\\
+        \bottomrule
+        \end{tabular}
+        \caption{
+           Multivariate results for the Independent vs. Conjunct Alternation: VAIs \\ \label{tab:aiivcmv}
+          }
+        \end{table}
+        
+Again, time increased the likelihood of the Independent, but there are now variables that increase the Conjunct. Discourse preverbs were the most strongly affecting Conjunct, closely followed by obviative actors. Less strongly effecting a Conjunct form is the \codebox{sg.actor} effect. This image of the Conjunct as a form dealing with a preverb of discourse and a non-proximal actor suggests that the Conjunct is an Order that represents a a structure beyond simple declarative clauses.
+
+
+\begin{exe}
+\ex
+\gll êkwa, wîhkât nânitaw \textbf{kâ-isi-mâyinikêhkâtocik} ôki nêhiyawak ... \\
+     and, ever simply {they act thus badly towards each other} these Cree ...  \\
+\trans
+\label{ivcai1}
+\end{exe}
+
+In (\ref{ivcai1}) we see a Conjunct type verb, \textit{kâ-isi-mâyinikêhkâtocik}, which takes the discourse preverb \textit{-isi-}. A large number of the Independent forms in this alternation and verb class are simply the quotative \textit{itwêw}: 919 of 2157 tokens, to be exact. Despite this, the verb class \codebox{AI.Speech} was not found to be a significant effect on the Independent Order.
+
+    \subsubsection{Transitive Inanimate Verbs}
+            \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+            \toprule
+            & \textbf{Independent} & \\
+                    \midrule
+            & Estimate & \textit{p}-value \\
+    \midrule
+(Intercept)      & -0.199 & 0.121 \\
+PV.Discourse     & -2.064 & $<$ 0.001 \\
+TI.money.count   & -1.914 & 0.019 \\
+NI.place.goal    & -1.441 & 0.026 \\
+NDI.Body.goal    & -1.032 & 0.044 \\
+actor.3          & -0.793 & $<$ 0.001 \\
+NI.nominal.goal  & -0.759 & 0.009 \\
+TI.do            & -0.766 & $<$ 0.001 \\
+actor.2          & 0.372  & 0.038 \\
+NA.persons.actor & 0.495  & 0.001 \\
+Px1Sg.goal       & 1.613  & 0.005 \\
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. Conjunct Alternation: VTIs \\ \label{tab:tiivcmv}
+              }
+            \end{table}
+        
+The VTIs had many significant effects. As with the other classes, the majority of these effects showed influence towards a Conjunct paradigm.  Again the Conjunct has to do with discourse. Verbs of action and verbs of money/counting also increased Conjunct. Place goals, nominalized goals, and body part goals similarly increased the likelihood of the Conjunct, as did the third person actors. Person actors and especially second person actors, as well as those with goals possessed by first persons. This suggests the Independent to be an Order more related to local participants or those dependent on them as in (\ref{ivcti1}), while the Conjunct is more likely to have an overt goal and a non-local actor, as in (\ref{ivcti2}).
+
+\begin{exe}
+\ex
+\gll ... \textbf{kikiskêyihtênâwâw} kîstawâw ...\\
+     ... {\textbf{you all know it}} {you all also} ...\\
+\trans `... \textbf{you all know this} ...' \citep[40]{AhenakewAlice2000}
+\label{ivcti1}
+\end{exe}
+
+\begin{exe}
+\ex
+\gll ... kayâs      ayis ês        ... \textbf{ê-kî-wêpinahkik}       ... wîwatiwâwa           ...\\
+     ... {long ago} for  evidently ... {\textbf{s/he throws it away}} ... {their medicine-bundles} ...\\
+\trans `... for long ago evidently \textbf{they had thrown away} their medicine-bundles ...' \citep[164]{AhenakewAlice2000}
+\label{ivcti2}
+\end{exe}
+
+Notably, unlike the VII and VAI classes, preverbs of time were not significant effects for either outcome. Curiously, the prescence of overt goals of any sort were not significant for the Independent Order. Perhaps the most striking aspect of these results, is that no semantic class of overt goals produced a significant effect in modelling the Independent. It is unclear why this might be, though the fact that the Conjunct outcome had more than double the number of observations than the Independent may be the cause. 
+
+
+    \subsubsection{Transitive Animate Verbs}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+    \toprule
+            & \textbf{Independent} & \\
+                    \midrule
+            & Estimate & \textit{p}-value \\
+    \midrule
+(Intercept)     & -0.386 & 0.423 \\
+TA.food         & -1.723 & 0.007 \\
+PV.Position     & -1.026 & 0.014 \\
+actor.obv       & -0.921 & $<$ 0.001 \\
+PV.Move         & -0.612 & 0.005 \\
+PV.Time         & -0.342 & $<$ 0.001\\
+Sg.actor        & -0.608 & 0.044 \\
+goal.2          & -0.487 & 0.034 \\
+NA.persons.goal & -0.352 & 0.010 \\
+goal.obv        & -0.314 & 0.029 \\
+actor.1         & 0.485  & $<$ 0.001 \\
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. Conjunct Alternation: VTAs \\ \label{tab:taivcmv}
+              }
+            \end{table}
+            
+    For VTAs, verbs which regarded food strongly motivated Conjunct forms. Preverbs of position, movement, and time all increased the likelihood of the Conjunct Order, as did obviative actors/goals, person goals, and singular actor. Only one effect was associated with the Independent in the VTAs, that of first person actors. In this class, it seems the Conjunct Order is, unlike in other cases, non-present in nature, as well as being modified by preverbs. Independent still associated with a local actor, but not second person. That Conjunct is associated with obviative fits with the VII and VAI classes.
+    
+    \begin{exe}
+    \ex
+    \gll êkwatowihk aya ...  êkwatowa   ê-itikot,              manicôsa             ê-mowikot,"         kî-itwêw mâna\\
+         {`}         {um} ... {like that'} { s/he says to him  } {insect.\textsc{obv}} {s/he eats him/her} {He said} but/also/used to \\
+    \trans `fing pagex' (Cecila Masuskapo (Chapter 2))
+    \label{ivcta1}
+    \end{exe}
+    
+ In (\ref{ivcta1}) we see a VTA, \textit{ê-mowikot}, that represents not only verbs of food and eating, but also those that have an obviative actor.
+ 
+ It is worth noting that the \textit{only} significant effect for the Independent VTAs was first person actors. This discrepency may simply be written off as an issue of data sparsity, as there were 1071 Independent TAs in this alternation and 1931 Conjunct forms, though this difference In data size is not so big that one would expect numerous effects to be significant for the Conjunct while only one was so for the Independent. 
+    
+
+\FloatBarrier
+
+\subsection{Independent vs. ê-Conjunct}
+As in the previous alternation, positive effects represent an influence of an effect on producing an Independent form; here, however, negative effects represent an increase in likelihood specifically of the ê-Conjunct form.
+
+    \subsubsection{Intransitive Inanimate Verbs}
+            \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+            \toprule
+                                    & \textbf{Independent} & \\
+                    \midrule
+                                & Estimate    & (\textit{p}-value) \\
+            \midrule
+(Intercept) & -0.932 & $<$ 0.001 \\
+PV.Time & 0.654 & 0.003 \\
+
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. ê-Conjunct Alternation: VIIs \\ \label{tab:tiivcmv}
+              }
+            \end{table}
+            
+            As in the alternation between the Independent and the general Conjunct, the VIIs had only one significant effect: preverbs of time, which increased the likelihood of observing an Independent form. 
+            
+            
+            
+            
+            
+    
+    \subsubsection{Intransitive Animate Verbs}
+            \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+            \toprule
+                                    & \textbf{Independent} \\
+                    \midrule
+                        & Estimate    & (\textit{p}-value) & \\
+            \midrule
+(Intercept) & -1.529 & $<$ 0.001 \\
+PV.Discourse & -1.087 & $<$ 0.001 \\
+PV.Time & 0.204 & 0.008 \\
+actor.3 & 0.373 & 0.007 \\
+actor.1 & 0.632 & $<$ 0.001 \\
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. ê-Conjunct Alternation: VAIs \\ \label{tab:tiivcmv}
+              }
+            \end{table}
+            
+         In the VAIs, discourse preverbs again strongly effected ê-Conjunct forms in the VAIs, while all other significant effects increased the likelihood of the Independent Order: preverbs of time and first and third person actors. The latter of these presented to strongest Independent effects.  
+
+         These results suggest again an Independent form which is more focused in simple declarative structures, as in (\ref{ive1}), where the main verb \textit{kî-atoskêw} take an Independent form. 
+
+
+        \begin{exe}
+        \ex
+        \gll  êwakw âna mâna nisis, Sam Minde, \textbf{kî-atoskêw} pêyakwan âta kâ-minihkwêt \\
+              {There it is} {that one} {habitually} {father-in-law's brother}, Sam Minde, \textbf{worked} similar although {he drinks}.\\
+        \trans `My father-in-law's brother, Sam Minde, \textbf{still used to work} the same, even when he drank \citep[102]{Minde1997kwayask}.'
+        \label{ive1}
+        \end{exe}
+        
+        There are no significant effects in the form of semantic classes for the actual verb lemmas. This is true even in spite of the fact that nearly 21\% of all Independent VAIs were forms of \textit{itwêw}, `S/he says.' This quotative is tagged as a \codebox{AI-Speech} verb, yet this effect was not found to be significant in the logistic prediction models for the Independent vs. ê-Conjunct alternation.  
+
+
+            
+            
+            
+    \subsubsection{Transitive Inanimate Verbs}
+            \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+            \toprule
+                                    & \textbf{Independent} \\
+                    \midrule
+                & Estimate   & (\textit{p}-value) &   \\
+            \midrule
+(Intercept) & 0.188 & 0.193 \\
+PV.Discourse     & -2.366 & $<$ 0.001 \\
+TI.money.count   & -2.029 & 0.019 \\
+NI.place.goal    & -1.604 & 0.018 \\
+TI.do            & -0.912   & $<$ 0.001 \\
+actor.3          & -0.797 & $<$ 0.001 \\
+NA.persons.actor & 0.583 & 0.001 \\
+actor.2          & 0.851  & $<$ 0.001 \\
+Px1Sg.goal       & 1.275 & 0.043 \\
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. ê-Conjunct Alternation: VTIs \\ \label{tab:tiivcmv}
+              }
+            \end{table}
+        
+        For VTIs in the Independent vs. ê-Conjunct Alternation, preverbs of discourse again strongly increased the likelihood of an ê-Conjunct form. Unlike the previous verb classes, VTIs also contained significant effects in terms of semantic classes. Verbs of money and action, as well as goals representing places all increased the likelihood of an ê-Conjunct form. Additionally, third person actors corresponded to the ê-Conjunct outcome. Actors representing people, second person actors, and goals possessed by first person actors all increased the likelihood of the Independent Order. 
+        
+
+        \begin{exe}
+        \ex
+        \gll êkoni kahkiyaw ê-kî-wâpahtamân tânis âya \textbf{ê-kî-isi-paminahkik} kîkway ... \\
+             those all      {I saw}         how   hm  {\textbf{they look after it}} something  ...\\
+        \trans `I saw all these things, how \textbf{they looked after} things ...' \citep[96]{Minde1997kwayask}.
+        \label{ive2}
+        \end{exe}
+        
+        In (\ref{ive2}), \textit{ê-kî-isi-paminahkik} represents a third person action verb with a discourse preverb that heads a non-main clause and occurs in the ê-Conjunct. It is worth noting, however, that the main verb in this excerpt, \textit{ê-kî-wâpahtamân} is also in the ê-Conjunct. Using the information from \citet{Cook2008} and the hypothesis that the Conjunct in general is a less \textit{main} or indexical than the Independent, one might expect that \textit{ê-kî-wâpahtamân} to occur in the Independent. 
+
+            
+    \subsubsection{Transitive Animate Verbs}
+            \begin{table}[H]
+            \centering
+            \begin{tabular}{lll}
+            \toprule
+                        & \textbf{Independent} \\
+                    \midrule
+                        & Estimate & (\textit{p}-value) & \\
+            \midrule
+TA.food & -1.648 & 0.003 \\
+PV.Position & -1.342 & 0.001 \\
+PV.Discourse & -1.108 & 0.003 \\
+actor.obv & -0.801 & 0.005 \\
+PV.Move & -0.506 & 0.032 \\
+PV.Time & -0.331 & 0.001 \\
+actor.1 & 0.539 & 0.001 \\
+actor.2 & 1.807 & $<$ 0.001 \\
+            \bottomrule
+            \end{tabular}
+            \caption{
+               Multivariate results for the Independent vs. ê-Conjunct Alternation: VTAs \\ \label{tab:tiivcmv}
+              }
+            \end{table}
+
+            In the Transitive Animate Verb class, verbs to do with food and preverbs of discourse strongly influenced a verb to occur in the ê-Conjunct. Preverbs of discourse and position, along with verbs with an obviative actor, were mild effects influencing the ê-Conjunct. More mild effect, preverbs of movement and time, were also present. Local actors were moderate to strong effects, with second person actors being the most strong effect and increased the likelihood of the Independent. This again suggests the ê-Conjunct as a marked form associated with discursively marked and less proximate actions, as well as those displaced in time. This is reflected in (\ref{iveta1}), where the main verb, \textit{ê-kî-ayi-mâkohikot} is given in the ê-Conjunct.
+
+
+        \begin{exe}
+        \ex
+        \gll iyikohk mâna \textbf{ê-kî-ayi-mâkohikot} anihi wîhtikowa tâpwê ... \\
+             {so much} {truly} {\textbf{he pressed him}} {that} {windigo.\textsc{obv}} truly ...        \\
+        \trans `And he was truly pressed upon by that windigo ...' \citep[34]{AhenakewAlice2000}
+        \label{iveta1}
+        \end{exe}
+
+
+
+
+\FloatBarrier
+
+\subsection{Conjunct Type: ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct}
+
+The final alternation detailed in this section is multinomial: ê-Conjunct, kâ-Conjunct, and Other-Conjunct forms. As a result, while a positive effect for, as an example, an ê-Conjunct outcome does represent an increased likelihood of ê-Conjunct forms, a negative effect for the same one can not be interpreted as an effect toward some other specific outcome as in the previous alternations. Instead, a negative effect can simply be said to represent a decrease in likelihood for a given outcome. This is because, while in previous alternations there were only two possible options (and thus the absence of one implies the presence of the other), in multinomial results framed through a one-vs-rest heuristic, the absence of one outcome implies the presence of \textit{any} other possible outcomes. In the tables below, the estimates are given in each cell, with a \textit{p} value being given underneath in parenthesis.
+
+
+    \subsubsection{Intransitive Inanimate Verbs}
+                \begin{table}[H]
+                \centering
+                \begin{tabular}{llll}
+                \toprule
+                            & \textbf{ê-Conjunct}   & \textbf{kâ-Conjunct}  & \textbf{Other} \\
+                                            \midrule
+                            & Estimate     & Estimate     & Estimate\\
+                            & (\textit{p}-value) & (\textit{p}-value) & (\textit{p}-value) \\
+                \midrule
+                
+(Intercept)    & \cellcolor[HTML]{B6D7A8}{1.468} & \cellcolor[HTML]{EA9999}{-2.554} & \cellcolor[HTML]{EA9999}{-2.452} \\
+               & \cellcolor[HTML]{B6D7A8}{(0.004)} & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      \\
+II.weather &       & \cellcolor[HTML]{B6D7A8}{1.596}  &        \\
+               &       & \cellcolor[HTML]{B6D7A8}{(0.017)}  &        \\ 
+
+
+    
+                \bottomrule
+                \end{tabular}
+                \caption{
+                   Multivariate results for the Conjunct Type Alternation: VIIs \\ \label{tab:iiecnjall}
+                  }
+                \end{table}
+                
+    In Intransitive Inanimate Verbs, there was a single significant effect: weather verbs strongly increased the likelihood of the kâ-Conjunct. This effect was not significant for other outcomes. 
+    
+        \begin{exe}
+        \ex
+        \gll   mâka mân      ânohc \textbf{kâ-kîsikâk}    kâ-mâmitonêyihtamân ...\\
+               but {used to} today {\textbf{it is today}} {I think about it} ...\\
+        \trans `But when I think of it today ...' \citep[218]{Bearetal1992}
+        \label{ivcii1}
+        \end{exe}
+        
+        \begin{exe}
+        \ex
+        \gll   ... âta \textbf{kâ-kimiwahk} ...\\
+               ... allthough {\textbf{it is raining}} ...\\
+        \trans `... even when it was raining ...' \citep[36]{Minde1997kwayask}
+        \label{ivcii1}
+        \end{exe}
+    
+   In (\ref{ivcii1}), \textit{kâ-kîsikâk} is used nominally. The kâ-Conjunct seems to represent a non-hypothetical conditional form, as opposed to the relativized form as with other verb classes.
+                
+ \FloatBarrier
+    
+    
+    \subsubsection{Intransitive Animate Verbs}
+                \begin{table}[H]
+                \centering
+                \begin{tabular}{llll}
+                \toprule
+                            & \textbf{ê-Conjunct}   & \textbf{kâ-Conjunct}  & \textbf{Other} \\
+                                            \midrule
+                            & Estimate     & Estimate     & Estimate\\
+                            & (\textit{p}-value) & (\textit{p}-value) & (\textit{p}-value) \\
+                \midrule
+                
+(Intercept)         & \cellcolor[HTML]{B6D7A8}{0.923}  & \cellcolor[HTML]{EA9999}{-1.342} & \cellcolor[HTML]{EA9999}{-3.052} \\
+                    & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      \\
+actor.2             & \cellcolor[HTML]{EA9999}{-1.147} &        & \cellcolor[HTML]{B6D7A8}{1.849}  \\
+                    & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      &        & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      \\
+Sg.actor            & \cellcolor[HTML]{EA9999}{-0.695} & \cellcolor[HTML]{B6D7A8}{0.633}  &        \\
+                    & \cellcolor[HTML]{EA9999}{(0.001)}  & \cellcolor[HTML]{B6D7A8}{(0.004)}  &        \\
+actor.1             & \cellcolor[HTML]{B6D7A8}{0.471}  & \cellcolor[HTML]{EA9999}{-0.553} &        \\
+                    & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      &        \\
+NDA.Relations.actor & \cellcolor[HTML]{B6D7A8}{0.561}  &        & \cellcolor[HTML]{EA9999}{-2.744} \\
+                    & \cellcolor[HTML]{B6D7A8}{(0.028)}  &        & \cellcolor[HTML]{EA9999}{(0.01)}   \\
+actor.3             & \cellcolor[HTML]{B6D7A8}{0.563}  & \cellcolor[HTML]{EA9999}{-0.653} &        \\
+                    & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}      &        \\
+RdplW               & \cellcolor[HTML]{B6D7A8}{0.616}  &        &        \\
+                    & \cellcolor[HTML]{B6D7A8}{(0.027)}  &        &        \\
+PV.Discourse        & \cellcolor[HTML]{B6D7A8}{0.791}  & \cellcolor[HTML]{EA9999}{-0.719} &        \\
+                    & \cellcolor[HTML]{B6D7A8}{(0.003)}  & \cellcolor[HTML]{EA9999}{(0.024)}  &        \\
+PV.Position         & \cellcolor[HTML]{B6D7A8}{1.101}  & \cellcolor[HTML]{EA9999}{-0.985} &        \\
+                    & \cellcolor[HTML]{B6D7A8}{(0.001)}& \cellcolor[HTML]{EA9999}{(0.014)}  &        \\
+PV.WantCan          &        & \cellcolor[HTML]{EA9999}{-1.227} & \cellcolor[HTML]{B6D7A8}{1.83}   \\
+                    &        & \cellcolor[HTML]{EA9999}{(0.048)}  & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      \\
+AI.cooking          &        &  &        \\
+                    &        &   &        \\
+PV.Qual             &        &        & \cellcolor[HTML]{EA9999}{-1.637} \\
+                    &        &        & \cellcolor[HTML]{EA9999}{(0.026)}  \\
+AI.health           &        &        & \cellcolor[HTML]{B6D7A8}{1.359}  \\
+                    &        &        & \cellcolor[HTML]{B6D7A8}{(0.005)}  \\
+NA.persons.actor    &        & \cellcolor[HTML]{B6D7A8}{0.379}  &        \\
+                    &        & \cellcolor[HTML]{B6D7A8}{(0.04)}   &        \\
+Pl.actor            &        & \cellcolor[HTML]{B6D7A8}{0.578}  &        \\
+                    &        & \cellcolor[HTML]{B6D7A8}{(0.015)}  &       \\                \bottomrule
+                \end{tabular}
+                \caption{
+                   Multivariate results for the Conjunct Type Alternation: VAIs \\ \label{tab:aiecnjall}
+                  }
+                \end{table}
+                
+                
+As previously, effects were far more numerous for VAIs than VIIs. Second person actors decreased the likelihood of the ê-Conjunct while increasing the likelihood of the Other-Conjunct class. Singular actors decreased the likelihood of the ê-Conjunct but increases the likelihood of the kâ-Conjunct, as do third person actors, preverbs of discourse, and preverbs of position (the latter most strongly). Actors belonging to the class of dependent relations increased the likelihood of ê-Conjunct but strongly decrease the likelihood of the Other-Conjunct class. The final class which affects the the ê-Conjunct is the presence of weak/light reduplication, which acted as an effect for no other outcome. Preverbs of desire/ability strongly decreased the likelihood the kâ-Conjunct and similarly increased the likelihood of the Other-Conjunct. Verbs of cooking moderately decreased the likelihood of the kâ-Conjunct. Preverbs of quality and verbs of health had strong effects on the Other-Conjunct, the former a negative effect and the latter a positive. Finally, actors representing people and plural actors more generally had a mild effect increasing the likelihood of a kâ-Conjunct.
+
+
+    \begin{exe}
+    \ex
+    \gll ... êkosi namôya kikiskêyihtênânaw tânitê \textbf{ê-isi-pimohtêcik} êkwa kitôsk-âyiminawak ...\\
+         ... êkosi \textsc{neg} {we all know it} where {\textbf{they walked thus}} and {our kids} ... \\
+    \trans `... so we do not know where our young people are going ...' \citep[42-43]{VandallDouquette1987}
+    \label{cnjtypeai}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll â, anohc kâ-kîsikâk, êwak ôhc êtikwê ayisiyiniw \textbf{kâ-maskawâtisit} ... \\
+         â, today today,      this from perhaps person {\textbf{s/he who is strong}} ...\\
+    \trans `Well, that must be the reason why people are so strong today ...' \citep[364]{Bearetal1992}
+    \label{cnjtypeai2}
+    \end{exe}
+
+
+    \begin{exe}
+    \ex
+    \gll tânisi k-êtôtamân, \textbf{mêstohtêyêko} pê-miyikawiyâni wêpinâson ...\\
+         what   {I will do}, {\textbf{when you have all passed away}} {if someone comes and gives me} flag ... \\
+    \trans `What will I do when you are all gone if someone comes and gives me cloth ...' \citep[128]{Bearetal1992}
+    \label{cnjtypeai3}
+    \end{exe}
+
+ 
+ In this alternation as in others, the ê-Conjunct is associated with first and second persons, and those with preverbs of discourse and position, as in (\ref{cnjtypeai}). The majority of the kâ-Conjunct effects were negatively related, with the only positive effects being actor based: \codebox{Sg.actor}, \codebox{Pl.actor}, and \codebox{NA.persons.actor}, as seen in (\ref{cnjtypeai2}). The effects of the Other-Conjunct don't seem to form a cohesive class, though a verb with a second person actor and verb of health (in this case, \textit{mêstohtêyêko}, meaning `when you have all passed away'), is represented in (\ref{cnjtypeai3}).
+ 
+ 
+ 
+ 
+ 
+ 
+ \FloatBarrier
+ 
+    \subsubsection{Transitive Inanimate Verbs}
+        
+                    \begin{table}[H]
+                    \centering
+                    \begin{tabular}{llll}
+                    \toprule
+                                & \textbf{ê-Conjunct}   & \textbf{kâ-Conjunct}  & \textbf{Other} \\
+                                & Estimate     & Estimate     & Estimate\\
+                                & (\textit{p}-value) & (\textit{p}-value) & (\textit{p}-value) \\
+                    \midrule
+(Intercept)            & \cellcolor[HTML]{B6D7A8}{1.468}       & \cellcolor[HTML]{EA9999}{-2.361} & \cellcolor[HTML]{EA9999}{-2.652} \\
+                       & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)} & \cellcolor[HTML]{EA9999}{($<$ 0.001)}                      & \cellcolor[HTML]{EA9999}{($<$ 0.001)}|     \\
+actor.2                & \cellcolor[HTML]{EA9999}{-1.21}       &                                  & \cellcolor[HTML]{B6D7A8}{1.847}  \\
+                       & \cellcolor[HTML]{EA9999}{($<$ 0.001)} &                                  & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      \\
+Prox.goal              & \cellcolor[HTML]{EA9999}{-1.039}      & \cellcolor[HTML]{B6D7A8}{0.898}  &        \\
+                       & \cellcolor[HTML]{EA9999}{($<$ 0.001)} & \cellcolor[HTML]{B6D7A8}{(0.001)}                          &        \\
+PV.WantCan             & \cellcolor[HTML]{EA9999}{-1.031}      & \cellcolor[HTML]{B6D7A8}{1.365}  &        \\
+                       & \cellcolor[HTML]{EA9999}{(0.003)}     & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}                      &        \\
+TI.speech              & \cellcolor[HTML]{EA9999}{-0.776}      & \cellcolor[HTML]{B6D7A8}{0.817}  &        \\
+                       & \cellcolor[HTML]{EA9999}{(0.024)}     & \cellcolor[HTML]{B6D7A8}{(0.021)}                          &        \\
+NI.nominal.goal        & \cellcolor[HTML]{EA9999}{-0.753}      &                                  & \cellcolor[HTML]{B6D7A8}{0.86}   \\
+                       & \cellcolor[HTML]{EA9999}{(0.007)}     &                                  & \cellcolor[HTML]{B6D7A8}{(0.013)}  \\
+Sg.goal                & \cellcolor[HTML]{EA9999}{-0.479}      &                                  &        \\
+                       & \cellcolor[HTML]{EA9999}{(0.015)}     &                                  &        \\
+PV.Position            & \cellcolor[HTML]{B6D7A8}{2.362}       & \cellcolor[HTML]{EA9999}{-2.19}  & \cellcolor[HTML]{EA9999}{-2.203} \\
+                       & \cellcolor[HTML]{B6D7A8}{(0.002)}     & \cellcolor[HTML]{EA9999}{(0.035)}                          & \cellcolor[HTML]{EA9999}{(0.045)}  \\
+NA.persons.actor       &                                       & \cellcolor[HTML]{B6D7A8}{0.791}  &        \\
+                       &                                       & \cellcolor[HTML]{B6D7A8}{(0.002)}                          &        \\
+NI.object.goal         &                                       &                                  & \cellcolor[HTML]{EA9999}{-0.988} \\
+                       &                                       &                                  & \cellcolor[HTML]{EA9999}{(0.004)}  \\
+Med.goal               &                                       &                                  & \cellcolor[HTML]{B6D7A8}{0.983}  \\
+                       &                                       &                                  & \cellcolor[HTML]{B6D7A8}{(0.014)}  \\
+          \bottomrule
+                    \end{tabular}
+                    \caption{
+                       Multivariate results for the Conjunct Type Alternation: VTIs \\ \label{tab:tiecnjall}
+                      }
+                    \end{table}
+        
+        In the Conjunct Type alternation for VTIs, second person actors strongly decreased the likelihood of the ê-Conjunct while similarly increasing the likelihood of an Other-Conjunct outcome. Proximate goals, preverbs of desire and ability, and verbs of speech all strongly decreased the likelihood of the ê-Conjunct while strongly increasing the kâ-Conjunct. Nominalized goals strongly decreased the likelihood of the ê-Conjunct, but instead of being significant in the kâ-Conjunct outcome, this effect strongly increased the likelihood to the Other-Conjunct. Singular goals had a moderate negative effect on the ê-Conjunct outcome alone. Preverbs of position had extremely strong effects for all outcomes: positive for the ê-Conjunct and negative for the other outcomes. Person actors strongly increased the likelihood of the kâ-Conjunct, and inanimate objects negatively influenced the Other-Conjunct outcome. Finally, medial goals strongly increased the likelihood of the Other-Conjunct class. 
+
+        These results do not create clear profiles of these outcomes. What can be abstracted is that the ê-Conjunct is less likely to be used with proximal goals, less likely to be a verb of speech, and more likely to indicate physical positionality (as in (\ref{ivcti})); that the kâ-Conjunct is more likely to have a proximal goal, have a person actor and not have a preverb of position (as in (\ref{ivcti2})); and the Other outcome has a second person actor, a medial goal and no a preverb of position (as in (\ref{ivcti3})).
+        
+    \begin{exe}
+    \ex
+    \gll ... môy \textbf{ê-ohci-kaskihtâyâhk} ka-kîsowihkasoyâhk ...\\
+         ... no  {\textbf{we did not manage}} {we get warm} ... \\
+    \trans `... \textbf{we did not manage} to get warm ...' \citep[116]{Minde1997kwayask}
+    \label{ivcti}
+    \end{exe}
+        
+    \begin{exe}
+    \ex
+    \gll ôhi wiya kayâhtê ayisiyiniwak \textbf{kâ-kî-âpacihtâcik} ...\\
+         this that before people       {\textbf{those who used to use}} ... \\
+    \trans `The things that \textbf{people used to use} formerly  ...' \citep[294]{Bearetal1992}
+    \label{ivcti2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll kwayask êkwa anita \textbf{ta-kakwê-pimipayihtâyêk} anima kâ-nêhiyawêyêk ...\\
+         effort and there \textbf{{you all try to operate it}} this {you who speak Cree} ... \\
+    \trans `\textbf{you should make a serious effort} to keep speakings your Cree' \citep[26]{Whitecalf1993}
+    \label{ivcti3}
+    \end{exe}
+        
+        
+
+ \FloatBarrier
+
+    \subsubsection{Transitive Animate Verbs}
+                \begin{table}[H]
+                \centering
+                \begin{tabular}{llll}
+                    \toprule
+                                & \textbf{ê-Conjunct}   & \textbf{kâ-Conjunct}  & \textbf{Other} \\
+                                & Estimate     & Estimate     & Estimate\\
+                                & (\textit{p}-value) & (\textit{p}-value) & (\textit{p}-value) \\
+                    \midrule
+                    (Intercept)          &           &        & \cellcolor[HTML]{EA9999}{-2.601} \\
+                     &           &        & \cellcolor[HTML]{EA9999}{(0.022)}  \\
+actor.2              & \cellcolor[HTML]{EA9999}{-1.595}    &        & \cellcolor[HTML]{B6D7A8}{1.829}  \\
+                     & \cellcolor[HTML]{EA9999}{($<$ 0.001)}       &        & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}      \\
+Prox.actor           & \cellcolor[HTML]{EA9999}{-0.938}    & \cellcolor[HTML]{B6D7A8}{1.324}  &        \\
+                     & \cellcolor[HTML]{EA9999}{(0.021)}   & \cellcolor[HTML]{B6D7A8}{(0.001)}  &        \\
+Sg.goal              & \cellcolor[HTML]{EA9999}{-0.46}     & \cellcolor[HTML]{B6D7A8}{0.585}  &        \\
+                     & \cellcolor[HTML]{EA9999}{(0.039)}   & \cellcolor[HTML]{B6D7A8}{(0.012)}  &        \\
+actor.1              & \cellcolor[HTML]{B6D7A8}{0.432}     &        & \cellcolor[HTML]{EA9999}{-0.751} \\
+                     & \cellcolor[HTML]{B6D7A8}{(0.007)}   &        & \cellcolor[HTML]{EA9999}{(0.001)}  \\
+Px1Sg.goal           & \cellcolor[HTML]{B6D7A8}{0.695}     &        &        \\
+                     & \cellcolor[HTML]{B6D7A8}{(0.048)}   &        &        \\
+{PV.Discourse}       & \cellcolor[HTML]{B6D7A8}{1.359}     &        & \cellcolor[HTML]{EA9999}{-2.463} \\
+                     & \cellcolor[HTML]{B6D7A8}{($<$ 0.001)}       &        & \cellcolor[HTML]{EA9999}{(0.018)}  \\
+PV.Position          & \cellcolor[HTML]{B6D7A8}{1.775}     & \cellcolor[HTML]{EA9999}{-1.459} &        \\
+                     & \cellcolor[HTML]{B6D7A8}{(0.004)}   & \cellcolor[HTML]{EA9999}{(0.05)}   &        \\
+TA.cognitive         &           & \cellcolor[HTML]{EA9999}{-0.428} & \cellcolor[HTML]{B6D7A8}{0.667}\\
+                     &           & \cellcolor[HTML]{EA9999}{(0.048)}  & \cellcolor[HTML]{B6D7A8}{(0.016)}  \\
+                \bottomrule
+                \end{tabular}
+                \caption{
+                   Multivariate results for ê-Conjunct vs. Other Conjuncts Alternation: VTAs \\ \label{tab:taecnjall}
+                  }
+                \end{table}
+
+        Results for the VTAs were similar to those for VTIs. Second person actors strongly decreased the likelihood of the ê-Conjunct and increased the likelihood of the Other-Conjunct outcome. Proximate actors and singular goals were strong and moderate effect decreasing the likelihood for the ê-Conjunct outcome and increasing the likelihood of the kâ-Conjunct. First person actors mildly increased the likelihood of the ê-Conjunct and had a strong negative effect for the Other-Conjunct outcome. Goals possessed by singular first persons were a strong effect for the ê-Conjunct. Preverbs of discourse had a strong positive effect for the ê-Conjunct and a very strong negative effect for the Other-Conjunct. Position preverbs strongly increased the likelihood for the ê-Conjunct and decreased the likelihood of the kâ-Conjunct. Finally, the only verb semantic class that showed a significant effect were those verbs of cognition, which had a moderate negative effect on the kâ-Conjunct and a strong positive effect for the Other-Conjunct. 
+        
+        
+        This creates a profile wherein the ê-Conjunct is associated with first person actors as well as preverbs of discourse, similarly to the way the outcome is framed in the Independent vs. ê-Conjunct alternation. This is exemplified in (\ref{cnjta1}). The kâ-Conjunct class had fewer positive effects, but a verb with a proximate actor (and lacking a position preverb) that has not to do with speech is presented in (\ref{cnjta2}). Finally, the Other Conjunct class as embodied by second person actors on verbs of cognition and a lack of discourse preverb is presented in (\ref{cnjta3}).
+        
+        
+    \begin{exe}
+    \ex
+    \gll ... mêkosi piko ê-isi-wîhtamâtakok ...\\
+         ... {that is all} only {I tell you about it thus} ... \\
+    \trans `... that is all I am telling you ...' \citep[66]{KaNipitehtew1998}
+    \label{cnjta1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... {ahpô êtikwê} awa ê-wî-kiskinohtahikoyâhk ...\\
+         ... {maybe} it {s/he is going to show us the way} ... \\
+    \trans `... maybe it is going to show us the way ...' \citep[130]{Bearetal1992}
+    \label{cnjta2}
+    \end{exe}
+        
+        
+    \begin{exe}
+    \ex
+    \gll ... ka-kitâpamâyêkok iskwêwak ôtê ê-sâkaskinêkâpawicik ...\\
+         ... {you all look at them} women {over there} {they stand crowded} ... \\
+    \trans `... for you watch these women standing crowded over there ...' \citep[126]{KaNipitehtew1998}
+    \label{cnjta3}
+    \end{exe}
+        
+        
+        
+        
+        
+        
+        
+
+\section{Model Statistics}
+In assessing the results detailed above, we must also scrutinize the predictive models that produce such results. \citet{polytomous} provides a function for this, \codebox{modelstats}. This function reports details specifics of how predictive models operate, how often they predict a correct outcome, measures of precision vs recall, tau ($\tau$) measures of how much better than the baseline proportions the model's classifications are, and pseudo-R\^{2} ($\rho^{2}$) measures, a measure of \textit{reduction} is baddness-of-fit.
+
+In the following subsections, tables for each of the verb classes are given for each alternation. For the final, tripartite, alternation being studied, a model statistic table is given for each of the outcomes (e.g. ê-Conjunct vs all-other Conjunct forms (\textit{other}). In the model statistics tables, column names with circumflexes over their entirety (e.g. $\widehat{\textsc{cnj}}$ and $\widehat{\textsc{ind}}$) represent how many times the model \textit{predicted} an outcome. Rows without circumflexed titles (e.g. \textsc{cnj} represents observed outcomes used to train the model. The cells represent how often a token with a predicted outcome was actually observed with a particular outcome (e.g. the cell $C_{\textsc{cnj}|\widehat{\textsc{ind}}}$ represents how many Conjunct tokens were predicted to be Independent.).
+
+
+
+For all verb classes in the Independent vs. Conjunct alternation, overall model accuracy was roughly 75\%. The $\tau$ score for the VIIs were 0.35 (representing a moderate increase in model classification efficacy over a baseline), the VAI model had a slightly better score of 0.50, and both VTI and VTA models have $\tau$ scores of 0.41. Though the VAI, VTI, and VTA models have slightly large $\tau$ values, these are all still only  moderate values.
+
+The VII, VTI, and VTA models all have moderate $\rho^{2}$ values, of 0.14 (for the VIIs) to 0.18 (for the VTIs and VTAs). The VAI model, on the other hand, has a moderate-to-large $\rho^{2}$ value of 0.26. This represents a well fitting model. 
+
+In terms of recall and precision, all models show a very high recall for the Conjunct outcome, usually around 90\%. Recall for Independent were usually around 35\% to roughy 50\%. The VII model had a much smaller Independent recall, at only 13\%. Precision scores for this alternation were similar for all classes: in predicting the Conjunct, the VII model was 75\% precise, the VAI model was 79\% precise, and both the VTI and VTA models were 77\% precise. In predicting the Independent, the VII models had 65\% precision, the VAI models had 74\% precision, the VTI model had 67\% precision, and the VTA model had 65\% precision. 
+
+In general, for the Independent vs. Conjunct alternation, all classes appear to have much higher recall than precision for the Conjunct than the Independent. Precision was also higher for the Conjunct than the Independent, but to a lesser extent than in recall.  
+
+\subsection{Independent vs. Conjunct}
+
+
+\begin{table}[H]
+  \floatsetup{floatrowsep=qquad, captionskip=4pt}
+  \begin{floatrow}[2]
+    \makegapedcells
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+\textsc{Cnj}    & 562                & 44                    \\
+\textsc{ind}    & 141                & 46                    \\
+                     \midrule
+                     \midrule
+Accuracy          & 0.77               &                       \\
+$\tau$            & 0.35               &                       \\
+$\rho^{2}$        & 0.13               &                       \\
+                     \midrule
+                     \midrule
+                     & \textsc{Cnj}           & \textsc{Ind}           \\
+Recall               & 0.93               & 0.25                  \\
+Precision            & 0.80               & 0.51 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VII Independent vs. Conjunct}
+      \label{viiivcms}}
+    \hfill%
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+\textsc{Cnj}    & 3973                & 282                    \\
+\textsc{ind}    & 1045                & 1037                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.79               &                       \\
+$\tau$               & 0.53               &                       \\
+$\rho^{2}$           & 0.27               &                       \\
+                     \midrule
+                     \midrule
+                     & \textsc{Cnj}       & \textsc{Ind}           \\
+Recall               & 0.93               & 0.50                  \\
+Precision            & 0.79               & 0.79 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VAI Independent vs. Conjunct}
+      \label{vaiivcms}}
+  \end{floatrow}
+  \vspace*{1cm}
+  \begin{floatrow}[2]
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+\textsc{Cnj}         & 1982               & 176                    \\
+\textsc{Ind}           & 561                & 336                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.76               &                       \\
+$\tau$               & 0.42               &                       \\
+$\rho^{2}$           & 0.16               &                       \\
+                     \midrule
+                     \midrule
+                     & \textsc{Cnj}       & \textsc{Ind}           \\
+Recall               & 0.92               & 0.38                  \\
+Precision            & 0.78               & 0.66 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTI Independent vs. Conjunct}
+      \label{vtiivcms}}
+    \hfill%
+    \ttabbox%
+        {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+\textsc{Cnj}         & 1765               & 207                    \\
+\textsc{Ind}           & 541                & 494                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.75               &                       \\
+$\tau$               & 0.45               &                       \\
+$\rho^{2}$           & 0.21               &                       \\
+                     \midrule
+                     \midrule
+                     & \textsc{Cnj}     & \textsc{Ind}           \\
+Recall               & 0.90               & 0.48                  \\
+Precision            & 0.77               & 0.71 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTA Independent vs. Conjunct}
+      \label{vtaivcms}}
+  \end{floatrow}
+\end{table}%
+
+The models for the Independent vs. Conjunct alternation performed reasonably well. The VII model was reasonably accurate at 77\%. The model had a 93\% recall for Conjunct and a 25\% recall for the Independent. Precision for each outcome are similarly disparate, at 80\% for the Conjunct and 51\% for the Independent. While the recall and precision scores for the Conjunct outcome seem to suggest an accurate model, the Independent rates suggest a more mediocre model. The $\rho^{2}$ measure of 0.12 similarly suggests a middling model, as did a $\tau$ measure of 0.35 (suggesting model is only slightly better than baseline classification). The VAI model showed  similar accuracy (79\%), Conjunct recall (93\%), and a Conjunct precision (79\%), though Independent recall was higher at 50\% and 79\%. The $\tau$ and $\rho^{2}$ measures were also notably higher: the former at 0.53 and the latter at 0.27. These measures suggest a model with a decent increase over baseline in terms of classification and a large reduction in badness of fit (thus reflecting a model that well describes the variance). The VTI model showed a similar profile as the VII, with an overall accuracy of 76\%, a Conjunct recall of 92\% and precesion of 78\%, with an Independent recall of 38\% and precision of 66\%. The VTI $\tau$ of 0.42 suggest a somewhat mediocre increase in classification over baseline, while the $\rho^{2}$ of 0.16 suggest a mediocre model fit. Conversely, the VTA model patterns more closely to the VAI model. The VTA model had an overall accuracy of 75\%, a Conjunct recall of 90\%, a Conjunct precision of 77\%, an Independent recall of 48\% and an Independent precision of 0.71. While the $\tau$ is mediocre at 0.45, the $\rho^{2}$  of 0.21 represents a well fit model.
+
+\FloatBarrier
+
+
+\subsection{Independent vs. ê-Conjunct}
+
+
+\begin{table}[H]
+  \floatsetup{floatrowsep=qquad, captionskip=4pt}
+  \begin{floatrow}[2]
+    \makegapedcells
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & ê-$\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+ê-\textsc{Cnj}  & 378                & 33                    \\
+\textsc{ind}    & 131                & 73                    \\
+                     \midrule
+                     \midrule
+Accuracy          & 0.73               &                       \\
+$\tau$            & 0.40               &                       \\
+$\rho^{2}$        & 0.17               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}           & \textsc{Ind}           \\
+Recall               & 0.92               & 0.36                  \\
+Precision            & 0.74               & 0.69 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VII Independent vs. ê-Conjunct}
+      \label{viiivcms}}
+    \hfill%
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & ê-$\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+ê-\textsc{Cnj}  & 2834                & 266                    \\
+\textsc{ind}    & 987                & 1170                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.76               &                       \\
+$\tau$               & 0.51               &                       \\
+$\rho^{2}$           & 0.27               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}       & \textsc{Ind}           \\
+Recall               & 0.91               & 0.54                  \\
+Precision            & 0.74               & 0.82 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VAI Independent vs. ê-Conjunct}
+      \label{vaiivcms}}
+  \end{floatrow}
+  \vspace*{1cm}
+  \begin{floatrow}[2]
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & ê-$\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+ê-\textsc{Cnj}         & 1322               & 193                    \\
+\textsc{Ind}           & 468                & 490                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.72               &                       \\
+$\tau$               & 0.44               &                       \\
+$\rho^{2}$           & 0.20               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}       & \textsc{Ind}           \\
+Recall               & 0.85               & 0.55                  \\
+Precision            & 0.74               & 0.73 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTI Independent vs. ê-Conjunct}
+      \label{vtiivcms}}
+    \hfill%
+    \ttabbox%
+        {                \begin{tabular}{lll}
+                \toprule
+                     & ê-$\widehat{\textsc{Cnj}}$ & $\widehat{\textsc{Ind}}$ \\
+                \midrule
+ê-\textsc{Cnj}         & 1083               & 269                    \\
+\textsc{Ind}           & 409                & 662                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.72               &                       \\
+$\tau$               & 0.43               &                       \\
+$\rho^{2}$           & 0.22               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}     & \textsc{Ind}           \\
+Recall               & 0.80               & 0.62                  \\
+Precision            & 0.73               & 0.71 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTA Independent vs. ê-Conjunct}
+      \label{vtaivcms}}
+  \end{floatrow}
+\end{table}%
+
+The models in the Independent vs. ê-Conjunct alternation were generally well fitting, with the exception of the VII model. This model had an accuracy of 73\%, an ê-Conjunct recall and precison of 92\% and 74\% respectively, and an Independent recall and precision of 36\% and 69\%. The model's $\tau$ measure was mediocre at 0.40 and its $\rho^{2}$ was similar at 0.17. The VAIs showed an increase in nearly all measures: accuracy was 76\%, ê-Conjunct recall and precision were 91\% and 74\%, Independent recall and precision were 54\% and 82\%, $\tau$ was measured at 0.51 (representing a decent increase over baseline in classification), and its $\rho^{2}$ was a relatively high 0.27, representing a large reduction in badness of fit. The VTI model was slightly less effective, with a 72\% accuracy, an ê-Conjunct recall and precision of 85\% and 74\%, an Independent recall and precision of 55\% and 73\%. The model's $\tau$ score was mediocre at 0.44 and a relatively robust $\rho^{2}$ of 0.20, representing a very good fit. The VTA model's accuracy was 72\%, its ê-Conjunct recall and precision were 80\% and 73\%, and Independent recall and pecision were 62\% and 71\%. Finally, the VTA model had a $\tau$ 0.43, representing a slight increase in classification over baseline, and a $\rho^{2}$ of 0.22, representing a very good reduction in badness of fit. 
+
+
+\FloatBarrier
+
+
+\subsection{Conjunct Type}
+The models for the Conjunct Type alternation were more generally varied and, contrary to the previous alternation, it was not always the case that the VAIs and VTAs showed the best results. In general, the models were not very good at predicting kâ-Conjunct forms, with both precision and recall being \textit{much} higher for the other outcome. 
+
+\FloatBarrier
+
+\subsubsection{ê-Conjunct}
+\begin{table}[H]
+  \floatsetup{floatrowsep=qquad, captionskip=4pt}
+  \begin{floatrow}[2]
+    \makegapedcells
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textup{ê}-\textsc{Cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+ê-\textsc{Cnj}   & 375               & 36                    \\
+other            & 73                & 112                    \\
+                     \midrule
+                     \midrule
+Accuracy          & 0.82               &                       \\
+$\tau$            & 0.57               &                       \\
+$\rho^{2}$        & 0.33               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}           & other           \\
+Recall               & 0.91               & 0.61                  \\
+Precision            & 0.84               & 0.76 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VII Conjunct Types: ê-Conjunct vs other}
+      \label{viiivcms}}
+    \hfill%
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textup{ê}-\textsc{Cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+ê-\textsc{Cnj}  & 3013                & 87                    \\
+other           & 921                & 211                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.76               &                       \\
+$\tau$               & 0.39               &                       \\
+$\rho^{2}$           & 0.17               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}       & other           \\
+Recall               & 0.97               & 0.19                  \\
+Precision            & 0.77               & 0.71 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VAI Conjunct Types: ê-Conjunct vs other}
+      \label{vaiivcms}}
+  \end{floatrow}
+  \vspace*{1cm}
+  \begin{floatrow}[2]
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & ê-$\widehat{\textsc{Cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+ê-\textsc{Cnj}         & 1450               & 65                    \\
+other                  & 412                & 185                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.77               &                       \\
+$\tau$               & 0.44               &                       \\
+$\rho^{2}$           & 0.22               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}       & other           \\
+Recall               & 0.96               & 0.31                  \\
+Precision            & 0.78               & 0.74 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTI Conjunct Types: ê-Conjunct vs other}
+      \label{vtiivcms}}
+    \hfill%
+    \ttabbox%
+        {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{\textup{ê}-\textsc{Cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+ê-\textsc{Cnj}         & 1278               & 74                    \\
+other                  & 431                & 179                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.74               &                       \\
+$\tau$               & 0.40               &                       \\
+$\rho^{2}$           & 0.17               &                       \\
+                     \midrule
+                     \midrule
+                     & ê-\textsc{Cnj}     & other           \\
+Recall               & 0.95 & 0.29                  \\
+Precision            & 0.75               & 0.71 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTA Conjunct Types: ê-Conjunct vs other}
+      \label{vtaivcms}}
+  \end{floatrow}
+\end{table}%
+
+
+The VII model showed a significantly better fit than the models previously reported. The model has an accuracy of 82\%, and ê-Conjunct recall and precision of 91\% and 84\% and some other Conjunct outcome recall and precision of 61\% and 76\%. The model had a $\tau$ measure of 0.57 and a very high  $\rho^{2}$ of 0.33, representing a very well fit model. The VAI model was significantly less well fitting with an accuracy of 76\%, an ê-Conjunct recall and precision of 97\% and 77\%  and other Conjunct outcome recall and precision of 19\% and 71\%. The VAI had a somewhat disappointing $\tau$ of only 0.39 and a $\rho^{2}$ measure of 0.17, representing only a slight reduction in badness of fit. The VTI model performed similarly in most measures: accuracy was rated at 77\%,  ê-Conjunct recall at 96\%, precision at 78\%, other outcome recall at 31\% and precision at  74\%. The model's $\tau$ was 0.44, representing a moderate increase of classification over baseline, and the $\rho^{2}$ was 0.22, representing a very good reduction in badness of fit. The final model for this outcome, the VTA model, was less well fit. The VTA model accuracy was rated at 74\%, ê-Conjunct recall and precision were 95\% and 75\%, other outcome recall and precision at 29\% and 71\%, a moderate $\tau$ score of 0.40, and a $\rho^{2}$ of 0.17, indicating a only moderate reduction in badness of fit. 
+
+
+\FloatBarrier
+
+\subsubsection{kâ-Conjunct}
+
+\begin{table}[H]
+  \floatsetup{floatrowsep=qquad, captionskip=4pt}
+  \begin{floatrow}[2]
+    \makegapedcells
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{k\textup{â}-\textsc{cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+kâ-\textsc{cnj}   & 84                & 77                    \\
+other             & 30                & 405                    \\
+                     \midrule
+                     \midrule
+Accuracy          & 0.82               &                       \\
+$\tau$            & 0.54               &                       \\
+$\rho^{2}$        & 0.33               &                       \\
+                     \midrule
+                     \midrule
+                     & kâ-\textsc{cnj}           & other           \\
+Recall               & 0.52               & 0.93                  \\
+Precision            & 0.74               & 0.84 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VII Conjunct Types: kâ-Conjunct vs other}
+      \label{viiivcms}}
+    \hfill%
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{k\textup{â}-\textsc{cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+kâ-\textsc{cnj}      & 53                & 766                    \\
+other                & 26                 & 3387                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.81               &                       \\
+$\tau$               & 0.40               &                       \\
+$\rho^{2}$           & 0.16               &                       \\
+                     \midrule
+                     \midrule
+                     & kâ-\textsc{cnj}       & other           \\
+Recall               & 0.07               & 0.99                  \\
+Precision            & 0.67               & 0.82 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VAI Conjunct Types: kâ-Conjunct vs other}
+      \label{vaiivcms}}
+  \end{floatrow}
+  \vspace*{1cm}
+  \begin{floatrow}[2]
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{k\textup{â}-\textsc{cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+kâ-\textsc{cnj}         & 36               & 284                    \\
+other                   & 18                & 1774                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.86               &                       \\
+$\tau$               & 0.44               &                       \\
+$\rho^{2}$           & 0.19               &                       \\
+                     \midrule
+                     \midrule
+                     & kâ-\textsc{cnj}       & other           \\
+Recall               & 0.11               & 0.99                  \\
+Precision            & 0.67               & 0.86 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTI Conjunct Types: kâ-Conjunct vs other}
+      \label{vtiivcms}}
+    \hfill%
+    \ttabbox%
+        {                \begin{tabular}{lll}
+                \toprule
+                     & $\widehat{k\textup{â}-\textsc{cnj}}$ & $\widehat{\textup{other}}$ \\
+                \midrule
+kâ-\textsc{cnj}         & 23               & 373                    \\
+other                   & 13                & 1553                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.80               &                       \\
+$\tau$               & 0.39               &                       \\
+$\rho^{2}$           & 0.13               &                       \\
+                     \midrule
+                     \midrule
+                     & kâ-\textsc{cnj}       & other           \\
+Recall               & 0.06               & 0.99                  \\
+Precision            & 0.64               & 0.81 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTA Conjunct Types: kâ-Conjunct vs other}
+      \label{vtaivcms}}
+  \end{floatrow}
+\end{table}%
+
+The kâ-Conjunct outcome models were, overall, less robust than previous models. As in the ê-Conjunct, the VII model was very well fit, with an accuracy of 84\%. Interestingly, the kâ-Conjunct recall was low, at only 52\%, though precision was at a less deviant 74\%. The other outcome recall was quite high at 93\% and precision was similar at 84\%. The model had a $\tau$ of 0.54, representing a decent increase of classification, and a $\rho^{2}$ of 0.33, indicating a very well fit model. The VAI was far less effective than the VII model. Accuracy for VAIs was relatively high at 81\%, though the kâ-Conjunct recall and precision were very low at 7\% and 67\% indicate a poor prediction model. The other outcome recall and precision were very high at 99\% and 82\%. The $\tau$ and $\rho^{2}$ measures were 0.40 and 0.16 respectively, indicating a model with only a mediocre fit. The VTIs were similar with an accuracy of 86\%, kâ-Conjunct recall and precision of 11\% and 67\%, other outcome recall and precision of 99\% and 86\%, a $\tau$ measure of 0.44, and a $\rho^{2}$ of 0.19. Finally, the VTA model was even less well fit, with an accuracy of 80\%, kâ-Conjunct recall and precision of 6\% and 64\%, other outcome recall and precision of 99\% and 81\%, a $\tau$ measure of 0.39 and a $\rho^{2}$ of only 0.13. 
+
+
+
+
+\FloatBarrier
+
+\subsubsection{Other Conjunct}
+
+The Other-Conjuncts (that is, the ka-/ta-Initial, Initial Change, and Subjunctive Conjuncts) models had extremely high recall, precision for Other-Conjuncts with a very low recall for other outcomes. In general, these models were very well fit, with large $\tau$ and $\rho^{2}$ measures.
+
+
+\begin{table}[h]
+  \floatsetup{floatrowsep=qquad, captionskip=4pt}
+  \begin{floatrow}[2]
+    \makegapedcells
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & \widehat{\textup{Other}-\textsc{cnj}} & $\widehat{\textup{other}}$ \\
+                \midrule
+Other-\textsc{cnj}   & 1                & 571                   \\
+other                & 1                & 23                   \\
+                     \midrule
+                     \midrule
+Accuracy          & 0.96               &                       \\
+$\tau$            & 0.48               &                       \\
+$\rho^{2}$        & 0.33               &                       \\
+                     \midrule
+                     \midrule
+                     & Other-\textsc{cnj}           & other           \\
+Recall               & 0.04                & 1.00                  \\
+Precision            & 0.50               & 96 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VII Conjunct Types: Other-Conjunct vs other}
+      \label{viiivcms}}
+    \hfill%
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & \widehat{\textup{Other}-\textsc{cnj}} & $\widehat{\textup{other}}$ \\
+                \midrule
+Other-\textsc{cnj}      & 8                & 3911                    \\
+other                   & 35                 & 278                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.93               &                       \\
+$\tau$               & 0.51               &                       \\
+$\rho^{2}$           & 0.27               &                       \\
+                     \midrule
+                     \midrule
+                     & Other-\textsc{cnj}       & other           \\
+Recall               & 0.11               & 1.00                  \\
+Precision            & 0.81               & 0.93 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VAI Conjunct Types: Other-Conjunct vs other}
+      \label{vaiivcms}}
+  \end{floatrow}
+  \vspace*{1cm}
+  \begin{floatrow}[2]
+    \ttabbox%
+    {                \begin{tabular}{lll}
+                \toprule
+                     & \widehat{\textup{Other}-\textsc{cnj}} & $\widehat{\textup{other}}$ \\
+                \midrule
+Other-\textsc{cnj}      & 16               & 1819                    \\
+other                   & 37                & 240                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.88               &                       \\
+$\tau$               & 0.47               &                       \\
+$\rho^{2}$           & 0.28               &                       \\
+                     \midrule
+                     \midrule
+                     & Other-\textsc{cnj}       & other           \\
+Recall               & 0.13               & 0.99                  \\
+Precision            & 0.70               & 0.88 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTI Conjunct Types: Other-Conjunct vs other}
+      \label{vtiivcms}}
+    \hfill%
+    \ttabbox%
+        {                \begin{tabular}{lll}
+                \toprule
+                     & \widehat{\textup{Other}-\textsc{cnj}} & $\widehat{\textup{other}}$ \\
+                \midrule
+Other-\textsc{cnj}         & 6                 & 1742                    \\
+other                      & 38                & 176                    \\
+                     \midrule
+                     \midrule
+Accuracy             & 0.91               &                       \\
+$\tau$               & 0.52               &                       \\
+$\rho^{2}$           & 0.27               &                       \\
+                     \midrule
+                     \midrule
+                     & Other-\textsc{cnj}     & other           \\
+Recall               & 0.18               & 1.00                  \\
+Precision            & 0.86               & 0.91 \\
+                \bottomrule
+                \end{tabular}}
+    {\caption{VTA Conjunct Types: Other-Conjunct vs other}
+      \label{vtaivcms}}
+  \end{floatrow}
+\end{table}%
+
+For VIIs, the model had an accuracy of 96\%, Other-Conjunct of 4\% and 50\% and an alternate outcome recall and precision of 100\% and 96\% . The model showed a decent improvement in classification resulting in a $\tau$ measure of 0.48, and the model had a $\rho^{2}$ of 0.33, showing a very good model fit. The VAI model was similar, with an accuracy of 93\%, Other-Conjunct recall and precision of 11\% and 81\% and an other outcome recall and precision of 100\% and 93\%. The model's $\tau$ measure was high, at 0.51, and a strong reduction in badness of fit, indicated by $\rho^{2}$ of 0.27. The VTIs had similar results, with an accuracy of 88\%, Other-Conjunct recall and precision of 13\% and 70\%, other outcome recall and precision of 99\% and 88\%, a $\tau$ of 0.47 and a $\rho^{2}$ of 0.28. Finally, the VTAs continued this trend with an accuracy of 91\%, Other-Conjunct recall and precision of 18\% and 86\%, other outcome recall and precision of 100\% and 91\%, a $\tau$ of 0.52 and a $\rho^{2}$ of 0.27.
+
+\section{Exemplar Extraction}
+The fitted value of a mixed effects logistic model presents a set of probability estimates for every lemma that represent the likelihood of a lemma occurring in a particular outcome. Given the lemma token \textit{itêw} for the VTA Independent vs. ê-Conjunct model, the lemma token produces a probability estimate of 0.85. Thus, there is an 85\% chance that the token will occur in the Independent Order; conversely, there is a 15\% chance of it occurring in the ê-Conjunct. These probability estimates allow for the easy extraction of forms most likely to be in one Order over another. By making use of the clause indices that every lemma is marked for, one can extract the most exemplary clauses which may prove useful in educating students of language on how and when to use each Order. 
+
+Based on the work of \citet{arppe2008univariate}, I first create dataframes for each conjugation class in each of the three alternation types. These data frames include only the significant effects identified in Chapter \ref{ch:result}. Unlike the clustering done in Chapter \ref{ch:semantics}, no distance matrix is used as dataframe is entirely logical.\footnote{When a distance matrix was created, it was functionally just an ordered list with each cell being a distance of 1 from its adjacent neighbor.} Hierarchical Agglomerative Clustering is used on the logical matrix, to create prototypical classes from which exemplars can be extracted. To determine the appropriate number of clusters to be used, silhouette analysis \citep{rousseeuw1987silhouettes} was used. In this technique, a \textit{silhouette} is calculated which represents the distance of a cluster member to other members of the same cluster, the distance of a cluster member to all objects in other clusters, and finally the distance of a cluster members to all members of the next nearest cluster \citep{rousseeuw1987silhouettes}. Using these measures, an silhouette is calculated which ranges from -1 (representing an item that certainly misclustered) to +1 (representing an item that is certainly properly clustered). When the silhouette is equal 0, it is unclear where the item belongs, and so can be said to lie between clusters \citep{rousseeuw1987silhouettes}. 
+
+Using the \codebox{fviz\_silhouette} function from the \codebox{factoextra} library in \codebox{R} \citep{facto}, I selected the number of clusters that created an average silhouette (the average silhouette for all classes divided by the number of classes) as close to 1 as possible. This results in some individual classes with low silhouettes, though it ensures the overall clustering is as well fit as possible. In some cases, an average silhouette of 1 could not be achieved even after a large amount of clusters were added. In this case, the highest possible silhouette (in all such cases this was a silhouette of 0.99) with the lowest number of clusters was chosen. In most cases, an optimal number of clusters ranged from 5-50, though in some cases such as the Independent vs. Conjunct VTAs, this number was much higher. Table \ref{tab:exemplarsil} details the optimal number of clusters for each alternation and each class.
+
+\begin{table}[]
+\begin{tabular}{@{}llllll@{}}
+\toprule
+             &                        & VII & VAI    & VTI & VTA   \\
+             \midrule
+\textsc{ind} v. \textsc{cnj}   &      & 4   & 17     & 77  & 110 \\
+\textsc{ind} v. ê-\textsc{cnj} &      & 4   & 20     & 42  & 55   \\
+Cnj Type                       &      & 4   & 20     & 42  & 55   \\
+       & ê-\textsc{cnj}               & 2   & 50     & 69  & 31   \\
+       & \textsc{k}â-\textsc{cnj}              & 4   & 53     & 22  & 16   \\
+       & Other \textsc{cnj}           & 2   & 13     & 21  & 11   \\
+
+\bottomrule
+\end{tabular}
+\caption{Number of silhouettes used for clustering \\ \label{tab:exemplarsil}}
+\end{table}
+
+From these results, only those exemplars where the predicted outcome matched the \textit{actual} outcome were selected. While all such exemplar verbs and their relevant indices are included in APPENDIX HERE, only the five (or fewer, if there were fewer than five correctly predicted exemplars) exemplars with the highest probability estimates per \textit{outcome} are included. Note that, for the binary alternations, probabilities closer to 0 represent an alternative outcome (i.e. \textit{not Independent}), while the those closer to 1 represent the predicted variable outcome (i.e. \textit{Independent}). For multinomial outcomes, probabilities closer to 0 represent an `other' form, but this can not be specified further. As such, it is more useful to look only at those numbers closest to 1. For the sake of presentation, the alternative outcome probabilities will be given in the form of $1-probability$, so that an estimate of 0.1 in the Independent vs. Conjunct alternation (indicating a likely Conjunct form) will be presented as a Conjunct probability of 0.99.
+
+The following sections detail these exemplars. As before, sources are given by the corpus codes (e.g. \textit{AL} for the corpus \codebox{AL-RL-C.FIN}) along with the line number where the exemplar occurs, which are may be accessed by contacting Dr. Antti Arppe. A list of corpus codes and the full name of the corpus file is given in APPENDIX HERE. Where translations are quoted verbatim from official translation publications, the relevant book and page numbers are included. Next to the corpus ID and line number is the estimated probability of occurring in a particular outcome. Where official translations were not easily available, only word-by-word glosses are given. The verbs which are being evaluated are in bold face.
+
+\subsection{Independent vs. Conjunct}
+
+\subsubsection{Inanimate Intransitive Verbs}
+\textit{Independent}
+    \begin{exe}
+    \ex
+    \gll otâkosihk ma cî wiya \textbf{kî-pêhtâkwan} kwayask. \tiny{(CMBK-5-2 20; 0.69)}\\
+         yesterday \textsc{neg} Q for {it was heard} properly \\
+    \trans 
+    \label{vii-ic1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll aya mîna nikî-âtotên kayâs, \tiny{(AL 976; 0.54)}\\
+    ah, and {I told about this} {long ago},\\
+    \Id{
+    \gll namôy wîhkâc \textbf{ohci-pêhtâkwan} ...  \tiny{(AL 976; 0.54)}\\
+      not ever {\textbf{it was heard}} ... \\
+    \trans 
+    }
+    \label{vii-ic2}
+    \end{exe}
+
+There were only two classes containing VIIs with probability estimates of over 0.50 (that is, where the model predicted an Independent form). In both cases, these were past tense forms of \textit{pêhtâkwan}, `it is heard.' In the first instance, example (\ref{vii-ic1}), the verb is used in an interrogative clause.
+
+\vspace{5mm}
+\textit{Conjunct}
+
+    \begin{exe}
+    \ex
+    \gll ``tâpwê anim âkosi sâsay \textbf{ê-ispayik} \tiny{(C2GB 40; 0.99)}\\
+    ``truly that thus already \textbf{{s/he fares thus}}\\
+    \Id{
+    \gll anima kâ-kî-itwêt,'' itwêw \tiny{(C2GB 40; 0.01)}\\
+          that {s/he said},'' {s/he said}    \\
+    \trans It is true, and some of what he had said is happening already ... \tiny{\citep[80-81]{Bearetal1992}}
+    }
+    \label{vii-ic3}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll êkosi anima mîna êwako \textbf{ê-kî-ispayik} mâna ... \tiny{(SW 41; 0.97)}\\
+         so that and that {\textbf{it fared thus}} {used to} ...\\
+    \trans That is the way this used to happen ... \tiny{\citep[36-37]{Whitecalf1993}}
+    \label{vii-ic4}
+    \end{exe}
+    
+For the Conjunct, there were also only two classes with probability estimates of less than 0.50. Both instances are forms of the lemma \textit{ispayin} `it happens thus.' In both cases, the predicted verbs seem to carry the main semantic meaning of the utterance, and both appear to be in past tense forms, though in (\ref{vii-ic3}) this does not appear to be marked morphologically. This comports with the finding that the Conjunct Order is some how less immediate, as discussed previously. The Conjunct forms are well predicted, with the lowest probability being 0.97.
+   
+
+\subsubsection{Animate Intransitive Verbs}
+
+\textit{Independent}
+
+    \begin{exe}
+    \ex
+    \gll vamps aniki, âha, `asêsinwa' \textbf{kî-itwêwak}. \tiny{(AL 1144; 0.84)}\\
+         vamps those yes `asêsinwa' {\textbf{they said}} \\
+    \trans 
+    \label{ic1}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll ... nititwân mâna, tâspwâw mâna wiya niya \textbf{nititwân} ... \tiny{(SW 140; 0.82)}\\
+         ... {I say} usually, {in fact} {usually} {by contrast} {I} {\textbf{I say}} ... \\
+    \trans ... I usually say, as for myself, as a matter of fact, I usually say ... \tiny{\citep[76]{Whitecalf1993}} 
+    \label{ic2}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll êkwa êkosi \textbf{kî-itwêw} ana kisêyiniw ... \tiny{(VDC2 1061-1062; 0.79)}\\
+         and this \textbf{he said} that {old man} ... \\
+    \trans and this is what that old man said ... \tiny{\citep[106-107]{VandallDouquette1987}} 
+    \label{ic3}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll ``a play ôm { } ê-wî-ayâyâhk {   } ôtê { } Sandy Lake," \tiny{(AA 33; 0.75)}\\
+    ``a play then { } {we are going to have} {   } {over here} { } Sandy Lake,"\\
+    \Id{
+    \gll      { } \textbf{itwêw} ... \tiny{(AA 33; 0.75)}\\
+    { } {\textbf{he said}} ... \\
+    \trans ``that we are going to have a play over here at Sandy Lake," he said ... \tiny{\citep[44]{AhenakewAlice2000}} 
+    }
+    \label{ic4}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll \textbf{ê-kî-wîhkitisit} mâna, ban-~ bannock ê-kî-osîhât ... \tiny{(C6IC 12; 0.5)}\\
+         {\textbf{It tasted good}} {used to}, ban-~ bannock {she made it} ... \\
+    \trans The bannock used to taste good, and she used to make it  ... \tiny{\citep[148]{Bearetal1992}}
+    \label{ic5}
+    \end{exe}
+    
+    Of the top five Independent exemplars, all but one were forms of the verb \textit{itêw}, `s/he says.' Used as a quotative in each of these cases, the expected probabilities ranged from 0.75 to 0.84, suggesting decent confidence in the prediction of an Independent outcome. The only non-quotative exemplar, \textit{ê-kî-wîhkitisit} `It tastes good,' resulted in a remarkably unconfident model which predicted a 0.50 likelihood of the lemma occurring in the Independent form. 
+    
+\vspace{5mm}
+\textit{Conjunct}
+
+    \begin{exe}
+    \ex
+    \gll ... êkot[a] êkwa kikâh-kî-wîcêwâw \tiny{(JK 8; 0.97)}\\
+    ... there and {you repeatedly got along with him} \\
+    \Id{ 
+    \gll tânis \textbf{ê-isi-mawimoscikêt}. \tiny{(JK 8; 0.97)}\\
+         how {\textbf{he prays thus}}  \\
+    \trans ... then you would be able to join him in his way of worship \tiny{\citep[51]{KaNipitehtew1998}}
+    }
+    \label{ic6}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... otôsk-âyima êkâ kwayask \textbf{ê-isi-wîcêhtoyit}. \tiny{(JK 6; 0.97)}\\
+         ... {young people} not properly  {\textbf{they get along with one another}}.  \\
+    \trans ... if their young people do not get along with one another. \tiny{\citep[14]{KaNipitehtew1998}}
+    \label{ic7}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ... ôma  tânisi ê-ispayik, tânisi \textbf{ê-kî-isi-mawimoscikêcik} \tiny{(VDC2 1050-1051; 0.97)}\\ 
+            ... this how {it is}, how {\textbf{they prayed about it so}}\\
+             \Id{
+    \gll nêhiyawak kayâs ... \tiny{(VDC2 1050-1051; 0.97)} \\
+          Cree {long ago} ...  \\
+    \trans
+    }
+    \label{ic8}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ... kîtahtawê êsa mâna êkwa kî-môyêyihtamwak ... \tiny{(SW 140; 0.96)} \\
+    ... suddenly apparently {used to} and {they were aware of it} \\
+    \Id{
+    \gll ayisiyiniwak, tânêhki ohci anihi mistahi \textbf{kâ-pê-kitoyit} êkota ... \tiny{(SW 140; 0.96)} \\
+         people, why from that much {\textbf{he comes to hoot}} then ...  \\
+    \trans ... and then people would realize why he had come to hoot there ...  \tiny{\citep[39]{Whitecalf1993}}
+    }
+    \label{ic9}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll môy mâka wîhkâc ohci-wîhtamwak awiyiwa \tiny{(CMBK-5-2 110; 0.95)}\\
+    not still ever {they tell about it} someone\\
+    \Id{
+    \gll anihi \textbf{kâ-kî-itahkamikisiyit}, êha. \tiny{(CMBK-5-2 110; 0.95)} \\
+    that {\textbf{she behaves thus}}, yes.   \\
+    \trans
+    }
+    \label{ic10}
+    \end{exe}
+    
+    Unlike the Independent outcome, there appears to be more variety in regards as to what lemmas occurred in the top five Conjunct exemplar forms. Further, estimated probabilities were much higher, with the model predicting all five exemplars with above a 95\% confidence. In all cases, these exemplars showed clearly an subordination as described by \citet{Cook2014} and \citet{Wolfart1973}. For example, in (\ref{ic6}), the already subordinate clause \textit{êkot[a] êkwa kikâh-kî-wîcêwâw tânis ê-isi-mawimoscikêt} contains the exemplar verb \textit{ê-isi-mawimoscikêt}. Here, \textit{ê-isi-mawimoscikêt} references the way someone prays and is subbordinate to the main verb of this clause, \textit{kikâh-kî-wîcêwâw} `you would be able to join him'. Similarly, in (\ref{ic9}) the predicted verb \textit{kâ-pê-kitoyit} is apart of the relative clause subordinate to the maing verb, \textit{kî-môyêyihtamwak} `They were aware of it.' As previously, the estimated probabilities were quite high, with the lowest of the five exemplars being 0.95
+    
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\textit{Independent}
+    \begin{exe}
+    \ex 
+    \gll ``nikêhcinâhon ôki iskwêsisak, nikotwâw ê-kimotamawicik,'' \tiny{(C7MW 75; 0.80)} \\
+         ``{I am sure} these girls, anytime {they stole it from me},'' \\
+         \Id{
+    \gll {nititêyiht-\~} \textbf{nititêyihtên} ôma niminihkwâcikan. \tiny{(C7MW 75; 0.80)} \\
+         {I thou\~} {\textbf{I think}} this {my cup}    \\
+    \trans ``I am sure one of these girls has stolen it from me,'' I thought with respect to my cup \tiny{\citep[180]{Bearetal1992}}. \\
+    }
+    \label{vti-ivc1}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll \textbf{kikiskêyihtên} kiya? \tiny{(AL 558; 0.80)} \\
+         {\textbf{you understand}} you? \\
+    \trans  \\
+    \label{vti-ivc2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll «kiya \textbf{kikaskihtân} ê-osîhtâyan,» nititik \tiny{(AA 76; 0.74)} \\
+         «you \textbf{{you are able}} {you make it},» {s/he says to me}\\
+    \trans ``You, you have been able to make it," she says to me \tiny{\citep[68-69]{AhenakewAlice2000}} \\
+    \label{vti-ivc3}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll nîsta \textbf{niwî-nipahi-cîhkêyihtên} \tiny{(CMBK-3-2 182; 0.76)} \\
+         {I too} {\textbf{I am really going to like it}} \\
+    \trans  \\
+    \label{vti-ivc4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll «kiyâm tâpwêhta, môy \textbf{kika-mihtâtên},» ê-kî-isit mâna. \tiny{(CMBK-4-2 114; 0.74)} \\
+         «please truly, not {\textbf{you will regret it}}» {s/he says to me} {used to}. \\
+    \trans  \\
+    \label{vti-ivc5}
+    \end{exe}
+    
+    Independent VTI exemplars mostly had to do with cognition/emotion verbs with the \{-yih-\} morph. The exception to this is in (\ref{vti-ivc3}), where a form of \textit{kaskihtâw}, `s/he is able to' occurs in the Independent. Interestingly, in this case the the main verb \textit{ê-osîhtâyan}, `you make it,' is in the Conjunct, while the Indepdendent verbs is acting more as an abilitative. This is somewhat different from what might be expected based on the previous literature as well as the results of this dissertation (which would predict the main verb to occur in Indpendent and the abilitative verb to be in a Conjunct); however, it is possible to view the \textit{ê-osîhtâyan} as object of the complementizer phrase \textit{kiya kikaskihtân}. Under this analysis, \textit{ê-osîhtâyan} is c-commanded by \textit{kiya kikaskihtân}. According to \cite[129]{Cook2014}, if a clause with an antecedent c-commands a clause that refers to it, there exists a relationship of anaphora. Alternatively, if an term referes to a previously stated element, then it also licenses anaphora \cite[129]{Cook2014}. In either case, if the goal implicit in the VTI \textit{kikaskihtân}, `you are able to do it' is referring forward to \textit{ê-osîhtâyan}, then then the anaphoric element would be considered \textit{ê-osîhtâyan}. Under this analysis, one would expect this to occur in a Conjunct form, as it does. The estimate probabilities were lower, ranging from 0.73-0.80
+\vspace{5mm}
+    
+    \textit{Conjunct}
+    \begin{exe}
+    \ex 
+    \gll kahkiyaw kîkway `mînisa' k-êsiyîhkâtêki, nanâtohk \textbf{ê-kî-isi-osîhtât} \tiny{(VDC2 315-317; 0.00)} \\
+         all thing berry {it is called}, variety {\textbf{s/he made him}} \\
+    \Id{
+\gll kîkway wiyâs, ê-osîhtât îwahikana ê-môwât. \tiny{(VDC2 315-317; 0.00)} \\
+         what meat, {s/he makes it} {pounded meat} {s/he eats him}.    \\
+    \trans All these things that are called `berries', they prepared them in various ways, they prepared the meat and ate pounded meat. \tiny{\citep[56-57]{VandallDouquette1987}} \\
+    }
+    \label{vti-ivc6}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll â, êkosi pêyakwâw êkota ê-kî-otahot ayi, \tiny{(C7MW 86; 0.99)}\\
+        ah, so once there  {she beat me} well,\\
+        \Id{
+    \gll wiyê [sic] nawac ê-kî-kiskêyihtahk ê-isi-\~ kîkway \textbf{ê-isi-osîhtât}. \tiny{(C7MW 86; 0.99)} \\
+          for [sic] before {s/he knew it} ê-isi-\~ what {\textbf{s/he makes it}} \\
+    \trans well, and so in that she knew better than I how to make something, this once she did beat me. \tiny{\citep[192-193]{Bearetal1992}}\\
+    }
+    \label{vti-ivc8}
+    \end{exe}
+    
+        \begin{exe}
+    \ex 
+    \gll êkwa aya, aya, pêyakwâw ê-kiskisiyân iyikohk ê-kî-miyokihtâyâhk \tiny{(EM 117; 0.01)}\\
+         and uh, uh, once {I recall} when {we grew well} \\
+         
+    \gll askipwâwa, êkosi mân \textbf{ê-kî-isi-tipahamâhk}, mitâtahtomitanaw-maskimot ê-kî-ayâyâhk \tiny{(EM 117; 0.01)} \\
+         potatoes, thus {used to} {\textbf{we measured it thus}}, {one hundred bags} {we had it}  \\
+    \trans And I remember once, when we grew such a good crop of potatoes, that is how we measured them, we had one hundred bags \tiny{\citep[84-85]{Minde1997kwayask}}  \\
+    \label{vti-ivc7}
+    \end{exe}
+
+   \begin{exe}
+    \ex 
+    \gll ``kây, êkâya mâto! ê-nôhtêhkatêt ana wîst ôm ê-~ \tiny{(C4MF 68; 0.99)}\\
+    ``no, {do not} cry! {s/he is hungry} {that one} {s/he too} {it is this} ê-\~ \\
+    \Id{
+    \gll ê-wâpamiko-~ ê-wâpahtahk ôma wiyâs \textbf{ê-nôhtê-mîcit},'' \tiny{(C4MF 68; 0.99)} \\
+         ê-wâpamiko-\~ {s/he sees it} actually meat \textbf{{s/he wants to eat it}}  \\
+    \trans ``Do not cry! That one is hungry, too, and it sees this meat and wants to eat it,'' \tiny{\citep[112-115]{Bearetal1992}} \\
+    }
+    \label{vti-ivc10}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll ... ê-wî-nanâskomot, matotisân ôma \textbf{kâ-wî-osîhtât}. \tiny{(JK 42; 0.98)} \\
+         ... {he gives him thanks}, {sweat lodge} actually {\textbf{he is going to make it}} \\
+    \trans ... that he is about to give thanks, the one who is about to make a sweat lodge \tiny{\citep[84]{ka2007counselling}} \\
+    \label{vti-ivc9}
+    \end{exe}
+    
+ 
+    
+The Conjunct exemplars for VTIs were mostly made of forms of \textit{osîhtâw}, `s/he makes it.' In examples (\ref{vti-ivc6}), (\ref{vti-ivc8}), and (\ref{vti-ivc9}) the exemplar verbs were third person singular forms of \textit{osîhtâw}. These verbs occurred in both main and subordinate clauses. Examples (\ref{vti-ivc7}) and (\ref{vti-ivc8}) show clearly subordinate clauses. Further, in (\ref{vti-ivc7}), \textit{ê-kî-isi-tipahamâhk} contains a discourse preverb, while in (\ref{vti-ivc10}) the exemplar verb \textit{ê-nôhtê-mîcit} is desiderative. The Conjuncts were very well predicted with the lowest estimated probability being 0.99.
+    
+
+\subsubsection{Transitive Animate Verbs}
+\textit{Independent}
+
+    \begin{exe}
+    \ex 
+    \gll sapiko mân êkosi \textbf{nititâwak} nôsisimak, «kayâs ôma \tiny{(cmbk-4-v2 304; 0.79)}\\
+    actually {used to} thus {\textbf{I say to them}} {my grandkids}, {long ago} \textsc{foc} \\
+    \gll niyanân mistahi ê-kî-atoskêyâhk ... \tiny{(cmbk-4-v2 304)} \\
+    we much {we worked} ... \\
+    \trans \\
+    \label{vta-ivc1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ... ômisi mâna \textbf{nikî-itâwak} nitawâsimisak ... \tiny{(EM 66; 0.73)}\\
+         ... thus {used to} {\textbf{I said thus to them}} {my children} \\
+    \trans     ... I used to tell my children as follows ... \tiny{\citep[36]{Minde1997kwayask}} \\
+    \label{vta-ivc2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ``îwahikanak niwî-osîhâwak,'' \textbf{nititâwak} awâsisak. \tiny{(AL 407; 0.73)} \\
+         ``{pounded meats} {I'm going to make them},'' {\textbf{I say to them}} {children} \\
+    \trans ``I'm going to make pounded meat,'' I told my children. \tiny{\citep[206-207]{Bearetal1992}} \\
+    \label{vta-ivc3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ``nôsisim!'' \textbf{nititik} ... \tiny{(C2GB 14; 0.70)} \\
+         {my grandchildren} {\textbf{I said}} ... \\
+    \trans ``My grandchild!'' I said ... \tiny{\citep[68-69]{Bearetal1992}} \\
+    \label{vta-ivc4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ... miton ês âwa nôcikwêsiw, ``ayiwêpitân,'' \tiny{(C4MF 23; 0.63)} \\
+         ... very apparently {this old lady} {let's rest} \\
+    \gll \textbf{itêw} êsa okosisa ... \tiny{(C4MF 23; 0.63)} \\
+          {\textbf{she says to him}} apparently {her son} ... \\
+    \trans ... and the old lady aid to her son, ``Let's rest;" ... \tiny{\citep[106-107]{Bearetal1992}} \\
+    \label{vta-ivc5}
+    \end{exe}
+    
+The top five Independent exemplars for the VTAs were all forms of \textit{itwêw}, `s/he says to him/her.' Specifically, each of these tokens were quotatives reporting exact speech. Perhaps unsurprisingly, these tokens were in either first or third person, but not second. Given the nature of the corpus (speeches or conversations), this is unsurprising. In all but one instance, (\ref{vta-ivc2}), these quotatives all had present tense morphology. Outside of these five exemplars, there was one instance of a non-\textit{itwêw} form occurring in the Independent and being correctly identified as such by the model, \textit{kinisitohtâtinâwâw}, `I understand you all'; however, in this instance, the predicted probability was only 0.57, representing a relatively uncertain prediction. Generally, estimate probabilities were lower for this group than previous ranging from 0.63 to 0.79. 
+
+\vspace{5mm}
+
+\textit{Conjunct}
+
+    \begin{exe}
+    \ex 
+    \gll îh, êwako anima êsa kayâs êkosi \tiny{(SW 140; 0.98)} \\
+    look, this {the fact that} apparently {long ago} so  \\
+    \gll \textbf{ê-kî-pê-isi-kakêskimâcik} otôsk-âyimiwâwa ... \tiny{(SW 140; 0.98)} \\
+         {\textbf{they came and counselled thus}} {their young over there} \\
+    \trans Look, in this wise long ago did they use to counsel their young people ... \tiny{\citep[76-77]{Whitecalf1993}} \\
+    \label{vta-ivc6}
+    \end{exe}
+    
+
+    \begin{exe}
+    \ex 
+    \gll ... kita-wâpamikot, \textbf{ê-pê-minihkwâtâyit}, itwêw. \tiny{(VDC2 485-486; 0.97)} \\
+         ... {looking at him} {\textbf{s/he comes to trade it for a drink}} {he says}   \\
+    \trans ... looking at him, he said, to trade it for a drink \tiny{\citep[68-69]{VandallDouquette1987}} \\
+    \label{vta-ivc7}
+    \end{exe}
+    
+
+    \begin{exe}
+    \ex 
+    \gll ... wâposwa ê-kî-nipahât \textbf{ê-wî-kakwê-asamikoyâhk} wiya ... \tiny{(C8GB 13; 0.97)} \\
+         ... rabbits {he killed} {\textbf{they're going to try to feed us}} they ...  \\
+    \trans   \\
+    \label{vta-ivc8}
+    \end{exe}
+    
+
+    \begin{exe}
+    \ex 
+    \gll ... âta tâpiskôc {êkâya kîkway} wiyasiwêwin wîyawâw \tiny{(C8GB 232-234; 0.97)}\\
+         ... though like {nothing} law they \\
+    \gll ... \textbf{ê-ohci-tâwiskâkocik}, nânitaw itinikêtwâwi. \tiny{(C8GB 232-234; 0.03)} \\
+         ... {\textbf{they aren't subject to it}} {something bad} {when they act thus}  \\
+    \trans ... even though it looked as if they were not subject to any formal law when they did do something wrong. \tiny{\citep[50-51]{VandallDouquette1987}} \\
+    \label{vta-ivc9}
+    \end{exe}
+    
+
+    \begin{exe}
+    \ex 
+    \gll êkosi ôma aspin, ``ay, kayâs nôcokwêsiw \tiny{(VDC2-RES 561-562)}\\
+    so that finally ``hey, {long ago} {old lady}\\
+    \gll \textbf{ka-wayawî-pakamahosk}!" nititikwak. \tiny{(VDC2-RES 561-562)} \\
+    {she throws you out}!'' {they say to me}\\
+    \trans So at the end they say to me ``hey, for sure, then, the old lady would throw you out, and with a vegence!" they say to me.
+    \tiny{\citep[74-75]{VandallDouquette1987}} \\
+    \label{vta-ivc10}
+    \end{exe}
+    
+    The Conjunct exemplars for the Independent vs. Conjunct VTA set were mostly subordinate verbs, such as \textit{ê-pê-minihkwâtâyit} `comes to trade a drink for it' (in (\ref{vta-ivc7})) or \textit{ê-wî-kakwê-asamikoyâhk}, `to try to feed all of us' (in (\ref{vta-ivc8})). These results comport with the general descriptions of Order in the literature. Exemplars were all highly predicted, with the Conjunct exemplars never being lower than 0.96.
+    
+\subsection{Independent vs. ê-Conjunct}
+
+\subsubsection{Intransitive Inanimate Verb}
+
+\textit{Independent}
+
+    \begin{exe}
+    \ex 
+    \gll ... otâkosihk ma cî wiya \textbf{kî-pêhtâkwan} kwayask. \tiny{(CMBK-5-2 20; 0.85)} \\
+         ... yesterday not \textsc{q} for {\textbf{it was heard}} properly     \\
+    \trans ... Was it not heard properly yesterday? \tiny{\citep[109-110]{AhenakewAlice2000}} \\
+    \label{vii-ive1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll aya mîna \textbf{nikî-âtotên} kayâs, namôy wîhkâc ohci-pêhtâkwan ...  (AL 976; 0.74) \\
+         ah, and {\textbf{I told}} {long ago}, not ever {it was not heard} ... \\
+    \trans  \\
+    \label{vii-ive2}
+    \end{exe}
+    
+    
+    
+    As in the previous alternation, there were fewer than five exemplars available for each outcome in the VII class. Here, there are only two exemplars for the Independent. Given this number, it is hard to draw conclusions, though it is worth noting that in both cases the exemplar verb was a negative form of \textit{pêhtâkwan}, `it is heard'. The difference between the two exemplars in estimated probabilities ranged from 0.74 to 0.85. 
+    
+    
+    
+    \vspace{5mm}
+    
+    
+\textit{Conjunct}
+
+    \begin{exe}
+    \ex
+    \gll ``tâpwê anim âkosi sâsay \textbf{ê-ispayik} \tiny{(C2GB 40; 0.99)}\\
+    ``truly that thus already \textbf{{s/he fares thus}}\\
+    \Id{
+    \gll anima kâ-kî-itwêt...'' \tiny{(C2GB 40; 0.99)}\\
+          that {s/he said}...'' \\
+    \trans ``It is true, and some of what he had said is happening already ... \tiny{\citep[80-81]{Bearetal1992}} \\
+    }
+    \label{vii-ive4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll êkosi anima mîna êwako \textbf{ê-kî-ispayik} mâna ... \tiny{(SW 41; 0.92)} \\
+         so that and this {\textbf{it happens}} {used to} ... \\
+    \trans That is the way this used to happen ... \tiny{\citep[37-38]{Whitecalf1993}} \\
+    \label{vii-ive5}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ê-pânisamihk anima kahkiyaw, {nama kîkway} \textbf{ê-ohci-wêpinikâtêk}. \tiny{(EM 97; 0.50)} \\
+         {someone cuts it} that all {nothing} {\textbf{it is not lost}}. \\
+    \trans it was cut, and nothing was wasted \tiny{\citep[120]{Minde1997kwayask}}. \\
+    \label{vii-ive6}
+    \end{exe}
+    
+    The ê-Conjunct outcome had three exemplars, two of which are of the verb \textit{ispayin}, `it happens.' In (\ref{vii-ive5}) and (\ref{vii-ive6}) the exemplars are semantically past. Like the Independent, the Conjunct had a large range in estimated probabilities, ranging from 0.50 to 99.
+    
+
+\subsubsection{Animate Intransitive Verbs}
+
+\textit{Independent}
+
+    \begin{exe}
+    \ex
+    \gll `... môy kîhtwâm êkwa nika-pakitinâw wîhkâc awâsis,’ \textbf{nikî-itwân} ôma \tiny{(CMBK-3-2 170; 0.90)}\\
+     ... no again and {I will let go} never children  {\textbf{I said}} this \\
+    \trans  `I will not ever let the children go again,' I said this \tiny{\citep[44]{AhenakewAlice2000}} 
+    \label{ai-ive2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll nititwân mâna, tâspwâw mâna wiya niya \textbf{nititwân} ... \tiny{(SW 140; 0.88)} \\
+         {I say} {usually}, {in fact} {usually} for I {\textbf{I say}} \\
+    \trans  I usually say, as for myself, as a matter of fact, I usually say ... \tiny{\citep[76]{Whitecalf1993}}
+    \label{ai-ive1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll êkwa êkosi \textbf{kî-itwêw} ana kisêyiniw ... \tiny{(VDC2 493-494; 0.88)}\\
+         and  so {\textbf{s/he said}} that {old man} ... \\
+    \trans  and this is what that old man said. \tiny{\citep[106-107]{VandallDouquette1987}}
+    \label{ai-ive5}
+    \end{exe}
+    
+        \begin{exe}
+    \ex
+    \gll ``a play ôm { } ê-wî-ayâyâhk {   } ôtê { } Sandy Lake," \tiny{(AA 33; 0.85)}\\
+    ``a play then { } {we are going to have} {   } {over here} { } Sandy Lake,"\\
+    \Id{
+    \gll      { } \textbf{itwêw} ... \tiny{(AA 33; 0.75)}\\
+    { } {\textbf{he said}} ... \\
+    \trans ``that we are going to have a play over here at Sandy Lake," he said ... \tiny{\citep[44]{AhenakewAlice2000}} 
+    }
+    \label{ai-ive4}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll `â, mahti!  pâmwayês miton ôtâkosik, nika-nitawi-minihkwahastimwân’, k-êtwêyan, \textbf{kikî-itwân}  ... \tiny{(CMBK-3-2 488; 0.82)}\\
+         `well, please! before quite {it is evening}, {I will water the horses},' {you said},  \textbf{you said} ... \\
+    \trans  
+    \label{ai-ive3}
+    \end{exe}
+
+    
+As with the previous alternation, the VAI exemplars were all forms of \textit{itwêw}, `s/he said.' In all examples other than (\ref{ai-ive1}), the exemplar verbs were semantically past, though not always morphologically so. Given the nature of quotatives, this is perhaps unsurprising. All exemplars were relatively well predicted, with estimated probabilities ranging from 0.89 and 0.88.
+
+\textit{Conjunct}
+    \begin{exe}
+    \ex
+    \gll ... otôsk-âyima êkâ kwayask \textbf{ê-isi-wîcêhtoyit}. \tiny{(JK 7; 0.97)} \\
+         ... {their young people} not right {\textbf{they get along thus}}. \\
+    \trans  ... if their young people do not get along with one another. \tiny{\citep[48-49]{KaNipitehtew1998}}
+    \label{ti-ive6}
+    \end{exe}
+    
+        \begin{exe}
+    \ex
+    \gll ... êkot[a] êkwa kikâh-kî-wîcêwâw tânis ê-isi-mawimoscikêt. \tiny{(JK-C4ARC.798 8; 0.97)} \\
+    ... then and {you would be able to} how {he worships this}
+    \trans  ... then you would be able to join him in his way of worship \tiny{\citep[50]{KaNipitehtew1998}}. \\
+    \label{ti-ive7}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll êkos êtikwê piko \textbf{ê-kî-isi-ma-mêyiwiciskêhk} ê-kî-isi-pasikôhk. \tiny{(C8GB 18; 0.96)} \\
+         so apparently only {\textbf{someone was always dirty}} {someone get up}.
+    \trans  one simply got up dirty, I guess \tiny{\citep[210-211]{Bearetal1992}}. \\
+    \label{ti-ive8}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ê-kakwêcimak ôma, tânis \textbf{ê-kî-pê-ay-isi-pimâcihisocik} ayisiyiniwak (AL 2; 0.95) \\
+         {I am asking her} this, how {\textbf{they lived thus}} people
+    \trans  one simply got up dirty, I guess \tiny{\citep[240-241]{Bearetal1992}}. \\
+    \label{ti-ive9}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll tânitê kiy ê-kî-kiskinahamâkawiyan cî, ka-isi-kakâyawisîyan \textbf{ê-awâsisîwiyan}? (AL 359; 0.95) \\
+         where you {you went to school} Q, {you work hard} {\textbf{you are a child}}?
+    \trans  \\
+    \label{ti-ive10}
+    \end{exe}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+\subsubsection{Transitive Inanimate Verbs}
+
+\textit{Independent}
+    
+        \begin{exe}
+    \ex
+    \gll \textbf{kikiskêyihtên} kiya? \tiny{(AL 558; 0.89)} \\
+         {\textbf{you know}} you?\\
+    \trans
+    \label{ti-ive2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll kiya \textbf{kikaskihtân} ê-osîhtâyan \tiny{(AA 76; 0.88)} \\
+     you {\textbf{you manage it}} {you prepare it} \\
+    \trans 
+    \label{ti-ive3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll kiyâm tâpwêhta, môy \textbf{kika-mihtâtên} \tiny{(CMBK-4-2 114; 0.87)}\\
+      so agree, not {\textbf{you regret it}}    \\
+    \trans  
+    \label{ti-ive4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... môy mâka wîhkât niya wiya \textbf{nôh-cîhkêyihtên} ôma \tiny{(CMBK-4-2 128; 0.87)} \\
+        ... not but  ever I for {\textbf{I like it}} this \\
+    \Id{
+    \gll `radio’ k-êsiyîhkâtêk \tiny{(CMBK-4-2 128; 0.87)}\\
+    `radio' {it is called thus}\\
+    \trans  
+    }
+    \label{ti-ive5}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll ... wiya kiyânaw \textbf{kikaskihtânaw} kîkway ka-kî-nipahtamâsoyahk ... \tiny{(C2GB 45; 0.80)} \\
+        ... \textsc{foc} {we all} {\textbf{we all succeed}} what {we all killed it for ourselves} \\
+    \trans  
+    \label{ti-ive6}
+    \end{exe}
+
+
+ As previously, in examples (\ref{ti-ive3}), (\ref{ti-ive4}), and (\ref{ti-ive5}) demonstrate the use of the Independent as the main verb in a multiverb phrase. Interestingly, all examples but \ref{ti-ive5} were in second person, and all forms had speech act participants as actors. estimated probabilities range from 0.87 and 0.90.
+
+
+\textit{Conjunct}
+
+    \begin{exe}
+    \ex 
+    \gll kahkiyaw kîkway `mînisa' k-êsiyîhkâtêki, nanâtohk \textbf{ê-kî-isi-osîhtât} \tiny{(VDC2 315-317; 1.00)} \\
+         all thing berry {it is called}, variety {\textbf{s/he made him}} \\
+    \Id{
+\gll kîkway wiyâs, ê-osîhtât îwahikana ê-môwât. \tiny{(VDC2 315-317; 0.00)} \\
+         what meat, {s/he makes it} {pounded meat} {s/he eats him}.    \\
+    \trans All these things that are called `berries', they prepared them in various ways, they prepared the meat and ate pounded meat \tiny{\citep[56-57]{VandallDouquette1987}}. \\
+    }
+    \label{vti-ive6}
+    \end{exe}
+
+        \begin{exe}
+    \ex 
+    \gll êkwa aya, aya, pêyakwâw ê-kiskisiyân iyikohk ê-kî-miyokihtâyâhk \tiny{(EM 117; 0.99)}\\
+         and uh, uh, once {I recall} when {we grew well} ... \\
+         
+    \gll askipwâwa, êkosi mân \textbf{ê-kî-isi-tipahamâhk}, mitâtahtomitanaw-maskimot ê-kî-ayâyâhk \tiny{(EM 117; 0.01)} \\
+         potatoes, thus {used to} {\textbf{we measured it thus}}, {one hundred bags} {we had it}  \\
+    \trans And I remember once, when we grew such a good crop of potatoes, that is how we measured them, we had one hundred bags ... \tiny{\citep[84-85]{Minde1997kwayask}} ...  \\
+    \label{vti-ive7}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll ... mêtoni mân \textbf{ê-kî-kanâcihtâcik} êkwa mân ê-kî-kaskâpasahkik. (EM 268; 0.98) \\
+         ... very {used to} {they cleaned it} and {used to} {they smoked it}  \\
+    \trans  \\
+    \label{vti-ive8}
+    \end{exe}
+
+    \begin{exe}
+    \ex 
+    \gll ... âhci piko pêyakwan iyikohk ê-kî-isi-môcikêyihtamihk. (CMBK-3-2 271; 0.98) \\
+         ... still only similar until {s/he was excited about this}.  \\
+    \trans  \\
+    \label{vti-ive9}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll ê-nôhtêhkatêt ana wîst ôm ê-~ ê-wâpamiko-~ ê-wâpahtahk ôma wiyâs \textbf{ê-nôhtê-mîcit} ... (C4MF 68; 0.97) \\
+         {s/he is hungry} {this one} {he too} and ê-~ ê-wâpamiko-~ {s/he shows it} that meat {\textbf{s/he wants to eat it}} ... \\
+    \trans That one is hungry, too, and it sees this meat and wants to eat it ... \\
+    \label{vti-ive10}
+    \end{exe}
+
+
+
+
+
+\subsubsection{Transitive Animate Verbs}
+
+\textit{Independent}
+
+    \begin{exe}
+    \ex
+    \gll ... môy êkw êkonik mîna \textbf{kikî-wîhâwak} ... \tiny{(AL 1284; 0.91)} \\
+         ... no and those and {\textbf{you relied on them}}\\
+    \trans  ... now you can't even rely on them ... \tiny{\citep[342-243]{Bearetal1992}}
+    \label{ta-ive1}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll â, \textbf{kitayâwâwak} cî \tiny{(AL 106; 0.86)} \\
+        ah {\textbf{you have} them} \textsc{q}\\
+    \trans  Ah, do you have any of that? \citep[250-251]{Bearetal1992}
+    \label{ta-ive2}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll ... sapiko mân êkosi \textbf{nititâwak} nôsisimak ... \tiny{(CMBK-4-2 304; 0.85)} \\
+        ... actually {used to} so {\textbf{I say about}} {my grandchildren}  ... \\
+    \trans  
+    \label{ta-ive3}
+    \end{exe}
+
+    
+    \begin{exe}
+    \ex
+    \gll ... \textbf{itâwak} mân ôki niwâhkômâkanak ... \tiny{(EM 160; 0.77)} \\
+         ... {\textbf{someone says about}} {used to} \textsc{foc}  {my relatives} ...\\
+    \trans  
+    \label{ta-ive5}
+    \end{exe}
+
+    \begin{exe}
+    \ex
+    \gll ... ômisi mâna \textbf{nikî-itâwak} nitawâsimisak ... \tiny{(EM 66; 0.73)} \\
+         ... thus {used to} {\textbf{I told them}} {my children} ...\\
+    \trans   I used to tell my children as follows \tiny{\citep[36]{Minde1997kwayask}}
+    \label{ta-ive4}
+    \end{exe}
+
+    
+     Three of the five top exemplars (examples (\ref{ta-ive1}), (\ref{ta-ive3}), (\ref{ta-ive4})) were forms of \textit{itêw}, `s/he speaks/tells about someone). In each of the five VTA exemplars, the target verbs were the main, and in fact \textit{only}, verbs in their clauses. Estimated probabilities ranged form 0.73 to 0.91.
+    
+    \textit{Conjunct}
+    
+    \begin{exe}
+    \ex
+    \gll îh, êwako anima êsa kayâs êkosi \textbf{ê-kî-pê-isi-kakêskimâcik} otôsk-âyimiwâwa ... \tiny{(SW 140 0.98)} \\
+        look, this that apparently {long ago} so {\textbf{they come and counsel them thus}} {young people} ... \\
+    \trans   Look, in this wise long ago did they use to counsel their young people ... \tiny{\citep[76-77]{Whitecalf1993}} \\
+    \label{ta-ive6}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... wâposwa ê-kî-nipahât \textbf{ê-wî-kakwê-asamikoyâhk} wiya ... (C8GB 13; 0.97) \\
+         ... rabbits s/he kills him {\textbf{they are going to try to feed us}} for ... \\
+    \trans    \\
+    \label{ta-ive7}
+    \end{exe}    
+    
+    \begin{exe}
+    \ex 
+    \gll ... kita-wâpamikot, \textbf{ê-pê-minihkwâtâyit}, itwêw. \tiny{(VDC2 485-486; 0.97)} \\
+         ... {looking at him} {\textbf{s/he comes to trade it for a drink}} {he says}   \\
+    \trans ... looking at him, he said, to trade it for a drink \tiny{\citep[68-69]{VandallDouquette1987}} \\
+    \label{vta-ive8}
+    \end{exe}
+
+    
+    \begin{exe}
+    \ex 
+    \gll ... âta tâpiskôc {êkâya kîkway} wiyasiwêwin wîyawâw \tiny{(C8GB 232-234; 0.96)}\\
+         ... though like {nothing} law they \\
+    \gll ... \textbf{ê-ohci-tâwiskâkocik}, nânitaw itinikêtwâwi. \tiny{(C8GB 232-234; 0.96)} \\
+         ... {\textbf{they aren't subject to it}} {something bad} {when they act thus}  \\
+    \trans ... even though it looked as if they were not subject to any formal law when they did do something wrong \tiny{\citep[50-51]{VandallDouquette1987}}. \\
+    \label{vta-ive9}
+    \end{exe}
+    
+    \begin{exe}
+    \ex 
+    \gll miton êsa mân êkotê ê-kî-isi-sôhkêpitikocik (cmbk-5-2 72; 0.96) \\
+         very apparently {used to} {over there} {they promote them thus}   \\
+    \trans  \\
+    \label{vta-ive10}
+    \end{exe}
+    
+    
+The majority of the exemplars for the ê-Conjunct Order in the Independent vs. ê-Conjunct outcome were the same found in the Conjunct outcome in the more Independent vs. Conjunct, with the notable exception of (\ref{vta-ive10}). This is liekly due to the fact that the majority of Conjunct forms are, in fact, ê-Conjuncts.
+    
+    \subsection{Conjunct Type}
+    
+    In the Conjunct type alternation, it does not make sense to do analyze both outcomes, as one is simply an \textit{other} case. As such, the exemplars here will only be given for the positive case, (e.g. ê-Conjunct, kâ-Conjunct, or Other-Conjunct.
+    
+    \subsubsection{ê-Conjunct}
+    \textit{Inanimate Intransitive Verbs}
+    
+    \begin{exe}
+    \ex
+    \gll ... namôy êtikwê \textbf{ê-miywâsik} ôma ta-nipahtâkêhk. \tiny{(CMBK-5-2 87; 0.95)} \\
+         ...  not apparently {\textbf{it is good}} \textsc{foc} {someone who kills}\\
+    \trans  
+    \label{ii-cnjtype}
+    \end{exe}
+    
+    There was only one correctly identified ê-Conjunct exemplar available, and in this case it was as a main verb of a clause. It's estimated probability is high at 0.95.
+    
+    \vspace{5mm}
+    \textit{Animate Intransitive Verbs}
+    
+    \begin{exe}
+    \ex
+    \gll ... môy tâpwê \textbf{ê-ohci-ma-miyomahcihot} ... \tiny{(CMBK-4-2 159; 0.98)} \\
+         ... not truly {\textbf{he does not really feel well}} ...\\
+    \trans  
+    \label{ai-cnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... êkos ânima \textbf{ê-isi-tâpwêt} êwako. \tiny{(JK 160; 0.97)} \\
+         ... so that {\textbf{he speaks truth thus}} this \\
+    \trans  
+    \label{ai-cnjtype2}
+    \end{exe}
+    
+
+    \begin{exe}
+    \ex
+    \gll ... ê-wîcêwâyâhk âskaw ê-~ \textbf{ê-papâmi-mawisot} ... \tiny{(EM 36-37; 0.97)} \\
+         ... {we get along with him} sometimes ê-~ \textbf{he picks berries about} ...\\
+    \trans  
+    \label{ai-cnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll \textbf{ê-papâmi-pa-pêyakoyân} in the spruce -~–	mâka mîn âsay nitâkayâsîmon. \tiny{(AL 148-149; 0.97)} \\
+    {\textbf{I'd be going about alone}} in the spruce -~– but and already {I speak English}  \\
+    \trans  I'd be going about alone in the spruce -~ - and I'm already speaking English again \tiny{\citep[254-255]{Bearetal1992}}.
+
+    \label{ai-cnjtype4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll êkos ôma nika-mâc-âcimon nîsta, tânisi \textbf{ê-isi-ka-kiskisiyân} ... \tiny{(CMBK-1-2 14; 0.97)} \\
+         so this {I will tell bad news} {I too}, how {\textbf{I really remember thus}} ... \\
+    \trans  
+    \label{ai-cnjtype5}
+    \end{exe}
+
+In the ê-Conjunct outcome for the VAI, all of the top five VAI exemplars make use of preverbs. Interestingly, two of the top five exemplars used the position preverb, \{papâmi-\} (indicaitng an action is done throughout an area). Another two made use of the discourse preverb \{isi-\} (describing that an action is done is such a way). Beyond this, the actual semantic criteria of the verbs does not form a cohesive class in this outcome. The estimated probability was high for this outcome, ranging from 0.97-0.98.
+    
+\vspace{5mm}
+    \textit{Inanimate Transitive Verbs}
+    
+    \begin{exe}
+    \ex
+    \gll môy wîhkât nânitaw \textbf{ê-ohci-itêyihtamâhk} ... \tiny{(CMBK-3-2 162; 1.00)} \\
+     not ever simply {\textbf{we do not think this}} ...  \\
+    \trans 
+    \label{ti-cnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll êkwa awa nisîmis, anita wiy êkwa \textbf{ê-ohci-nitohtahk} wîkiwâhk ... \tiny{(CMBK-4-2 29; 0.98)} \\
+     and this {my younger sister}, there for and  {\textbf{she listened at my home}}...  \\
+    \trans 
+    \label{ti-cnjtype2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... tâpiskôc {namôya kîkway} \textbf{ê-itêyihtahkik} onêhiyâwiniwâw. \tiny{(VDC2 20-22; 0.97)} \\
+    ... {Just like} {nothing} {\textbf{they think about}} {their Cree way}.
+\\
+    \trans 
+    \label{ti-cnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll â, êkos ê-itihtahk anima, «sâncikilôs [sic]» \textbf{ê-itêyihtahk}, «in the cross» ê-itwêwiht. \tiny{(AA 191; 0.97)}
+ \\
+     yes, so {he hears thus} this, «sâncikilôs [sic]» {\textbf{he thinks about it}}, «in the cross» {he make such a noise} \\
+    \trans Yes, that is what he heard, interpreting it as `sâncikilôs' when they said 'in the cross.' \tiny{\citep[124-125]{AhenakewAlice2000}}
+    \label{ti-cnjtype4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... êkâya kîkway ê-pakitinamâkoyahk, tânisi \textbf{ê-itêyihtamahk}. \tiny{(VDC2 114-115; 0.90)} \\
+      not what {he allows us}, what {\textbf{we think about this}} \\
+    \trans ... they do not allow us to think for ourselves \tiny{\citep[42-43]{VandallDouquette1987}}.
+    \label{ti-cnjtype5}
+    \end{exe}
+    
+Of the top five exemplars for VTIs, only one (example \ref{ti-cnjtype2}) was \textit{not} a form of \textit{itêyihtam}, `s/he thinks it'. Interestingly, this exception (a form of \textit{nitohtam}, `s/he listens') is still a sensory verb, which in the VTI falls under the same umbrella as thinking verbs, \codebox{TI-nonaction}. Estimated probabilities were quite high, ranging from 0.90 to 1.00.
+    
+\vspace{5mm}
+    \textit{Transitive Animate Verbs}
+    
+    \begin{exe}
+    \ex
+    \gll ... ma kîkway wîhkâc \textbf{ê-ohci-pakitinicik} aniki nikosis Randy ... \tiny{(CMBK-2-2 43; 0.97)} \\
+    ... not what ever {\textbf{they let me go}} those {my son} Randy ... \\
+    \trans 
+    \label{ta-cnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... môy âhpô ê-ohci-kiskêyimak awa kâ-wî-wîkimak awa Tommy, môy \textbf{ê-ohci-kiskêyimak}. \tiny{(CMBK-4-2 114; 0.97)} \\
+     ... not even {I do not know him} this {whom I am going to live with} this Tommy, not {\textbf{I do not know him}}\\
+    \trans  
+    \label{ta-cnjtype2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... tânsi ê-isi-sîhkimicik, tânisi \textbf{ê-isi-nitawêyimicik}, nikî-tôtên. \tiny{(EM 92; 0.96)} \\
+    ... how {he urges me}, how \textbf{{they want me}} {I do it}\\
+    \trans ... what they urged me, what they wanted me to do, I would do \tiny{\citep[66-67]{Minde1997kwayask}}.
+    \label{ta-cnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll êwakw ânima kêhcinâ aya ê-kî-miywêyihtamân, ê-kî-oh-~ aya \textbf{ê-kî-isi-wâpamak} niwîkimâkan ôtê kâ-pê-wîcêwak ... \tiny{(EM 65; 0.93)} \\
+    this that certainly well {I was glad} {ê-kî-oh-~} well \textbf{I saw him thus} {my husband} {over here} {I come to marry him}   \\
+    \trans I certainly used to be happy that I could see my husband in this light when I came over here to be married to him ... \tiny{\citep[36-37]{Minde1997kwayask}}
+    \label{ta-cnjtype4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... wiy âh-apisîs piko \textbf{ê-kî-asamikawiyâhk}. \tiny{(CMBK-1-2 25; 0.92)} \\
+    ... for {very small} {a bit} {\textbf{some one fed us}}\\
+    \trans 
+    \label{ta-cnjtype5}
+    \end{exe}
+    
+Although the VTA exemplar for the ê-Conjunct outcome have little cohesion, all but (\ref{ta-cnjtype2}) represent a past action, even if not represented in the morphology. Beyond this, ê-Conjunct exemplars often contain first person goals, as in (\ref{ta-cnjtype1}), (\ref{ta-cnjtype3}), (\ref{ta-cnjtype5}). These exemplars ranged from 0.92 to 0.97. 
+
+
+\subsubsection{kâ-Conjunct}
+    
+\textit{Inanimate Intransitive Verb}
+
+    \begin{exe}
+    \ex
+    \gll ... ita êsa mân êtikwê ê-kî-osâpit, \textbf{kâ-kîsikâyik} ... \tiny{(CMBK-5-2 57; 0.75)}  \\
+    ... there apparently {used to} apparently {he watched from there}, {\textbf{in the day}}  \\
+    \trans 
+    \label{ii-kaacnjtype1}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll ... wiya pîhc-âyihk kâ-~ \textbf{kâ-pipohk} kâ-kî-ayâyâhk. \tiny{(C2GB 18; 0.63)}  \\
+    ... for inside kâ-~ {\textbf{it is snowing}} {he has it} \\
+    \trans 
+    \label{ii-kaacnjtype2}
+    \end{exe}
+    
+The kâ-Conjunct outcome for the VII had only two valid exemplars. Each of these exemplars were used not as prototypical semantic verbs. In (\ref{ii-kaacnjtype1}) the exemplar, a form of \textit{kîsikâw} is used as a temporal prepositional phrase/adjunct. In (\ref{ii-kaacnjtype2}), the verb \textit{kâ-pipohk} (`it is snowing'), is used nominally to simply mean `snow'. These exemplars were not as well predicted as those covered previously, ranging from 0.63 to 0.75.
+    
+\vspace{5mm}
+\textit{Animate Intransitive Verb}
+
+    \begin{exe}
+    \ex
+    \gll ... mîn êkâ awiyak \textbf{kâ-kî-minahot}, âhci piko pêyakwan ê-miyiht wiyâs ... \tiny{(CMBK-4-2 264; 0.73)}  \\
+    ... and no someone {\textbf{he kills}}, still {a bit} one {he gives to me} meat \\
+    \trans  
+    \label{ai-kaacnjtype1}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll ... êkwa \textbf{kâ-minahocik} ôkik nâpêwak ... \tiny{(C2GB 14; 0.72)} \\
+    ... and {\textbf{they hunt}} these men  \\
+    \trans  
+    \label{ai-kaacnjtype2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll cikêmô kikî-miyikonaw kôhtâwînaw, kîstanaw \textbf{kâ-nêhiyâwiyahk} ... \tiny{(JK 7; 0.63)}\\
+    {of course} {we were given it by him} {our father}, {we too} {\textbf{we are cree}}  \\
+    \trans 
+    \label{ai-kaacnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... misatimwak ê-têhtapiyâhk, itê \textbf{kâ-minahocik} nôhtâwînânak. \tiny{(CMBK-4-2 250; 0.59)}\\
+    .. horses {we ride}, there {\textbf{they hunt}} {our fathers}\\
+    \trans 
+    \label{ai-kaacnjtype4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll êkwa mîna pikw îta \textbf{kâ-pîhtikwêyan} ê-mîcisoyan ... \tiny{(AL 71; 0.57)}\\
+     and also only there {\textbf{you come in}} {you eat}\\
+    \trans 
+    \label{ai-kaacnjtype5}
+    \end{exe}
+
+Three of the five exemplars ((\ref{ai-kaacnjtype1}), (\ref{ai-kaacnjtype2}), and (\ref{ai-kaacnjtype4})),  for the VAIs in the kâ-Conjunct outcome concern forms of the lexeme \textit{minahow} (`s/he hunts/kills'). Beyond this, this is little that can be generalized about these exemplars. Estimated probabilities were relatively low, ranging from 0.57 on the low end to only 0.73 on the high end.
+    
+\vspace{5mm}
+\textit{Inanimate Transitive Verb}
+
+    \begin{exe}
+    \ex
+    \gll ... êkosi êkon êkw êkotê ê-wa-wîc-âyâmât – wâhyaw ôm ôma \textbf{kâ-itamân}, {môy âhpô} nikiskisin tânis ânim ê-isiyîhkâtahkik ... \tiny{(CMBK-1-2 237; 0.91)} \\
+    ... so this and {over there} {he always lives with him} - {far away} {then} {the fact that} {\textbf{I call something}}, {not even} {I know} what that {they call it} ...\\
+    \trans 
+    \label{ti-kaacnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... `iyisâhowin' anima ka-~ \textbf{kâ-itamihk} aya ... \tiny{(EM 75; 0.83)}\\
+    ... `iyisâhowin' this ka-~ {\textbf{he calls it}} {this one} ... \\
+    \trans ... 'resisting tempatation' as they would call it ... \tiny{\citep[46-47]{Minde1997kwayask}}
+    \label{ti-kaacnjtype2}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll êkoyikohk isko ê-kî-nôhtê-âcimostawak awa niwîcêwâkan, êwak ôm ôma \textbf{kâ-nitawêyihtahk}. \tiny{(CMBK-3-2 48; 0.66)}\\
+    {only then} until {they wanted to tell a story} \textsc{foc} {my spouse}, {this one} \textsc{foc} that {\textbf{he wants it}}  \\
+    \trans 
+    \label{ti-kaacnjtype3}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll ... anima \textbf{kâ-nôhtê-kiskêyihtahk} nâha, êwako ê-kî-pawâmit anima ... \tiny{(SW 39; 0.61)}\\
+    ... that {\textbf{he wants to know about it}} {that one}, {this one} {he had a dream spirit} {that}  \\
+    \trans .. what that one wants to know about, that the woman had a dream spirit ... \tiny{\citep[36-37]{Whitecalf1993}}
+    \label{ti-kaacnjtype4}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll êwakw ânim ânohc \textbf{kâ-mâmiskôtahk} ayamihêwiyiniw ... \tiny{(EM 78; 0.61)}\\
+    this that today {\textbf{he talks about it}} {priest} ...\\
+    \trans This is what the priest talked about today ... \tiny{\citep[52-53]{Minde1997kwayask}}
+    \label{ti-kaacnjtype5}
+    \end{exe}
+
+The VTI exemplars were made up mostly of verbs of speech. In (\ref{ti-kaacnjtype1}) and (\ref{ti-kaacnjtype2}) the exemplar verb \textit{itam} (`s/he calls it so') is used; in (\ref{ti-kaacnjtype5}) the verb \textit{mâmiskôtam} (`s/he talks about it') is used; and finally in (\ref{ti-kaacnjtype3}) where the exemplar \textit{ê-kî-nôhtê-âcimostawak} regars to telling a story. The remaining exemplar verb, \textit{kâ-nôhtê-kiskêyihtahk}, refers to knowing. As in the previous outcome, all these exemplars fall under the banner of \codebox{II-nonaction}. This class of verbs had a large range in its estimated probabilities, with the lowest exemplar estimated at 0.61 and the highest at 0.91.
+    
+\vspace{5mm}
+\textit{Transitive Animate Verb}
+
+    \begin{exe}
+    \ex
+    \gll ... mâk êkwa awa \textbf{kâ-pê-wîhtamawit} nitôsim ... \tiny{(CMBK-4-2 19; 0.71)}\\
+    ... but and this {\textbf{he comes and tells me about it}} my stepson ...\\
+    \trans  
+    \label{ta-kaacnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... kîkway ôki \textbf{kâ-wîhtamawicik} nitawâsimisak ... \tiny{(CMBK-4-2 202; 0.71)} \\
+    ... what these {\textbf{they talk to me}} {my children} ... \\
+    \trans  
+    \label{ta-kaacnjtype2}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll êwakw âwa \textbf{kâ-wîhtamawak} anohc ... \tiny{(JK 4; 0.64)}\\
+    that one that {\textbf{I tell him about it}} today ... \\
+    \trans  
+    \label{ta-kaacnjtype3}
+    \end{exe}
+    
+The VTA kâ-Conjunct exemplars were fewer in number than the VAI and VTI classes with only three valid exemplars present. Similar to what was seen in the VTI class, each exemplar is a form of a speech verb. Probability estimates ranged from 0.64 to 0.71.
+    
+
+
+\subsubsection{Other Conjunct}
+
+\textit{Intransitive Inanimate Verbs}
+
+    \begin{exe}
+    \ex
+    \gll ...  môniyâw ê-pêhtât nêtê \textbf{ta-takopayiyiki} anihi. \tiny{(CMBK-3-2 134; 0.53)} \\
+    ... {white man} {he waits} there {\textbf{when it arrives}} \textsc{foc} \\
+    \trans 
+    \label{ii-othercnjtype1}
+    \end{exe}
+
+In the final outcome, the Other Conjunct, the VII had only a single valid exemplar. Here the exemplar is a subjunctive form acting as a temporal adjunct. The probability estimate for the one exemplar was quite low at 0.53.
+\vspace{5mm}
+\textit{Animate Intransitive Verbs}
+
+    \begin{exe}
+    \ex
+    \gll ... tânisi k-êtôtamân, \textbf{mêstohtêyêko} pê-miyikawiyâni wêpinâson ... \tiny{(JK 160; 0.89)} \\
+    ... what {I will do}, {when you are all gone} {if I am given it} {cloth}\\
+    \trans ... what will I do when you are all gone if someone comes and gives me cloth ... \tiny{\citep[132-133]{KaNipitehtew1998}}
+    \label{ai-othercnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... ahpô kikaskihtân \textbf{ta-nipâyan} ... \tiny{(SW 112; 0.67)} \\
+    ... or {you are able to} {you die} ...\\
+    \trans 
+    \label{ai-othercnjtype2}
+    \end{exe}
+    
+    
+    \begin{exe}
+    \ex
+    \gll ... êkwa awiyak nôhtê-papâmitâpâsoci, ta-~ \textbf{ta-papâmitâpâsohk} ... \tiny{(AL 42; 0.63)} \\
+    ... and someone {when he wants to ride about}. ta-~ {\textbf{someone rides around}}\\
+    \trans 
+    \label{ai-othercnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll misawâc ôta, ispî mêht-~ [sic] \textbf{mêstohtêtwâwi} ... \tiny{(JK 18; 0.53)} \\
+    {in any way} here, when, mêht-~ [sic] {\textbf{when they die}} \\
+    \trans In any case, when all those here will have died ... \tiny{\citep[64-65]{KaNipitehtew1998}}
+    \label{ai-othercnjtype4}
+    \end{exe}
+    
+All four valid VAI exemplars were hypothetical, time dependent, verbs. In most cases, the exemplars were in the subjunctive Conjunct form, though even when simply in the ka/ta-Conjunct (as in (\ref{ai-othercnjtype3})) the conditional meaning is still present. Expected probabilities had quite a large range, from 0.53 to 0.89.
+
+
+
+\vspace{5mm}
+\textit{Inanimate Transitive Verbs}
+
+    \begin{exe}
+    \ex
+    \gll ... piko kâwi \textbf{ka-kîwêtotamahk} k-âtoskêyahk, ka-kakwê-pimâcihoyahk ... \tiny{(EM 96; 0.85)} \\
+    ... {a bit} {again} {\textbf{we return to it}} {we work}, {we try to make a living}  \\
+    \trans ... so we will have to go back and work to try and make a living ... \tiny{\citep[72-73]{Minde1997kwayask}}
+    \label{ti-othercnjtype2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll mistahi ka-miywâsin, êwak ôma kîstawâw,\textbf{ka-kiskinowâpahtamêk} ôma kâ-wî-isîhcikêyâhk  oskinîkiskwêwak, kwayask ... \tiny{(JK 158; 0.84)} \\
+    very {it is good}, this the {you all too}, {\textbf{you all learn by watching it}} {this} {we are going to do it} {young women}, {properly}\\
+    \trans It will be very good for you too, the young women, to watch what we are going to do and learn from it ... \tiny{\citep[130-131]{KaNipitehtew1998}}
+    \label{ti-othercnjtype2}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... wiya kiyânaw kikaskihtânaw kîkway ka-kî-nipahtamâsoyahk, kayâsi-pimâcihowin \textbf{ka-otinamahk} ... \tiny{(C2GB 45; 0.74)} \\
+    ... for {us} {we can} what {we killed}, {old way of life} {\textbf{we take it}} ...\\
+    \trans ... for we are able to kill things for ourselves and to take up our traditional way of life ... \tiny{\citep[82-83]{Bearetal1992}}
+    \label{ti-othercnjtype3}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll môy pikw êkosi k-êsi-mâmitonêyihtamahk, \textbf{ka-tôtamahk} anima ... \tiny{(EM 76; 0.78)} \\
+    no only so {we should think that way}, {\textbf{we should do it}} that ... \\
+    \trans We should not only think that way, we should do it ... \tiny{\citep[48-49]{Minde1997kwayask}}
+    \label{ti-othercnjtype4}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll ... ê-miyohtwât an[a] îskwêw ê-wîcihât anih ôskinîkiwa, \textbf{ta-pônihtâyit} minihkwêwin ... \tiny{(EM 134; 0.76)}\\
+    ... {she is good  natured} that woman {she helps him} that {young man}, {\textbf{he quits}} {alcohol} ...\\
+    \trans ... that woman is good-natured and helps that young man to quit drinking ... \tiny{\citep[92-93]{Minde1997kwayask}}
+    \label{ti-othercnjtype5}
+    \end{exe}
+    
+The VTI class has five exemplars, all of which occur in the ka/ta-Conjunct. In most cases, these are translated as infinitive forms and nearly always act as non-main verbs, though in (\ref{ti-othercnjtype2}) the exemplar \textit{ka-kîwêtotamahk} appears to be the main verb of the clause. For the VTIs, probabilities estimates were reasonably from 0.76 and 0.85
+    
+\vspace{5mm}
+\textit{Transitive Animate Verbs}
+
+    \begin{exe}
+    \ex
+    \gll ... âta kâ-nisitohtahkik, âta \textbf{kitotatwâwi}, tâpiskôc êkâya ê-pêhtâskik \tiny{(VDC2 19-20; 0.84)}\\
+    ... although {they understand}, although {\textbf{if you speak to them}}, {for instance} not {they hear you} ... \\
+    \trans 
+    \label{ta-othercnjtype1}
+    \end{exe}
+    
+    \begin{exe}
+    \ex
+    \gll k-âyimômâyahk kîc-âyisiyinînaw, ahpô \textbf{ka-pâhpihâyahk} ê-kitimâkinâkosit ... \tiny{(JK 9; 0.84)} \\
+    {when we gossip about him} {our fellow man}, or {\textbf{if we laugh at him}} {he is pitiable} ...  \\
+    \trans When we gossip about our fellow man, or if we were to laugh at someone who looks pitiable ... \tiny{\citep[54-55]{KaNipitehtew1998}}
+    \label{ta-othercnjtype2}
+    \end{exe}
+    
+The final class, the VTAs, has only two valid exemplars. Both are conditional verbs, though only (\ref{ta-othercnjtype1}) had the verb in the subjunctive Conjunct form. Instead, (\ref{ta-othercnjtype2}) contains \textit{ka-pâhpihâyahk}, `if we laugh at him', in the ka/ta-Conjunct without any particle that might suggest conditionality. It is also worth noting that in (\ref{ta-othercnjtype1}) the exemplar verb is, as has been seen previously, one of speech.  Both exemplars were well predicted, with probability estimates of 0.84.

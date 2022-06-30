@@ -1,0 +1,38 @@
+
+\begin{lstlisting}[style=mystyle]
+#Univariate analyses
+##Independent vs. Conjunct Alternation
+II.Univariate.indcnj <- nominal(TopOrder ~ PV.StartFin + PV.Qual + II.sense + II.natural.land + II.weather + Sg.actor + NI.object.actor + auto.ni.3.actor + Dem.actor + Pron.actor + Med.actor + NI.nominal.actor + Pl.actor + actor.3 + actor.obv, data = subset(AWnimp, II))
+
+AI.Univariate.indcnj <- nominal(TopOrder ~ PV.Move + PV.Time + PV.Position + PV.Qual + PV.StartFin + PV.Discourse + PV.WantCan + AI.do + AI.state + AI.speech + AI.reflexive + AI.cooking + AI.health + AI.money.count + AI.plural + AI.pray + AI.heat.fire + RdplS + RdplW + NA.persons.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Pers.actor + Px1Sg.actor + Prox.actor + Med.actor + Incl.actor + Obv.actor + NA.beast.of.burden.actor + NA.food.actor + Px3Sg.actor + Indef.actor + actor.3 + actor.1 + actor.2 + actor.obv}, data = subset(AWnimp, AI))
+
+TI.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Position + PV.Move + PV.StartFinWantCan + PV.Discourse + PV.Qual + PV.WantCan + PV.StartFin + TI.do + TI.cognitive + TI.speech + TI.money.count + RdplW + RdplS + NA.persons.actor + Pron.actor + Sg.actor + Pers.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Px1Sg.actor + Incl.actor + Prox.actor + auto.na.1.actor + actor.3 + actor.1 + actor.2 + actor.obv + goal.3 + Sg.goal + NI.object.goal + Dem.goal + Pron.goal + Pl.goal + Med.goal + Prox.goal + NI.nominal.goal + NI.natural.force.goal + NI.nature.plants.goal + NI.place.goal + auto.ni.4.goal + auto.ni.7.goal + Px3Sg.goal + D.goal + NDI.Body.goal, data = subset(AWnimp, TI))
+
+TA.Univariate.indcnj <- nominal(TopOrder ~ PV.Time + PV.Move + PV.Position + PV.Discourse + PV.StartFinWantCan + PV.Qual + PV.WantCan + PV.StartFin + TA.speech + TA.do + TA.cognitive + TA.food + TA.money.count + TA.allow + NA.persons.actor + Sg.actor + D.actor + NDA.Relations.actor + Pron.actor + Px1Sg.actor + Dem.actor + Pers.actor + Pl.actor + Obv.actor + Prox.actor + Med.actor + Incl.actor + actor.3 + actor.1 + actor.2 + actor.obv + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + Sg.goal + Obv.goal + Pron.goal + D.goal + NDA.Relations.goal + Pl.goal + Dem.goal + Px1Sg.goal + Prox.goal + NA.beast.of.burden.goal + Med.goal + Px3Sg.goal + Pers.goal + NA.food.goal + Px3Pl.goal + Px12Pl.goal, data = subset(AWnimp, TA))
+
+
+###Independent vs. ê-Conjunct Alternation
+
+II.Univariate.ive <- nominal(OrderType ~ PV.Qual + PV.StartFin + II.sense + II.natural.land + II.weather + Sg.actor + NI.object.actor + Dem.actor + Pron.actor + Med.actor + NI.nominal.actor + Pl.actor + actor.3 + actor.obv, data = subset(AWive, II))
+
+AI.Univariate.ive <- nominal(OrderType ~ PV.Move + PV.StartFinWantCan + PV.Qual + PV.Position + PV.StartFin + PV.Discourse + PV.Time + PV.WantCan + AI.do + AI.state + AI.speech + AI.cooking + AI.reflexive + AI.health + AI.money.count + AI.plural + AI.pray + AI.heat.fire + RdplS + RdplW + NA.persons.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Pers.actor + Px1Sg.actor + Dem.actor + Prox.actor + Med.actor + Incl.actor + Obv.actor + NA.beast.of.burden.actor + Px3Sg.actor + NA.food.actor + Indef.actor + actor.3 + actor.1 + actor.2 + actor.obv, data = subset(AWive, AI))
+
+
+TI.Univariate.ive <- nominal(OrderType ~ PV.Position + PV.Move + PV.Time + PV.Qual + PV.Discourse + PV.WantCan + PV.StartFin + TI.do + TI.cognitive + TI.speech + TI.money.count + RdplW + RdplS + Pron.actor + Pers.actor + Sg.actor + Pl.actor + D.actor + NDA.Relations.actor + Px1Sg.actor + Dem.actor + Incl.actor + Prox.actor + actor.3 + actor.1 + actor.2 + actor.obv + goal.3 + Sg.goal + NI.object.goal + Dem.goal + Pron.goal + Pl.goal + Med.goal + Prox.goal + NI.nominal.goal + NI.natural.force.goal + NI.nature.plants.goal + NI.place.goal + Px3Sg.goal + D.goal + auto.ndi.1.goal + NDI.Body.goal + Px1Sg.goal + Px3Pl.goal, data = subset(AWive, TI))
+
+TA.Univariate.ive <- nominal(OrderType ~ PV.Move + PV.Discourse + PV.StartFinWantCan + PV.Position + PV.Qual + PV.Time + PV.StartFin + PV.WantCan + TA.speech + TA.do + TA.cognitive + TA.food + TA.money.count + TA.allow + RdplS + RdplW + NA.persons.actor + Sg.actor + D.actor + NDA.Relations.actor + Pron.actor + Px1Sg.actor + Dem.actor + Pers.actor + Pl.actor + Obv.actor + Prox.actor + Med.actor + Incl.actor + actor.3 + actor.1 + actor.obv + actor.2 + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + Obv.goal + Sg.goal + D.goal + NDA.Relations.goal + Pron.goal + Pl.goal + Dem.goal + Px1Sg.goal + NA.beast.of.burden.goal + Prox.goal + Med.goal + Px3Sg.goal + Pers.goal + NA.food.goal + Px3Pl.goal + Incl.goal + Px12Pl.goal, data = subset(AWive, TA))
+
+###ê-Conjunct vs. kâ-Conjunct vs. Other-Conjunct Alternation
+
+II.Univariate.Cnjtypes <- nominal(OrderType ~ PV.StartFin + PV.StartFinWantCan + PV.Qual + II.sense + II.natural.land + II.weather + Sg.actor + NI.object.actor + Dem.actor + Pron.actor + actor.3 + actor.obv, data = subset(AWCnj, II))
+
+
+AI.Univariate.Cnjtypes <- nominal(OrderType ~  PV.Move + PV.Time + PV.Position + PV.StartFinWantCan + PV.Qual + PV.Discourse + PV.StartFin + PV.WantCan + AI.do + AI.state + AI.speech + AI.reflexive + AI.cooking + AI.health + AI.plural + AI.money.count + AI.pray + RdplW + RdplS + NA.persons.actor + Sg.actor + Pron.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Pers.actor + Px1Sg.actor + Prox.actor + Med.actor + Obv.actor + Incl.actor + NA.beast.of.burden.actor + NA.food.actor + Px3Sg.actor + Indef.actor + actor.3 + actor.1 + actor.2 + actor.obv, data = subset(AWCnj, AI))
+
+
+TI.Univariate.Cnjtypes <- nominal(OrderType ~  PV.Time + PV.Position + PV.Discourse + PV.StartFinWantCan + PV.Move + PV.Qual + PV.WantCan + PV.StartFin + TI.do + TI.cognitive + TI.speech + RdplW + RdplS + NA.persons.actor + Pron.actor + Sg.actor + Pers.actor + Pl.actor + D.actor + NDA.Relations.actor + Dem.actor + Px1Sg.actor + actor.3 + actor.1 + actor.2 + actor.obv + goal.3 + Sg.goal + NI.object.goal + Dem.goal + Pron.goal + Pl.goal + Med.goal + Prox.goal + NI.nominal.goal + NI.natural.force.goal + NI.nature.plants.goal + NI.place.goal, data = subset(AWCnj, TI))
+
+
+TA.Univariate.Cnjtypes <- nominal(OrderType ~ PV.Time + PV.Move + PV.Position + PV.Discourse + PV.StartFinWantCan + PV.Qual + PV.StartFin + PV.WantCan + TA.do + TA.speech + TA.cognitive + TA.food + TA.money.count + TA.allow + RdplS + RdplW + Sg.actor + NA.persons.actor + D.actor + NDA.Relations.actor + Pron.actor + Px1Sg.actor + auto.nda.1.actor + Dem.actor + Pl.actor + Obv.actor + Pers.actor + Prox.actor + Med.actor + actor.3 + actor.1 + actor.2 + actor.obv + goal.3 + goal.4 + goal.1 + goal.2 + NA.persons.goal + Obv.goal + Sg.goal + Pron.goal + D.goal + NDA.Relations.goal + Pl.goal + Dem.goal + Prox.goal + NA.beast.of.burden.goal + auto.na.7.goal + Px1Sg.goal + auto.na.2.goal + auto.na.3.goal + Med.goal + Px3Sg.goal + Pers.goal + NA.food.goal + Px3Pl.goal, data = subset(AWCnj, TA))
+
+\end{lstlisting}

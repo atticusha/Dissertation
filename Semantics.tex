@@ -1,0 +1,195 @@
+	\chapter{Automatic Semantic Classification}
+	\label{ch:semantics}
+
+\begin{abstract}
+A previous versions of this paper were published \cite{harrigan-arppe-2021-leveraging} and \cite{harriganPACsem}. This paper details a semi-automatic method of word clustering for the Algonquian language, Nêhiyawêwin (Plains Cree). Although this method worked well, particularly for nouns, it required some amount of manual postprocessing. The main benefit of this approach over implementing an existing classification ontology is that this method approaches the language from an endogenous point of view, while performing classification quicker than in a fully manual context.
+\end{abstract}
+
+\section{Introduction}
+
+Grouping words into semantic subclasses within a part of speech is a technique used widely throughout quantitative and predictive studies in the field of linguistics. \citet{bresnan2007predicting} use high level verb classes to predict the English dative alternation, \citet{arppe2008univariate} uses verb class as one of the feature sets to help predict the alternation of Finnish \textit{think} verbs, and \citet{yu2017refining} use polarity classifications (\textit{good} vs \textit{bad}) from pre-defined lexica such as WordNet \cite{miller1998wordnet}. In many cases, classifications within word classes allow researchers to group words into smaller cohesive groups to allow for use as predictors in modelling. Rather than using thousands individual lexemes as predictors, one can use a word's class to generalize over the semantic features of individual lexemes to allow for significantly more statistical power. 
+
+While extensive ontologies of word classifications exist for majority languages like English \citep{miller1998wordnet}, German \citep{hamp1997germanet}, and Chinese \citep{wang2013building}, minority languages, especially lesser resourced languages in North America generally do not boast such resources.\footnote{There is one attempt at semantically classifying Nêhiyawêwin through automatic means found in \citet{dacanay2021}. This work makes use of similar techniques as described in this paper, differing mainly in its mapping of Nêhiyawêwin words onto Wordnet classes.} Where such ontologies do exist, for example in Innu-aimun, also known as Eastern Cree \citep{visitor2013eastern}, they are often manually created, an expensive process in terms of time. Alternatively, they may be based upon English ontologies such as WordNet. This opens the window to near-automatic ontology creation by associating definitions in a target language and English through a variety of methods. This is especially important, given the amount of time and effort that goes into manually classifying a lexicon through either an existing ontology (be it something like Rapidwords\footnote{See \url{http://rapidwords.net/}} or even Levin's like classes \citep{levin1993english}). Moreover, there is a motivation based in understanding a language and its lexicalization process on its own terms, though how to do this with a lesser resourced language remains unclear.
+
+\section{Background}
+I began word classification in preparation for modelling a morpho-syntactic alternation in Nêhiyawêwin verbs. One hypothesis we developed for this alternation, based on \citet{arppe2008univariate}, is that the semantic classes of the verbs themselves as well as their nominal arguments would inform the verbal alternation. Due to constraints of time, we investigated methods to automatically classify both verbs and nouns in Nêhiyawêwin. Although statistical modelling remains the immediate motivator for the authors, semantic/thematic classifications have a wide range of benefits for language learners and revitalization, particularly in online lexicographic resources, where one may want to view all words to do with a theme, rather than simply finding translations of single English words.
+
+In creating a framework for automatic semantic classification we make use of Word2vec \citep{mikolov2013efficient} word embeddings. Word embeddings are words represented by \textit{n}-dimensional vectors. These vectors are ultimately derived from a word's context in some corpus through the Word2vec algorithm. Unfortunately, the Word2vec method is sensitive to corpus size. We initially attempted to create basic word and feature co-occurrence matrices based on a 140,000 token Nêhiyawêwin corpus \cite{arppe1945morphosyntactically} to create word vectors using Principal Components Analysis, but in the end found the results to be not practically useful. Similarly, an attempt at both tf-idf and Word2Vec using only the Nêhiyawêwin dictionary produces mostly ill-formed groupings, though in these cases preprocessing by splitting verbs and nouns was not performed. Regardless, the poor performance was most certainly due simply to the paucity of data. Although the available corpora are small, Nêhiyawêwin does have several English-to-Nêhiyawêwin dictionaries, the largest being \citet{Wolvengrey2001}. Although a bilingual Nêhiyawêwin-English dictionary, it is one formed from an Indigenous point of view, based on vocabulary from previous Nêhiyawêwin language resources, some of which have been compiled by Nêhiyawêwin communities from their own perspectives, or gleaned from a number of texts collections rather than attempting to find Nêhiyawêwin word matches for a pre-defined set of English words. This results in dictionary entries such as \texttt{sakapwêw: it roasts over a fire (by hanging, with string on stick)}. Definitions such as this take into account the nuanced cultural understanding reflected in the word's morphology. 
+
+\section{Methodology}
+
+To address the issue of corpus size, we attempted to bootstrap our classification scheme with pre-trained English vectors in the form of the 3 million word Google News Corpus, which represents every word with a 300-dimensional vector.\footnote{This corpus was trained on a large corpus of 100 billion words. Available at \url{https://code.google.com/archive/p/word2vec/}} We make use of the English definitions (sometimes also referred to as glosses) provided in \citet{Wolvengrey2001} and fit to each word its respective Google News Corpus vector. This dictionary makes use of lemmas as headwords, and contains, at the time of writing, 21,717 entries. The presumption is that the real-world referents (at least in terms of denotation) of English and Nêhiyawêwin words are approximately comparable, in particular when taking the entire set of words in an English definition. Stop words (common words that supply little lexical or semantic information) were removed, and where content words were present in definitions in \citet{Wolvengrey2001} but \emph{not} available in the Google News Corpus, synonyms were used (one such example might be the word \textit{mitêwin}, which is unavailable in the corpus and thus would replaced with something like \textit{medicine lodge} or deleted if a synonym was given in the definition as well). Because the Google News Corpus is based in American spelling, while \citet{Wolvengrey2001} is based in Canadian spelling, American forms (e.g. \textit{color, gray}) were converted into Canadian forms (e.g. \textit{colour, grey}). If such preprocessing is not performed, these words are simply unavailable for clustering, as they lack a matching vector.\footnote{In reality, there were only a handful of cases where words occurred in the dictionary but not in the Google News Corpus. Because there are so few examples of this, even simply leaving these items out would not substantiqally change clustering results.} Where a Nêhiyawêwin word had more than one word sense, each sense was given a separate entry and the second entry was marked with a unique identifier. Finally, where needed, words in the Nêhiyawêwin definitions were lemmatized.
+
+Once every word in \citet{Wolvengrey2001} definitions matched an entry in the Google News Corpus, we associated each word in a Nêhiyawêwin definition with its respective Google News Vector. That is, given a definition such as \texttt{awâsisihkânis: small doll}, the resulting structure would be:
+\begin{displaymath}
+    \texttt{awâsisihkânis} = \begin{bmatrix}
+0.159 \\ 0.096 \\ -0.125 \\ \vdots 
+         \end{bmatrix}
+\begin{bmatrix}
+0.108 \\ 0.031 \\ -0.034 \\ \vdots 
+         \end{bmatrix}
+\end{displaymath}
+Because all word-vectors in the Google News Corpus are of the same dimensionality, we then took the resulting definition and averaged, per dimension, the values of all its constituent word-vectors. This produced a single 300-dimensional vector that acts as a sort of naive sentence vector for each of the English glosses/definitions:
+\begin{displaymath}
+    \texttt{awâsisihkânis} = \begin{bmatrix}
+0.134 \\ 0.064 \\ -0.080 \\ \vdots 
+         \end{bmatrix}
+\end{displaymath}
+\citet{mikolov2013distributed} mention this sort of naive representation and suggests the use of phrase vectors instead of word vectors to address the representation of non-compositional idioms; however, given the way \citet{Wolvengrey2001}'s definitions are written (e.g. with few idiomatic or metaphorical constructions), and for reasons of computational simplicity, we opted to use the above naive implementation in this paper.
+
+After creating the sentence (or English definition) vectors, we proceeded to cluster definitions with similar vectors together. To achieve this, we created a Euclidean distance matrix from the sentence vectors and made use of the \texttt{hclust} package in R \citep{R} to preform hierarchical agglomerative clustering using the Ward method (based on the experience of \cite{arppe2008univariate} in using the method to produce multiple levels of smaller, spherical clusters). This form of clustering is essentially a bottom-up approach where groupings are made by starting with individual labels with the shortest distance, then iteratively at a higher level making use of the clusters that result from the previous step or remaining individual levels; this second step is repeated until there is a single cluster containing all labels. This method of clustering creates a cluster tree that can be cut at any specified level after the analysis has been completed to select different numbers of clusters, allowing researchers some degree of flexibility without needing to rerun the clustering. This method is very similar to what has been done by both \citet{arppe2008univariate}, \citet{bresnan2007predicting}, and \citet{divjak2006ways}. The choice of how many clusters were used was based on an impressionistic overview of effectiveness by myself.
+
+For our purposes, we focused on the semantic classification of Nêhiyawêwin nouns and verbs. Nêhiyawêwin verbs are naturally morphosemantically divided into four separate classes: Intransitive verbs with a single inanimate argument (VII), Intransitive verbs with a single animate argument (VAI), transitive verbs with an animate actor\footnote{As discussed in \citet{wolvengrey2005inversion}, Nêhiyawêwin sentences are devoid subject and objects in the usual sense. Instead, syntactic roles are defined by verbal direction alignment. For this reason, we use the terms \textit{actor} and \textit{goal} instead of \textit{subject} and \textit{object}.} and an inanimate goal (VTI), and verbs with an animate actor and goal (VTA). For verbs, clustering took place within each of these proto-classes. Among the VIIs, 10 classes proved optimal, VAIs had 25 classes, VTIs with 15 classes, and VTAs with 20 classes. The choice to preprocess verbs into these four classes was chosen as not doing so resulted in a clustering pattern that focused mainly on the difference between transitivity and the animacy of arguments. Any more or fewer classes and HAC clusters were far less cohesive with obvious semantic units being dispersed among many classes or split into multiple classes with no obvious differentiation. Similarly, verbs were split from nouns in this process because definitions in \citet{Wolvengrey2001} vary significantly between verbs and nouns. 
+
+Nouns are naturally divided into two main classes in Nêhiyawêwin: animate and inanimate.\footnote{Although this gender dichotomy is \textit{mostly} semantically motivated (e.g. nouns that are semantically inanimate are part of the inanimate gender) this is not always the case as in the word \textit{pahkwêsikan}, `bread', a grammatically animate word.} For our purposes we divide these further within each class between independent (i.e. alienable) and dependent (i.e. inalienable) nouns to create four main classes: Independent Animate Nouns (NA), Dependent Animate Nouns (NDA), Independent Inanimate Nouns (NI), and Dependent Inanimate Nouns (NDI). The reason for this further division is due to the morphosemantic differences between independent and dependent nouns in Nêhiyawêwin. While independent nouns can stand on their own and represent a variety of entities, they are semantically and morphologically dependent on some possessor.  We opted to pre-split NDIs and NDAs into their own classes, so as not to have the clustering focus on alienablity as the most major difference.\footnote{Preliminary results for words not seperated by their conjugation class or declension did, in fact, create clusters based around these obvious differences. This likely due to the way definitions were phrased (e.g. dependent nouns would have a possessive determiner or pronoun).}
+
+\section{Results}
+In all cases, clusters produced by this procedure needed some amount of post-processing. For nouns, this post-processing was minimal and mostly took the form of adjustments to the produced clusters: moving some items from one class to another, splitting a class that had clear semantic divisions, etc. For the verbs, this processing was often more complex, especially for the VAI and VTA classes. Although most clusters produced somewhat cohesive semantic units, the largest clusters for the VAI and VTA classes acted as, essentially, catch-all clusters. Although computationally they seemed to have similar vector semantics, the relationship between items was not obvious to the human eye. Postprocessing for these clusters took more time than other classes and essentially composed of using the more cohesive clusters as a scaffold into which one may fit words from these catch-all clusters. In most cases, this resulted in very slightly more clusters after postprocessing, though for VAIs this number was significantly higher, and for the NDIs it was slightly lower. Table 1 lists the number of clusters directly from HAC and from postprocessing. The actual quality of clustering varied form class to class. In general, nouns resulted in much more cohesive clusters out-of-the-box and required far less postprocessing. For example, nearly all \texttt{NI_14} items referred to parts of human bodies (and those that did not fit this description were terms clearly related to, or containing, body parts like aspatâskwahpisowin, 'back rest'), \texttt{NI_13} was made up of trapping/hunting words and words for nests/animals.
+\begin{table*}[]
+\centering
+ \begin{tabular}{rrrr}
+\toprule
+    &\textbf{HAC classes} & \textbf{Manually Adjusted Classes} & \textbf{Lexemes}\\
+\midrule
+\textbf{VII} & 10          & 6     & 581                 \\
+\textbf{VAI} & 25          & 13     & 5254                \\
+\textbf{VTI} & 15          & 6     & 1825                \\
+\textbf{VTA} & 20          & 7     & 1781                \\
+\textbf{NI}  & 15          & 13     & 3650                \\
+\textbf{NDI} & 3           & 2      & 245                 \\
+\textbf{NA}  & 10          & 8     & 1676                \\
+\textbf{NDA} & 3           & 3      & 191                 \\
+\bottomrule
+\end{tabular}
+\centering
+\caption{HAC built cluster counts vs. counts after postprocessing}
+\label{tabhac}
+\end{table*}
+
+The NA classes produced through HAC were similarly straightforward: \texttt{NA_9} was made up of words for trees, poles, sticks, and plants; \texttt{NA_8} was made up entirely of words relating to beasts of burden, carts, wheels, etc.; while much of \texttt{NA_3} and \texttt{NA_7}, and nearly all of \texttt{NA_2} referred to other animals. Once manually postprocessed, the NA lexemes settled into 8 classes: \texttt{NA-persons, NA-beast-of-burden, NA-food, NA-celestial, NA-body-part, NA-religion, NA-money/count}, and \texttt{NA-shield}.\footnote{This class refers to forms such as \textit{nakahâskwân} and \textit{pahpahâhkwân}, which both translate as ‘shield’, despite being grammatically animate.} 
+
+The NDI and NDA classes required almost no postprocessing: \texttt{NDA_1} and \texttt{NDA_3} were each made up of various family and non-family-based relationships, while \texttt{NDA_2} was made up of words for body parts and clothing. The resulting classes for these were: \texttt{NDA-Relations, NDA-Body}, and \texttt{NDA-Clothing}.
+
+The NDI lexemes took two classes: the vast majority of NDI forms referred to bodies and body parts while two lexemes referred to the concept of a house, resulting in only two classes: \texttt{NDI-body}, and \texttt{NDI-house}.
+
+Verbs, on the other hand, required more postprocessing. VIIs showed the best clustering results without postprocessing. For example, \texttt{VII_6} was entirely made up of taste/smell lexemes, \texttt{VII_7} verbs were almost entirely weather-related, \texttt{VII_8} contained verbs that only take plural subjects (the semantic nature of which is discussed below), \texttt{VII_9} had only lexemes referring to sound and sight, and \texttt{VII_10} had only nominal-like verbs (e.g. \textit{mîsiyâpiskâw} '(it is) rust(y)').\footnote{Although this form may be thought of as attributive, an identical form is used as an NI. Whether this is a separate lexeme, or a nominal use of a verb is debatable.}  Despite these well-formed clusters, \texttt{VII_1} through \texttt{VII_5} were less cohesive and required manual clustering. In the end, 6 distinct classes were identified: \texttt{II-natural-land, II-weather}\footnote{This class includes terms of weather as well as terms of seasons or times of day such as sîkwan, ‘it is spring’.},  \texttt{II-sensory, II-collective}\footnote{The semantic status of this class is discussed below.},  \texttt{II-move, II-named}\footnote{This class contains terms of being named, such as \textit{isiyihkâcikâtêw}, ‘It is named thus’}.  Although postprocessing was required, this was not too substantial in scope or time. The VAIs required significantly more work. Some classes were well defined, such as \texttt{VAI_23} whose members all described some sort of flight, but \texttt{VAI_12} contains verbs of expectoration, singing, dancing, and even painting. Rather than being able to consolidate some classes, most HAC-produced classes needed to be manually split further. Although here one could have cut the HAC tree at a lower level to create more classes. This did not produce better or cohesive classes. The resulting VAI classes were as follows: \texttt{AI-state, AI-action, AI-reflexive, AI-cooking, AI-speech, AI-collective, AI-care, AI-heat/fire, AI-money/count, AI-pray, AI-childcare, AI-canine}\footnote{This class refers to verbs that specifically describes behaviors specific to canines, e.g. nêmow, ‘s/he growls as a dog’.},  and \texttt{AI-cover}. The VTIs similarly required manual postprocessing after HAC clustering. Although some classes such as \texttt{VTI_11} (entirely to do with cutting or breaking) or \texttt{VTI_14} (entirely to do with pulling) were very well formed, the majority of the classes needed further subdivision (though significantly less so than with the VAIs), resulting in the following 6 classes: \texttt{TI-action, TI-nonaction, TI-speech, TI-money/count, TI-fit}\footnote{This class refers to verbs that specifically describes behaviors specific to canines, e.g. nêmow, ‘s/he growls as a dog’.},  and \texttt{TI-food}. Finally, the VTAs required a similar amount of postprocessing as the VAIs. Although a few classes were well formed (such as \texttt{VTA_4} which was entirely made up of verbs for 'causing' something), the vast majority of HAC classes contained two or more clear semantic groupings. Through manual postprocessing, the following set of classes were defined: \texttt{TA-action, TA-nonaction, TA-speech, TA-food, TA-money/count, TA-religion}, and \texttt{TA-allow}. 
+
+
+\subsection{Evaluation}
+ In addition to the wualitative evaluation presented above, I present a preliminary quantitative evaluation of this technique. This evaluation allows us to judge how useful these classes are in practical terms, providing an indirect measure of the informational value of the clusters. We make use of the mixed effects modelling that initially motivated automatic semantic clustering, focusing on a morphological alternation called Nêhiyawêwin Order, wherein a verb may take the form \textit{ninipân} (the \textit{Independent}) or \textit{ê-nipâyân} (the \textit{ê-Conjunct)}, both of which may be translated as `I sleep.' The exact details of this alternation remain unclear, though there appears to be some syntactic and pragmatic motivation \citep{Cook2014}. Using R \citep{R} and the \texttt{lme4} package \citep{lme4}, we ran a logistic regression to predict alternation using verbal semantic classes as categorical variables. In order to isolate the effect of semantic class, no other effects were used. The semantic classes were included as random effects. To assess the effectiveness of semantic class in this context, we assess the pseudo-R\textsuperscript{2} value, a measure of Goodness-of-Fit. Unlike a regular R\textsuperscript{2} measure, the pseudo-R\textsuperscript{2} can not be interpreted as a direct measure of how much a model explains variance, and generally "good" pseudo-R\textsuperscript{2} value are comparatively smaller \citep{mcfadden1973conditional}, though a higher value still represents a better fit. As a general rule, a pseudo-R\textsuperscript{2} of 0.20 to 0.40 represents a well fit model. \citep{pseudor2}\footnote{One can also compare the results in this paper with results from a similar alternation study in \citet{arppe2008univariate}.} Models were fit for each of the four conjugation classes for both classes produced directly from the Hierarchical Agglomerative Clustering as well those manually adjusted. We used a subset of the Ahenakew-Wolfart Corpus \citep{arppe1945morphosyntactically}, containing 10,764 verb tokens observed in either the Independent or ê-Conjunct forms. The resulting pseudo-R\textsuperscript{2} scores represent the way in which automatic and semi-manual clusters can explain the Nêhiyawêwin Order alternation. 
+
+\begin{table}[]
+\centering
+\begin{tabular}{lrr}
+\toprule
+    & \textbf{Manual} & \textbf{HAC-Only} \\
+    \midrule
+VII & 0.18   & 0.19 \\
+VAI & 0.13   & 0.09 \\
+VTI & 0.04   & 0.01  \\
+VTA & 0.06   & 0.06  \\
+\bottomrule
+\end{tabular}
+\caption{pseudo-R\textsuperscript{2} Values for Modelling Independent vs. ê-Conjunct Order Choice Based on Manual and Automatic Clustering Evaluation. Larger values represent better model fits.}
+\label{tab4}
+\centering
+\end{table}
+
+Table \ref{tab4} presents the result of these analyses. the \textit{Manual} column represents clusters that were manually adjusted, while the \textit{HAC-Only} column represents the result of the logistic model that used only the fully automatic HAC-produced clusters. A larger value in the table represent a model that is better able to predict the Order a verb takes. While this prediction is not in and of itself of primary importance to the focus of this section, a better fitting model in this context suggests the efficacy of fully-manual vs semi-automatic verb classification. If, for example, the semi-automatic classification scheme produced a less explanatory model than the fully-automatic scheme, there would be no reason to spend the time and effort for the semi-manual classification task. Further, if either model neglected to show any significant explanatory power, one would have no reason to include semantic classes in future predictive models at all.
+
+The manually adjusted and HAC-only classes performed similarly, especially for VTAs, though manual adjustment had a slightly worse fit for the VIIs, and conversely the VAI and VTI has somewhat significantly better fits using the manually adjusted classes. Although it appears that manual adjustment produced classes that were somewhat better able to explain this alternation, both manually adjusted and HAC-only clusters appear to explain a non-negligible degree of this alternation phenomenon in the above models. This is significant, because it shows that the result of the clustering techniques presented in this paper produce a tangible and useful product for linguistic analysis. Further, it suggests that, although manual classification was sometimes more useful, automatic classes more or less performed as well, allowing for researchers to determine if the added effort is worth the small increase in informational value. Nevertheless, alternative methods of evaluation, such as evaluating clusters based on speaker input, particularly through visual means as described in \citet{majewska2020manual} should be considered.\footnote{It is worth noting that previous attempts at such experimentation via Nêhiyawêwin communities with which we have good relationships have been poorly received by speakers.}
+
+
+\FloatBarrier
+
+\section{Discussion}
+In general, the best clustering was seen in classes with fewer items. The VAI and NI lexemes required the most postprocessing, with each having roughly double the number of items as the next most numerous verb/noun class. Verb classes in general seemed to produce less cohesive classes through HAC. Although the exact cause of this discrepancy in unknown, it could perhaps be due to the way words are defined in \citet{Wolvengrey2001}. In this dictionary, verb definitions almost always contain more words than noun definitions. Almost every single verb definition will have at least two words, owing to the fact that Nêhiyawêwin verbs are defined by an inflected lexeme. This means that if one looks up a word like \textit{walk}, it would appear as: \texttt{pimohtêw: s/he walks, s/he walks along; s/he goes along}. Meanwhile, nouns tend to have shorter definitions. The definition for the act of walking, a nominalized form of the verb for walk, is written as: \texttt{pimohtêwin: walk, stroll; sidewalk}. This difference is exacerbated by the fact that definitions are often translated fairly literally. Something like \textit{pêyakwêyimisow} might be translated simply as `s/he is selfish,' but contains morphemes meaning \textit{one}, \textit{think}, \textit{reflexive}, and \textit{s/he}. A gloss of this word is seen in (\ref{gl5}). Rather than simply defining the word as `s/he is selfish,' \cite{Wolvengrey2001} has opted to provide a more nuanced definition: \texttt{pêyakwêyimisow: s/he thinks only of him/herself, s/he is selfish, s/he is self-centered}.
+
+\begin{exe}
+\ex
+\glll pêyakwêyimisow \\
+pêyakw-êyi-m-iso-w\\
+one-think-\textsc{vta}-\textsc{rflx}-\textsc{3sg}\\
+\trans `s/he thinks only of him/herself'
+\label{gl5}
+\end{exe}
+
+
+The result of this complex form of defining is that words are defined more in line with how they are understood within the Nêhiyawêwin culture, which is indeed often manifested in the derivational morphological composition of these words. This is central to the motivation for this method of semi-automatic clustering, but produces verbs with relatively long definitions. 
+An alternative explanation for why Nêhiyawêwin lexemes with English definitions consisting of more numerous parts of speech were more difficult to classify is that these divisions simply have significantly more variation in meaning for whatever reason. Further investigation into this is needed. 
+
+\begin{table*}[h]
+\begin{adjustbox}{width=1\textwidth}
+\begin{tabular}{llll}
+\toprule
+NI (N)                 & NDI (N)        & NA (N)                   & NDA (N)             \\
+\midrule
+NI-nominal (1783)      & NDI-body (243) & NA-persons (720)         & NDA-relations (143) \\
+NI-object (902)        & NDI-house (2)  & NA-beast-of-burden (512) & NDA-body (45)       \\
+NI-natural-Force (283) &                & NA-food (325)            & NDA-clothing (4)    \\
+NI-place (228)         &                & NA-celestial (45)        &                     \\
+NI-nature-plants (198) &                & NA-body-part (37)        &                     \\
+NI-body-part (78)      &                & NA-religion (23)         &                     \\
+NI-hunt-trap (60)      &                & NA-money/count (12)      &                     \\
+NI-animal-product (48) &                & NA-shield (2)            &                     \\
+NI-religion (36)       &                &                          &                     \\
+NI-alteration (23)     &                &                          &                     \\
+NI-scent (4)           &                &                          &                     \\
+NI-days (4)            &                &                          &                     \\
+NI-persons (3)         &                &                          &                    \\
+\bottomrule
+\end{tabular}
+  \end{adjustbox}
+
+\caption{Manually Adjusted Noun Classes}
+\label{tabnc}
+\end{table*}
+
+Also worth noting is the relative distributions of each of the postprocessed classes mentioned above. Table \ref{tabnc} details each of the postprocessed noun classes sorted by their size. 
+
+ Perhaps unsurprisingly, the distribution of lexemes into different classes followed a sort of Zipfian distribution. The \texttt{NA-person} and \texttt{NA-beast-of-burden} accounted for the vast majority of noun lexemes for animate nouns. Just under half of all NI lexemes were nominalized verbs, and roughly a quarter were smaller object-like items (e.g. tools, dishes, etc.). The NDAs were almost entirely dominated by words for family, while all but three NDIs were body part lexemes. Some categories such as \texttt{NI-scent}, \texttt{NI-days}, and \texttt{NA-shield} have extremely low membership counts, but were substantially different from other categories that they were not grouped into another class. Most interestingly, there appeared to be three NI lexemes that referred to persons, something usually reserved for NAs only. These lexemes were \textit{okitahamâkêw} ‘one who forbids,’ \textit{owiyasiwêwikimâw} ‘magistrate,’ and \textit{mihkokwayawêw} ‘red neck.’ In all three cases, the lexemes seem to be deverbal nouns (from \textit{kitahamâkêw} ‘s/he forbids,’ \textit{wiyasiwêw} ‘s/he makes laws,’ and \textit{mihkokwayawêw} ‘s/he has a red neck.’
+
+
+\begin{table*}[]
+\begin{adjustbox}{width=1\textwidth}
+\begin{tabular}{llll}
+\toprule
+VII (N)                 & VAI (N)        & VTI (N)                   & VTA (N)             \\
+\midrule
+II-natural-land (275)        & AI-state (2083)     & TI-action (1409)   & TA-action (1013)    \\
+II-weather (96)              & AI-action (1982)    & TI-nonaction (293) & TA-nonaction (574)  \\
+II-sensory  (90)             & AI-reflexive (542)  & TI-speech (80)     & TA-speech (103)     \\
+II-collective  (79)          & AI-cooking (172)    & TI-money/count     & TA-food (54)        \\
+II-move (38)                 & AI-speech (131)     & TI-fit (10)        & TA-money/count (23) \\
+II-named   (3)               & AI-collective (97)  & TI-food (8)        & TA-religion (9)     \\
+                             & AI-care (81)        &                    & TA-allow (5)        \\
+                             & AI-heat/fire (55)   &                    &                     \\
+                             & AI-money/count (34) &                    &                     \\
+                             & AI-pray (29)        &                    &                     \\
+                             & AI-childcare (17)   &                    &                     \\
+                             & AI-canine (16)      &                    &                     \\
+                             & AI-cover (15)       &                    &                     \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\caption{Manually Adjusted Verb Classes}
+\label{tab3}
+\end{table*}
+
+
+
+Verbs showed a similar distribution. Table \ref{tab3} details the distribution of words within each of semantic classes for verbs. With the exception of VII and VAIs, verbs were dominated by classes for action, which subsumes most volitional actions (e.g. \textit{kîskihkwêpisiwêw} ‘s/he rips the face off of people,’ \textit{kâsîpayiw} ‘s/he deletes’), and nonaction which includes most verbs of thought, emotion, judgment, or sensory action (e.g \textit{koskowihêw}, ‘s/he startles someone,’  \textit{nôcîhkawêw} ‘s/he seduces someone’). Other classes may include action verbs, such as \texttt{AI-cooking} and \texttt{TI-speech}. Although these verbs could be classified in one of the two previously mentioned systems, their automatic classification and semantics unify them in a way that is unique to other items in these larger classes. 
+
+Verbs in \texttt{AI-action} have little in common with each other except that they are a form of volitional action, while \texttt{AI-care} verbs (which may include actions related to giving care such as \textit{kanawastimwêw} ‘s/he looks after/guards horses’) have a distinct and unifying characteristic relating to giving care. Similarly, although \texttt{AI-childcare} could be subsumed under \texttt{AI-care}, the former includes items like \textit{kimotôsêw} ‘s/he bears an illegitimate child’. This is even more obvious in categories such as \texttt{AI-collective} or \texttt{AI-reflexive}, which refer to lexemes that are plural only or reflexive in nature/morphology, respectively. These may not seem as semantically defined as other classes for VAIs, though one could argue that verbs that occur only in the plural are inherently collective in action, and thus semantically defined; similarly, reflexive forms are necessarily actions that are done to one’s self. Although there may be \texttt{action} or \texttt{nonaction} verbs in this category, the automatic classification divided and grouped most reflexive and plural only lexemes into their own respective classes. Resultantly, these clusters were kept as separate classes. For this classification scheme, reflexives were deemed to be more \texttt{reflexive} than they were to be \texttt{action} or \texttt{nonaction}. 
+
+Additionally, VAIs contained a sort of stative class, \texttt{AI-state}. This classification, being inherently non-transitive, is not present in the VTI or VTA classes. Stative verbs are present in the VII class, but given how many VII lexemes are essentially stative, we opted not to have a single stative class, but instead defined classes describing \texttt{natural-land} (including general landscape features such as \textit{kinohtakâw} ‘it has a long floor’), \texttt{sensory} information (e.g. \textit{kihcinâkwan} ‘it looks impressive’), or weather terms (\textit{mispon} ‘it is snowing’).
+
+Overall, verb forms, especially the most numerous classes of VAI and VTA, required a large degree of manual postprocessing. Because this approach assumes no underlying ontology, but rather attempts to work bottom-up (cf. Hanks 1996), the time taken to postprocess VAI and VTA classes is likely not too far from what it would take to manually classify these words based off a prebuilt ontology; however, the appeal of a bottom-up classification should not be overlooked. 
+
+
+
+
+\section{Conclusion}
+This paper describes an attempt at semi-automatically classifying Nêhiyawêwin verbs and nouns. Resulting clusters of Nêhiyawêwin words are freely available online.  Although the technique worked quite well with nouns, which required very little manual adjustment, verbs required more directed attention. Despite this, the technique presented in this paper offers a bottom-up, data-driven approach that takes the language on its own terms, without resorting to ontologies created primarily for other languages. If, however, one wishes to use a pre-defined ontology, the basis for this work (representing word definitions using pre-trained English word vectors) could be used in conjunction with existing ontologies to expedite the classification process. For example, Dacanay et al. (2021) compare the naive definition vectors for Wolvengrey (2001) with the same for the English WordNet word senses; word senses whose vectors bear a strong correlation with the Nêhiyawêwin definitions can then be assumed to be synonymous with a Nêhiyawêwin word, and the latter can take the WordNet classification of the former. Because this technique leverages resources from a majority language, it is not sensitive to the issue of paucity of data for minority languages. It should be applicable to any context where a minority language has a majority-language-bilingual-dictionary and where the majority language is well resourced. Applications for this research extend not only to the creation of semantic classes, but also to the association of words based on semantic similarity. The results of the quantitative evaluation suggest that, at least in the Independent vs. ê-Conjunct alternation, semantic class plays some role in predicting the alternation, though its use varied by conjugation class. In addition to the use of these results to bolster modelling of Nêhiyawêwin Order, the word similarity scores on which clustering was based can be used to identify words that are similar to one another, a task that is ideal for word discovery, for example in the presentation of synonymous (or at least semantically related) terms when searching through an online dictionary.
+
+Future research should investigate how these classes compare to raw HAC clusters and manual classification of various sorts (should these become available in Nêhiyawêwin). Different methods of calculating item distance in clustering techniques (e.g. through cosine distance \citep{dacanay2021}) should be considered. More sophisticated sentence/definition embeddings, such as those returned by BERT \citep{devlin2018bert} or other state of the art models would also likely increase the efficacy of this technique. Further, as one reviewer suggested, one could use a weighted average for words in the dictionary definitions along with word relevance measures (such as tf-idf scores) to more accurately represent the semantics of an English sentence. Although fully Nêhiyawêwin-trained vectors are ideal, as with most Indigenous languages of North America, there is simply nowhere close to enough data to build robust word embeddings as seen in the Google News Corpus. The technique described in this paper presents a compromise of taking the language on its own terms, while leveraging the massive data sets that exist for majority languages.
