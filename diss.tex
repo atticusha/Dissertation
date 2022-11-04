@@ -12,6 +12,7 @@
   \caption{#2 (repeated from page \pageref{#1})}%
   \addtocounter{figure}{-1}% So that next figure after the repeat gets the right number.
 }
+\usepackage{longtable}
 \usepackage{makecell}
 \usepackage{soul}
 \usepackage{color}
@@ -376,32 +377,7 @@ ACKNOWLEDGEMENT HERE
 \bibliography{citations} 
 \bibliographystyle{apalike}
 	
-	%TCIMACRO{
-	%\TeXButton{Appendices}{\appendix
-	%}}%BeginExpansion
-%	\appendix
-	%EndExpansion
-	%The chapters after this tab are all appendices
-	
-%	\begin{appendices}
-%		
-%		\chapter{Chapter 1: Supplementary materials}
-%		
-%\begin{table}[h!]
-%	\centering
-%	\caption{Number of highfives (people want)} 
-%	\label{app:highfives}
-%%		\begin{tabular}[ht!]{ll}
-%			People & High Fives \\\hline \Bstrut \Tstrut
-%			0 & 0 \\
-%			1 & 999 \\
-%			2 & 999 \\\hline
-%		\end{tabular}
-%	\end{footnotesize}
-%\end{table}
-%
-%		
-%
-%		
-%\end{appendices}
+\appendix
+\include{Kaidi-Template/AppendixCorpcodes}
+\include{Kaidi-Template/test}
 \end{document}
